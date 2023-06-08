@@ -29,7 +29,6 @@ public class PersonController {
         this.personService = personService;
     }
 
-    //DTO
     @GetMapping("/AllPersons")
     public ResponseEntity<List<PersonDTO>> getAllPersons3(){
         return ResponseEntity.ok(this.personService.getAllPersons());

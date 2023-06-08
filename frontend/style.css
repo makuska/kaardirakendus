@@ -42,3 +42,26 @@ body {
 .hidden {
   display: none;
 }
+
+
+
+/* Marker */
+.circle-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+
+/* Custom marker cluster styles */
+.leaflet-marker-icon.leaflet-marker-cluster {
+  /* Your styles for the cluster icon */
+  border-radius: 50%;
+  background-color: #ff0000; /* Custom background color */
+}
+
+.leaflet-marker-icon.leaflet-marker-cluster div {
+  /* Your styles for the cluster inner div */
+  color: #ffffff; /* Custom text color */
+}

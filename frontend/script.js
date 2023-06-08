@@ -1,16 +1,31 @@
 // import axios from 'axios';
 // console.log(axios.isCancel('something'));
 
+//https://leaflet-extras.github.io/leaflet-providers/preview/
+
 const osmLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 const cartoDB = '<a href="http://cartodb.com/attributions">CartoDB</a>';
+// const stamenToner = <a href="http://maps.stamen.com">StamenToner</a>
 
 const osmUrl = "http://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const osmAttrib = `&copy; ${osmLink} Contributors`;
+
 const landUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png";
 const cartoAttrib = `&copy; ${osmLink} Contributors & ${cartoDB}`;
 
+const stamenUrl = 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}';
+const stamenAttrib = 'Map data &copy; <a href="https://stamen.com">Stamen</a> contributors';
+
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
+
+const stamenMap = L.tileLayer(stamenUrl, {
+  attribution: stamenAttrib,
+  subdomains: 'abcd',
+  minZoom: 0,
+  maxZoom: 20,
+  ext: 'png',
+});
 
 // config map
 let config = {
@@ -19,6 +34,7 @@ let config = {
   minZoom: 5,
   maxZoom: 18,
 };
+
 
 
 // magnification with which the map will start
@@ -71,18 +87,34 @@ osmMap.addTo(map);
 
 // L.MarkerClusterGroup extends L.FeatureGroup
 // by clustering the markers contained within
-let markers = L.markerClusterGroup();
+let markers = L.markerClusterGroup({
+  spiderfyOnMaxZoom: false, // Disable spiderfying behavior
+  showCoverageOnHover: false, // Disable cluster spiderfier polygon
+});
+
+// Create a custom divIcon with a small circle
+function createCustomDivIcon() {
+  return L.divIcon({
+    className: 'custom-div-icon',
+    html: '<div class="circle-icon"></div>',
+    iconSize: [12, 12],
+  });
+}
+
 
 // Add markers to the layer
 for (let i = 0; i < points.length; i++) {
   const [lat, lng, title] = points[i];
 
-  let marker = L.marker(new L.LatLng(lat, lng))
-  .bindPopup(title)
-  .on("click", clickZoom); //Centers the map when popup is clicked
-  markers.addLayer(marker);
+  // Create a marker with the custom divIcon
+  const marker = L.marker(new L.LatLng(lat, lng), {
+    icon: createCustomDivIcon(i + 1), // Use the number (i + 1) as the content for the bubble
+  }).bindPopup(title).on("click", clickZoom); //Centers the map when popup is clicked
 
+  // Add the marker to the marker cluster group
+  markers.addLayer(marker);
 }
+
 
 // Add all markers to map
 map.addLayer(markers);
@@ -90,6 +122,7 @@ map.addLayer(markers);
 let baseLayers = {
   "Klassika": osmMap,
   "Dark mode": landMap,
+  "Stamen Toner": stamenMap,
 };
 
 L.control.layers(baseLayers).addTo(map);
@@ -125,7 +158,7 @@ searchbox.onButton("click", function () {
 searchbox.onInput("keyup", function (e) {
   let value = searchbox.getValue();
   if (value !== "") {
-    const searchUrl = `http://localhost:8080/api/v1/search?name=${value}`;
+    const searchUrl = `http://localhost:8080/api/v1/searchByFirstName?name=${value}`;
 
     fetch(searchUrl)
         .then(response => response.json())
@@ -242,16 +275,18 @@ const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 //   }
 // }
 
-// Create a new layer group for the KML data
-let kmlLayer = L.layerGroup();
+const kml = '/Users/Diana/Downloads/koik.kml';
 
-// Load the KML file using omnivore
-omnivore.kml('/Users/Diana/Downloads/Eesti avaliku elu tegelased 20. saj algul..kml')
-    .on('ready', function () {
-      // Add the KML features to the layer group
-      kmlLayer.addLayer(this);
-    })
-    .addTo(map);
+// // Create a new layer group for the KML data
+// const kmlLayer = L.layerGroup();
+//
+// // Load the KML file using omnivore
+// omnivore.kml(kml).addTo(kmlLayer);
+//
+// // Add the KML layer to the map
+// map.addLayer(kmlLayer);
 
-// Add the KML layer to the map
-kmlLayer.addTo(map);
+
+// MiniMap
+const osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13});
+const miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
