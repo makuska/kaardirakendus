@@ -1,0 +1,977 @@
+Aakre vald Tartumaa,58.1223,26.2894
+Aakre vald, Tartumaa, 58.38309, 26.83683
+Aaspere vald, Virumaa: 59.5107, 26.5144
+Aaspere vald, Virumaa: 59.5317, 26.2791
+Abaja, Pärnumaa, 58.61856, 24.27573
+Abja vald Parnumaa,58.0833,25.4329
+Abja vald, Pärnumaa: 58.1712, 25.5187
+Abja, Viljandimaa: 58.1249, 25.3491
+Abja-Vanamõisa vald, Pärnumaa, 58.120, 25.367
+Abruka, 57.813, 21.965
+Adavere vald Viljandimaa,58.4167,25.9277
+Ahja mõis, Tartumaa, 58.067, 26.369
+Ahja vald, Tartumaa, 58.154, 26.343
+Ahja vald, Tartumaa: 58.0175, 26.9029
+Aidu vald Viljandimaa,58.5681,25.6324
+Aidu vald, Viljandimaa, 58.24192, 25.54081
+Aidu, Viljandimaa, 58.526, 25.455
+Aksi, Tartumaa: 58.1918, 26.1701
+Alatskivi vald Tartumaa,58.6256,27.0967
+Alatskivi vald, Tartumaa, 58.57558, 27.0081
+Alatskivi, Tartumaa: 58.6273, 27.0512
+Albu vald Jarvamaa,58.9645,25.5614
+Albu vald, Järvamaa, 58.96939, 25.69503
+Aleksandri Võrumaa, 57.8007, 26.9797
+Aleksandri vald Võrumaa, 57.6609, 27.0395
+Alliku vald Jarvamaa,58.882,25.579
+Allikukivi, Pärnumaa: 58.4526, 24.4122
+Alūksne (Marienburg) vald, Latvia, 57.435, 27.060
+Ambla kihelkond,59.2043,25.6091
+Ambla vald Jarvamaa,59.2055,25.5913
+Ambla vald, Järvamaa, 59.18514, 25.45403
+Ambla, Järvamaa, 59.161, 25.436
+Ambla, Järvamaa, 59.248, 25.463
+Anija mõis, Harjumaa, 59.393, 25.168
+Anija vald, Harjumaa: 59.2816, 25.5108
+Anija, Harjumaa: 59.3121, 25.2684
+Anna vald, Järvamaa: 58.9815, 25.8872
+Antsla vald, Võrumaa: 57.8176, 26.5339
+Are vald Parnumaa,58.1915,24.9337
+Are vald, Pärnumaa, 58.21324, 24.74398
+Aru vald Tartumaa,58.2873,26.9073
+Aru, Tartumaa: 58.2578, 26.3845
+Koeru: 58.9000, 25.5578
+Aruküla, Harjumaa: 59.3567, 25.0992
+Arula vald Tartumaa,58.0895,26.0781
+Arula vald, Tartumaa, 58.532, 26.791
+Asukula vald Laanemaa,58.8753,24.1587
+Audru vald Parnumaa,58.3044,24.4844
+Avanduse vald Viljandimaa,58.6434,25.7939
+Avanduse vald, Virumaa, 59.03498, 27.41915
+Avinurme Tartumaa, 58.98264, 27.05523
+Avinurme vald Tartumaa,58.9689,27.0112
+Avinurme vald, Tartumaa, 58.938, 26.946
+Beja (Kolbergi) vald, Alūksne (Marienburg): 57.400000, 27.233333
+Breslavi Lati,57.4555,21.9504
+Edise mõis, Virumaa, 59.365, 26.675
+Einmanni mõis, Järvamaa: 58.9567, 26.3604
+Einmanni vald Jarvamaa,58.9644,25.6359
+Elistvere vald Tartumaa,58.5353,26.5356
+Elistvere vald, Tartumaa, 58.31548, 26.92008
+Emmaste vald, Hiiumaa: 58.8589, 22.7857
+Enge vald, Pärnumaa: 58.3363, 24.8419
+Erastvere Vorumaa,57.7823,27.0159
+Erastvere vald, Võrumaa, 57.88455, 26.86016
+Erastvere vald, Võrumaa: 58.0886, 26.7058
+Esna vald Jarvamaa,58.8574,25.7536
+Esna vald, Järvamaa, 59.072, 25.708
+Esna, 58.894, 25.150
+Haabsaare, Võrumaa, 57.722, 26.680
+Haademeeste vald, Pärnumaa, 58.12996, 24.41007
+Haapajarv Soome, 61.84424, 24.07473
+Haapsalu,58.9386,23.5408
+Haaslava mõis, Tartumaa, 58.21882, 26.77255
+Haaslava, Tartumaa: 58.5620, 26.6141
+Hageri Harjumaa,59.0417,24.6197
+Haimre, 59.300, 24.993
+Hajala kihelkond, 58.582, 25.681
+Halinga vald Parnumaa,58.5781,24.7617
+Halinga vald, Pärnumaa, 58.63135, 24.48761
+Haljala vald Virumaa,59.4579,26.0549
+Haljala vald, Virumaa: 59.4317, 26.3084
+Haljala, 59.4729, 26.1264
+Halliste küla, Viljandimaa: 58.1596, 25.3795
+Hallistes Parnumaa,58.2201,25.1823
+Hallistes Parnumaa,58.4174,24.8983
+Hanila, Läänemaa, 58.881, 23.680
+Harjanurme vald Tartumaa,58.2415,26.8675
+Harjanurme vald, Tartumaa, 58.376, 26.851
+Harjanurme, 58.370, 26.837
+Harjumaa,59.323,24.5569
+Harkovi kubermang Venemaa,50.0018,36.2314
+Harku vald, Harjumaa: 59.4107, 24.5467
+Heimtali mõis, Viljandimaa, 58.27295, 25.28747
+Heimtali vald Viljandimaa,58.3547,25.7269
+Heinaste vald Parnumaa,58.5622,24.637
+Hellamaa vald, Muhu saar: 58.6034, 23.2506
+Hellamaa vald, Muhumaa: 58.6034, 23.2184
+Hellamaa vald, Saaremaa: 58.4160, 22.9116
+Hellenurme vald Tartumaa,58.2782,26.4934
+Helme Valgamaa,58.0382,25.7073
+Helme Valgamaa,58.0444,25.888
+Helme Viljandimaa, 58.06267, 25.91797
+Helme vald, Valgamaa, 58.06267, 25.91797
+Helme vald, Viljandimaa, 58.00829, 25.67079
+Helsingi, Soome: 60.1699, 24.9384
+Helsinki: 60.1699, 24.9384
+Hiiu-Kõrgessaare vald, Hiiumaa, 58.914, 22.662
+Holdre mõis, Viljandimaa: 58.3497, 25.7371
+Holdre vald Valgamaa,57.9066,26.1191
+Holdre, Valgamaa, 57.776, 26.261
+Holdre, Valgamaa: 57.9803, 26.1281
+Holstre Viljandimaa,58.0989,25.5546
+Holstre Viljandimaa,58.1794,25.3783
+Holstre vald Viljandimaa,58.1577,25.3133
+Holstre vald, Viljandimaa: 58.2259, 25.5204
+Holstre, 58.072, 25.524
+Hummuli Valgamaa,57.7863,26.0058
+Hummuli vald, Valgamaa, 58.014, 26.260
+Häädemeste, Pärnumaa: 58.0907, 24.4592
+Igaste m., Valgamaa, 57.88124, 26.00488
+Illuka vald, Virumaa: 59.2234, 27.5517
+Ilmatsalu, Tartumaa: 58.4047, 26.6281
+Ilmjarve vald Tartumaa,58.2257,26.4853
+Imavere vald Viljandimaa,58.7088,25.9229
+Imavere, Järvamaa, 58.853, 25.550
+Imavere, Viljandimaa: 58.7027, 25.4563
+Ingliste vald, Harjumaa: 58.7245, 25.4719
+Ire (Irai) Liivi rannikul, 57.54501, 24.64027
+Issaku, Tartumaa: 58.2772114,27.0226493
+Ivangorod, Leningrad Oblast, Russia, 59.37384, 28.21778
+Jaara vald Parnumaa,58.2787,24.4222
+Jaarja vald, Pärnumaa: 58.3640, 24.6631
+Jamburgi,59.3683,28.6078
+Jaroslav, Venemaa, 57.316, 39.733
+Jarva-Jaani Kihelkond,58.8872,25.7212
+Jarvakandi vald Harjumaa,58.9115,24.6184
+Jarvamadise kihelkond,59.1021,23.6317
+Joala vald, Virumaa, 59.365, 26.675
+Joelahtme vald, Harjumaa, 59.506, 25.127
+Jogeva vald Tartumaa,58.7521,26.3782
+Johvi,59.3594,27.4212
+Juuru vald Harjumaa,59.0971,24.7494
+Juuru vald, Harjumaa, 59.08003, 24.8954
+Järvamaa: 58.8859, 25.5603
+Järve vald, Virumaa, 59.139, 26.253
+Järve, Virumaa, 59.424, 27.022
+Jõgeva, Tartumaa, 58.74357, 26.39309
+Jõgeva: 58.7463, 26.3941
+Jõgevaste vald, Valgamaa, 57.879, 26.193
+Jõgeveste vald, Valgamaa, 58.089, 26.252
+Jõhvi kihelkond, 59.36117, 27.41339
+Jõhvi vald, Virumaa, 59.360, 27.429
+Jõroiste kihelkond, Soome: 60.8739, 26.1236
+Kaagjarve vald Valgamaa,57.7317,26.3193
+Kaarepere vald Tartumaa,58.5367,26.7157
+Kaarepere, 58.727, 25.342
+Kaarli vald Viljandimaa,58.4983,25.9277
+Kaarli vald, Pärnumaa: 58.3452, 24.8059
+Kaarli vald, Viljandimaa, 58.452, 25.423
+Kaarma Saaremaa, 58.3349, 22.6716
+Kaarma-Suure vald, Saaremaa, 58.297, 22.504
+Kaarma-Suurvald Saaremaa,58.3915,22.686
+Kabala vald, Harjumaa, 59.223, 24.859
+Kabala vald, Viljandimaa, 58.501, 25.416
+Kabala, Harjumaa, 59.220, 24.869
+Kabala, Viljandimaa, 58.59516, 25.59884
+Kadrina Laane-Virumaa,59.3308,26.1345
+Kadrina, Virumaa, 59.321, 26.134
+Kadrina: 59.3471, 26.1317
+Kahkva vald, Võrumaa, 57.65325, 26.92317
+Kahkva, Võrumaa, 57.800, 26.960
+Kaisma vald, Pärnumaa, 58.01912, 24.36162
+Kaiu vald, Harjumaa, 59.057, 24.790
+Kalami talu, Viljandimaa, 58.253, 25.273
+Kalvi vald, Virumaa: 59.2381, 27.5585
+Kambja Tartumaa,58.2913,26.6459
+Kambja vald, Tartumaa: 58.2433, 26.2361
+Kambja vald, Tartumaa: 58.2697, 26.1862
+Kambja: 58.3014, 26.1999
+Kamenets-Podolski Venemaa,48.7164,26.5761
+Kanepi klk., 57.81554, 26.90398
+Kanepi küla, Võrumaa, 57.845, 26.979
+Kanepi, Võrumaa: 57.8356, 26.9701
+Kanepi, Võrumaa: 57.8363, 26.9705
+Kardla Hiiumaa,58.9974,22.7459
+Kargula, Võrumaa, 57.824, 26.912
+Kariste vald, Pärnumaa: 58.3727, 25.4918
+Kariste, Pärnumaa, 58.36732, 24.48289
+Karja vald Saaremaa,58.4022,22.6766
+Karkna vald Tartumaa,58.3676,26.348
+Karkna, Tartumaa: 58.3092, 26.3248
+Karksi Parnumaa,58.0066,25.6211
+Karksi vald Parnumaa,57.9857,25.4732
+Karksi vald, Pärnumaa, 58.097, 25.459
+Karla vald, Saaremaa, 58.482, 23.127
+Karski vald, Pärnumaa, 58.46576, 25.30212
+Karstna Viljandimaa,57.7169,25.6436
+Karstna Viljandimaa,58.2603,25.416
+Karstna vald, Viljandimaa: 58.2364, 25.3524
+Karu vald Jarvamaa,58.8951,25.8448
+Karu vald, Järvamaa, 58.90283, 25.80032
+Karula vald, Valgamaa: 57.7614, 26.3896
+Karula vald, Viljandimaa, 58.217, 25.650
+Karula vald, Võrumaa, 57.709, 26.409
+Karula, Võrumaa: 57.7681, 26.9244
+Kasaritsa vald, Võrumaa, 57.973, 27.189
+Kastre-Vonnu Tartumaa,58.2299,26.402
+Kastre-Vonnu Tartumaa,58.4024,26.6856
+Kastre-Vonnu vald, Tartumaa, 58.282, 26.940
+Kastre-Vorru Tartumaa,58.2416,27.1861
+Kastre-Võnnu vald, Tartumaa: 58.4154, 26.4824
+Kastre-Võnnu, 58.225, 26.677
+Kauksi mõis, Võrumaa, 58.222, 27.628
+Kavastu Tartumaa,58.3313,26.6791
+Kavastu maakond Virumaa,59.4319,25.856
+Kavastu vald Tartumaa,58.1504,
+Kavastu vald, Tartumaa: 58.4677, 26.5719
+Kavilda Tartumaa, 58.5209, 26.4646
+Kavilda vald Tartumaa,58.1657,26.4934
+Kavilda, 58.259, 26.823
+Keeni Tartumaa,58.2301,27.0696
+Keeni Tartumaa,58.3145,26.3552
+Keeni vald, Tartumaa: 58.2751, 26.4077
+Keeni vald, Valgamaa, 57.964, 26.361
+Kehra, Harjumaa, 59.342, 25.312
+Kehtna vald, Harjumaa, 58.8769, 24.82563
+Keila Harjumaa,59.3039,24.4113
+Keila vald Harjumaa, 59.2534, 24.4972
+Keila vald, Harjumaa: 59.3013, 24.4147
+Keina vald, Hiiumaa, 58.844, 22.546
+Kermi, Harjumaa: 59.1519, 25.7207
+Kernu vald Harjumaa,59.1032,24.5092
+Keskvere vald, Läänemaa: 58.9576, 23.9187
+Kihelkonna vald, Saaremaa: 58.4457, 22.7028
+Kiiev,50.4501,30.5234
+Kiiu Harjumaa,59.4187,25.2271
+Kiiu Harjumaa,59.4865,25.3937
+Kiiu vald, Harjumaa: 59.4935, 25.3372
+Kiiuma vald Vorumaa,57.7983,27.1007
+Kilingi vald Parnumaa,58.1577,24.9679
+Kilingi-Nõmme, Pärnumaa, 58.15234, 24.963
+Kilingi-Nõmme, Pärnumaa: 58.1412, 24.9624
+Kirbla, 58.960, 23.891
+Kirepi vald Tartumaa,58.0869,26.1504
+Kirepi vald, Tartumaa, 58.157, 26.546
+Kloostri vald, Harjumaa: 59.3546, 25.0101
+Kloostri vald, Läänemaa, 58.944, 23.607
+Kodasoo vald, Harjumaa, 59.4425, 24.87948
+Kogula vald Saaremaa,58.1763,22.2782
+Kogula vald, Saaremaa, 58.27147, 22.04848
+Kohila vald Harjumaa,59.0122,24.7592
+Kohtla vald Virumaa,59.3807,27.2991
+Kohtla vald, Virumaa, 59.40785, 27.28474
+Kohtla, Virumaa: 59.3377, 27.2747
+Kohtla-Järve vald, 59.377, 27.266
+Koigi vald, Järvamaa, 58.93649, 25.62204
+Koigi vald, Järvamaa: 58.9255, 25.5875
+Koiguste vald, Saaremaa: 58.3854864,22.9027966
+Koikkula vald Valgamaa,57.8167,26.0888
+Koiola Vorumaa,57.8042,27.2843
+Koiola Vorumaa,57.9289,26.982
+Koiola vald, Võrumaa, 57.725, 27.098
+Koiola vald, Võrumaa: 57.9938, 26.7415
+Kokora vald, Tartumaa, 58.3245, 27.0032
+Kolga Harjumaa,59.4125,25.5206
+Kolga Harjumaa,59.4812,25.8439
+Kolga Jaani Viljandimaa,58.5396,25.5165
+Kolga vald Harjumaa,59.4877,25.7937
+Kolga vald, Harjumaa, 59.48638, 25.79508
+Kolleste vald Vorumaa,57.8753,27.1722
+Kolleste, Võrumaa, 57.775, 27.036
+Koluvere vald Laanemaa,58.8929,23.6765
+Koluvere, 58.547, 24.679
+Konguta vald Tartumaa,58.3293,26.4874
+Konguta vald, Tartumaa, 58.331, 26.499
+Konnu vald, Harjumaa: 59.0506, 25.4924
+Konnu, Harjumaa, 59.248, 24.695
+Konstantiinovi vald Oudova maakond,59.3581,27.3195
+Koo vald Viljandimaa,58.3803,25.7293
+Koo vald, Viljandimaa, 58.53571, 25.87589
+Koo, 58.244, 26.529
+Koonga vald, Pärnumaa, 58.51122, 23.82823
+Koonga vald, Pärnumaa: 58.5987, 24.4763
+Koonga, Pärnumaa, 58.476, 23.829
+Kooraste Vorumaa,57.8541,27.1443
+Kooraste Vorumaa,57.8828,27.073
+Kooraste vald, Võrumaa: 57.8990, 26.9477
+Koorküla vald, Valgamaa: 57.7766, 26.0197
+Koorküla vald, Viljandimaa, 58.512, 25.415
+Kose, Harjumaa, 59.123, 24.870
+Krabi vald, Võrumaa: 57.8626, 26.6629
+Kreenholm, Narva: 59.3756, 28.2056
+Krementšugis Venemaa,53.9982,37.7475
+Krimm, 45.013, 34.963
+Krivjakino Moskva kubermang,56.5139,36.8319
+Kruudneri vald Tartumaa,58.1947,26.2641
+Kruudneri vald, Tartumaa, 58.35553, 26.66328
+Kubala vald, Viljandimaa: 58.2885, 25.6258
+Kudina vald Tartumaa,58.5229,27.1884
+Kudina vald, Tartumaa, 58.38393, 26.9848
+Kuigatsi vald Valgamaa,58.0624,26.0903
+Kuigatsi vald, Tartumaa, 58.361, 26.561
+Kuigatsi vald, Valgamaa, 57.730, 26.000
+Kuigatsi vald, Valgamaa, 57.87202, 26.1023
+Kuigatsi, Valgamaa: 57.7252, 26.1508
+Kuivajõe vald, Harjumaa, 59.22511, 24.63029
+Kuivajõe vald, Harjumaa: 59.3475, 24.9682
+Kuivajõe, Harjumaa, 59.173, 24.844
+Kuivastu Muhumaa,58.6136,23.0988
+Kuksemaa vald, Järvamaa: 58.8236, 25.9121
+Kukulinna mõis, Tartumaa, 58.49056, 26.46395
+Kulgu Narva,59.3916,28.1486
+Kulgu Narva,59.4393,28.1712
+Kunda, Virumaa: 59.4858, 26.5579
+Kuremaa Tartumaa,58.7797,26.0472
+Kuremaa vald, Tartumaa: 58.7129, 26.1437
+Kuressaare,58.2484,22.5039
+Kuressaare,58.252,22.4855
+Kurista vald Tartumaa,58.2486,26.2194
+Kurista vald Viljandimaa,58.6045,25.7785
+Kurista vald, 58.717, 24.829
+Kuristja vald, Viljandimaa: 58.6287, 25.6883
+Kurna vald Harjumaa, 59.3047, 25.1103
+Kurna vald, Harjumaa, 59.488, 25.116
+Kurtna, Harjumaa, 59.184, 25.943
+Kuti mõis, Virumaa: 59.0563, 26.3437
+Kuti vald Virumaa,59.1008,26.3574
+Kuuda mõis, Läänemaa, 58.829, 23.928
+Kuusalu kihelkond,59.4471,25.5833
+Kärdla, 58.9972, 22.74922
+Käsmu, Virumaa, 59.593, 26.038
+Kävilda vald, Tartumaa, 58.516, 26.722
+Kõnnu vald, Harjumaa, 59.312, 24.536
+Kõo, Viljandimaa: 58.4052, 25.7918
+Kõrgepalu Võrumaa, 57.7929, 27.0142
+Kõrgessaare vald, Hiiumaa: 58.9517, 22.4885
+Kõrkküla, Valgamaa: 57.8626, 26.1862
+Kõrveküla, Tartumaa, 58.05883, 26.42834
+Laanemaa,58.9626,23.5633
+Laanemetsa vald, Valgamaa: 57.6844, 26.3637
+Laanemetsa, Võrumaa: 57.6769, 26.5798
+Laatre vald Valgamaa,57.8964,25.7732
+Laatre vald, Pärnumaa: 58.0575, 24.8316
+Laatre, 57.940, 26.217
+Laatre, Valgamaa, 57.967, 26.170
+Laeva vald, Tartumaa: 58.5131, 26.6502
+Lahtru Laanemaa,58.8572,24.0522
+Lahtru Laanemaa,58.9782,23.6864
+Laiksaare vald Parnumaa,58.025,24.3931
+Laiksaare vald, Pärnumaa, 58.284, 24.409
+Laimjala vald, Saaremaa, 58.228, 22.788
+Laimjala vald, Saaremaa: 58.3127, 22.4359
+Laius-Tahkvere vald, Tartumaa: 58.7082, 26.4212
+Laiuse vald Tartumaa,58.9203,26.2601
+Laiuse vald, Tartumaa, 58.80515, 26.08122
+Laiuse, Tartumaa, 58.721, 25.598
+Laiuse-Tähkvere vald, Tartumaa, 58.741, 26.202
+Lapua Pohja-Soome,62.9689,23.0097
+Lasinurme, Virumaa: 59.0145, 26.4506
+Lasva vald, Võrumaa, 57.657, 27.202
+Laupa vald, Järvamaa, 58.891, 25.454
+Leebiku vald Valgamaa,57.8233,26.1199
+Leebiku vald, Valgamaa, 58.14241, 26.05147
+Lehtse Jarvamaa,59.1555,25.9102
+Lehtse Jarvamaa,59.1893,25.7446
+Lehtse vald Järvamaa, 59.3389, 26.0377
+Leisi vald, Saaremaa: 58.5269, 22.6826
+Levala küla, Saaremaa: 58.3129, 22.7041
+Lihula Laanemaa,58.6797,23.8464
+Lihula Laanemaa,58.6799,23.8482
+Lihula vald, Läänemaa: 58.6848, 23.8263
+Liibav, 56.48062, 21.01125
+Liiva kortsis, Luganuse klk., 59.39797, 27.57363
+Lillenbachi mõis, Narva: 59.3727, 28.1834
+Linnamae vald Vorumaa,57.7257,27.0719
+Livoonia eesti asunduses Põhja-Kaukaasia, 43.4232, 43.9617
+Lohusuu vald, Tartumaa: 58.6999, 27.0486
+Lohusuu, Tartumaa, 58.780, 27.133
+Lokuta m., Järvamaa, 58.91248, 25.89646
+Loo, Harjumaa: 59.3958, 24.9184
+Loodi vald Viljandimaa,58.5489,25.4691
+Loona vald, Saaremaa, 58.441, 22.401
+Loona, Saaremaa, 58.49123, 23.19258
+Loopre mõis Viljandimaa: 58.2404, 25.7649
+Loosi Vorumaa,57.7053,27.1407
+Loosi Vorumaa,57.7349,27.3173
+Loosi vald, Võrumaa: 57.6847, 26.9422
+Love vald, Valgamaa: 57.8160, 26.0848
+Love, Valgamaa: 57.6884, 26.1254
+Luiste Laanemaa, 58.8322, 24.6867
+Lumanda Saaremaa,58.5374,23.4316
+Lumanda Saaremaa,58.5626,22.1179
+Lumanda vald, Saaremaa: 58.5427, 22.2162
+Lustivere vald, Viljandimaa, 58.740, 25.599
+Luunja vald Tartumaa,58.3609,26.6309
+Luunja vald, Tartumaa: 58.2946, 26.5073
+Maasi Saaremaa,58.3705,22.3683
+Maasi Saaremaa,58.4465,22.477
+Maasi vald Saaremaa,58.5566,22.5527
+Maetaguse vald, Virumaa, 59.317, 27.070
+Maetaguse vald, Virumaa: 59.3315, 27.2699
+Maetaguse, Ida-Virumaa, 59.113, 27.151
+Maetaguse, Virumaa, 59.271, 27.304
+Maksa mõis, Tartumaa, 58.664, 26.753
+Maksa vald Tartumaa,58.0083,26.3765
+Maksa vald, Tartumaa, 58.680, 26.700
+Manniku Voltveti Parnumaa,58.315,25.1242
+Mao vald, Järvamaa: 58.9421, 25.5089
+Marienburg, Latvia, 56.888, 24.356
+Massu vald, Läänemaa: 58.9942, 23.6948
+Massu, 58.546, 24.849
+Massu, Läänemaa, 58.877, 24.120
+Meeksi Vorumaa,57.7044,27.0377
+Meeksi Vorumaa,57.9047,27.074
+Meeksi mõis, Võrumaa, 58.160, 27.158
+Meeksi vald, Tartumaa, 58.584, 27.173
+Meeri mõis, Tartumaa, 58.493, 26.865
+Meeri vald, Tartumaa, 58.415, 26.476
+Meeri vald, Tartumaa: 58.5448, 26.2325
+Mehikoorma: 58.2657, 27.1452
+Merimäe vald, Petserimaa: 57.7454, 27.2241
+Minsk, Belarus: 53.9045, 27.5615
+Moisekatsi vald Vorumaa,57.8564,27.0527
+Moniste, Võrumaa: 57.8789, 26.6213
+Mooste vald Vorumaa,58.1146,27.0451
+Mooste vald, Võrumaa, 58.20168, 27.03867
+Mooste, 58.165, 27.086
+Moskva: 55.7512, 37.6184
+Muhu Suurvald,58.5952,23.251
+Muhu,58.5708,23.1923
+Muhu-Hellamaa vald, Saaremaa, 58.607, 23.324
+Muhu-Hellamaa: 58.6124, 23.1639
+Muhu-Suure vald: 58.6177, 23.2506
+Muhu-Suurevalla vald, Saaremaa, 58.622, 23.123
+Muhumaa,58.589,23.0544
+Mustajõe vald, Virumaa, 59.313, 26.630
+Mustjala vald Saaremaa,58.3162,22.6564
+Mustjala, Saaremaa, 58.204, 22.643
+Mustvee Tartumaa,58.8515,26.956
+Mustvee Tartumaa,58.9078,26.9399
+Mustvee, 58.8971, 26.93642
+Mõniste vald, Võrumaa, 57.902, 26.894
+Nabala vald, Harjumaa, 59.226, 24.879
+Naissaar, Harjumaa, 59.50119, 24.85574
+Narva (Kreenholm), 59.37707, 28.19718
+Narva Joala Virumaa,59.3481,28.1722
+Narva,59.3772,28.1901
+Narva-Jõesuu: 59.4612, 28.0334
+Noarootsi,59.0462,23.4563
+Nursi vald, Võrumaa: 57.7151, 27.0965
+Nõmme küla, Järvamaa, 58.880, 25.540
+Oisu mõis, Järvamaa, 58.917, 25.408
+Oisu mõis, Raudsi, Viljandimaa: 58.4423, 25.2456
+Oisu mõis, Viljandimaa, 58.352, 25.438
+Oisu vald, Viljandimaa, 58.343, 25.379
+Ojasoo mõis, Harjumaa: 59.2631, 24.7318
+Olustvere vald Viljandimaa,58.6566,25.6871
+Olustvere, 58.724, 25.896
+Oomuli vald, Valgamaa, 57.704, 26.193
+Orajõe vald, Pärnumaa: 58.4337, 25.3711
+Oranienbaum Peterburi kubermang, 59.94007, 29.78202
+Orava mõis, Võrumaa, 57.651, 27.428
+Orava vald, Võrumaa, 57.95621, 26.60489
+Orelli kubermang Venemaa,58.9749,28.8689
+Oru vald, Läänemaa: 59.0918, 23.6007
+Otepaa Tartumaa,58.0529,26.4975
+Otepaa Tartumaa,58.0597,26.4943
+Otepaa,58.0567,26.4975
+Otepää vald, Tartumaa: 58.0615, 26.4904
+Otsa talu, Põltsamaa, 58.633, 26.880
+Oudova, 59.180, 27.320
+Paadla vald, Saaremaa: 58.5173, 22.1205
+Paadremaa vald Laanemaa,58.9387,23.872
+Paadremaa vald, Läänemaa, 58.87367, 24.21786
+Paadremaa, Läänemaa: 58.9013, 23.8738
+Paasvere Virumaa,59.2446,26.4092
+Paasvere mõis, Virumaa, 59.199, 26.202
+Paasvere vald Virumaa,59.2106,26.3762
+Paasvere vald, Virumaa, 59.176, 26.138
+Paatsalu vald, Läänemaa, 58.72721, 23.85658
+Paatsalu vald, Läänemaa: 58.6117, 23.6602
+Pada vald Virumaa,59.0318,26.7263
+Pada vald, Virumaa, 59.250, 27.380
+Paide, 58.8831, 25.5578
+Paidla vald Tartumaa,58.3786,26.6187
+Paidla-Neeruti vald, Tartumaa, 58.610, 26.232
+Pajusi vald Viljandimaa,58.4514,26.419
+Pajusi vald, Viljandimaa: 58.4369, 25.8276
+Pala Tartumaa,58.5219,27.1376
+Pala Tartumaa,58.5264,26.8943
+Pala mõis, Tartumaa, 58.700, 26.879
+Pala vald, Tartumaa, 58.581, 26.875
+Pala vald, Tartumaa: 58.6479, 27.0181
+Palamuse Tartumaa,58.7718,26.2399
+Paldiski: 59.3490, 24.0491
+Palivere vald Laanemaa,58.9615,23.8253
+Palmse vald, Virumaa, 59.54942, 26.24992
+Palmse vald, Virumaa: 59.5402, 26.2601
+Palmse, 59.530, 26.310
+Palmse, Virumaa, 59.460, 26.300
+Palu vald, Järvamaa: 58.9858, 25.6699
+Palupera Tartumaa,58.0915,26.2221
+Palupera vald Tartumaa,58.0316,26.0738
+Palupera, Tartumaa, 58.129, 26.177
+Pangodi Tartumaa,58.5319,26.8827
+Pangodi vald Tartumaa,58.5319,26.8827
+Pangodi vald, Tartumaa, 58.242, 27.048
+Pari vald, Viljandimaa: 58.3633, 25.4225
+Parnu,58.3854,24.4965
+Parsamaa vald, Saaremaa, 58.303, 22.653
+Parsamaa, Saaremaa, 58.594, 22.011
+Parsti vald, Viljandimaa: 58.2654, 25.3297
+Pati Parnumaa,58.6226,24.4041
+Pati vald Parnumaa,58.1823,24.7533
+Patkula vald Valgamaa,57.8623,26.0616
+Peetri, Virumaa: 59.3945, 24.8364
+Peningi Harjumaa, 59.2621, 25.2462
+Peningi vald, Harjumaa, 59.08185, 24.20258
+Penuja vald, Pärnumaa, 58.09652, 24.6925
+Penuja vald, Pärnumaa: 58.5254, 24.5686
+Peri Vorumaa,57.6826,27.2629
+Peri Vorumaa,57.8263,27.2621
+Peri vald, Tartumaa, 58.191, 26.380
+Peri vald, Võrumaa, 57.765, 26.487
+Perila mõis, Harjumaa: 59.4144, 24.5306
+Peterburg venemaa,59.9343,30.3351
+Peterburg, Venemaa (St. Petersburg, Russia): 59.9343, 30.3351
+Peterburg,59.9343,30.3351
+Peterburi kub., 59.93995, 30.31532
+Peterburi, 59.939, 30.315
+Peterburi, Venemaa: 59.9375, 30.3086
+Petserimaa, Võrumaa, 57.566, 27.264
+Pielavesi kihelkond, Soome, 63.189, 27.319
+Pihkva kubermang Venemaa,57.8157,27.6338
+Pihtla vald, Saaremaa, 58.307, 22.580
+Pihtla vald, Saaremaa: 58.3622, 22.5023
+Piirsalu vald, Järvamaa: 58.7980, 24.6530
+Pilistvere kihelkond, Viljandimaa, 58.389, 25.454
+Pilistvere, Viljandimaa, 58.46633, 25.74057
+Pilistvere, Viljandimaa, 58.594, 25.630
+Pilkuse vald Tartumaa,58.3497,26.6467
+Pindi mõis, Võrumaa, 57.842, 27.192
+Poide kihelkond: 58.4814783,22.966177
+Polli Parnumaa,58.4223,24.4061
+Polli mõis, Pärnumaa: 58.4869, 24.6614
+Polli vald Parnumaa,58.0122,24.4423
+Polli vald, Pärnumaa, 58.20015, 24.73273
+Poogle vald Parnumaa,58.6128,24.7635
+Poogle vald, Pärnumaa, 58.39632, 24.60668
+Pootsi vald, Pärnumaa, 58.16364, 24.64369
+Porkuni mõis, Virumaa, 59.205, 25.986
+Porkuni vald, Virumaa, 59.107, 26.232
+Porkuni, Viljandimaa: 58.7887, 25.7664
+Pornuse vald Parnumaa,58.3839,24.3639
+Pornuse, Pärnumaa, 58.402, 24.876
+Port-Kunda, Virumaa, 59.459, 26.568
+Prangli vald, Tartumaa: 58.0231016,26.6632219
+Preedi mõis, Järvamaa, 58.825, 25.307
+Puhajarve vald, Tartumaa, 58.09795, 26.19019
+Puhja kihelkond: 58.3385195,26.2791917
+Puhja klk., 58.36438, 26.44746
+Puhja, Tartumaa: 58.2762, 26.1975
+Puiatu vald, Viljandimaa, 58.49486, 25.64419
+Pussi Virumaa,59.3195,27.3093
+Pussi vald Virumaa,59.3895,27.0321
+Puurmani vald, Tartumaa, 58.521, 26.347
+Puurmani vald, Tartumaa, 58.644, 26.985
+Pärnu, Pärnumaa: 58.3850, 24.4976
+Pärnumaa, 58.49796, 24.96276
+Päti vald, Pärnumaa, 58.347, 24.651
+Pätküla vald, Valgamaa, 57.97908, 26.10994
+Pätküla, Valgamaa: 57.8875, 26.2486
+Pääsküla, Harjumaa, 59.369, 24.664
+Põltsamaa Viljandimaa, 58.65443, 25.95883
+Põltsamaa maakond Pärnumaa, 58.5959, 25.9572
+Põltsamaa vald, Viljandimaa, 58.656, 25.971
+Põltsamaa: 58.6527, 25.9639
+Põlva, Võrumaa, 58.06394, 27.05353
+Pühajärve küla, 57.9816, 26.5011
+Püssi vald, Virumaa, 59.33036, 27.01854
+Raabise mõis, Tartumaa, 58.51518, 26.52828
+Raadi Tartumaa, 58.3546, 26.7482
+Raadi vald, Tartumaa, 58.392, 26.806
+Raadi vald, Tartumaa: 58.3530, 26.7327
+Raama vald, Pärnumaa: 58.1487, 25.4122
+Raasiku Harjumaa,59.3083,25.2012
+Raasiku Harjumaa,59.3373,25.1157
+Rae vald, Harjumaa: 59.3806, 24.9513
+Ragavere vald Virumaa,58.9534,25.7035
+Raiküla vald, Harjumaa, 59.125, 24.429
+Rakke jaamas Järvamaa, 58.9952, 26.2022
+Rakvere vald Virumaa,59.3551,26.459
+Rakvere vald, Virumaa, 59.342, 26.425
+Rakvere,59.346,26.3584
+Ranna vald Tartumaa,58.1495,27.1391
+Ranna vald Tartumaa,58.5428,26.7415
+Rannamõisa, Harjumaa: 59.3700, 24.3897
+Rannu Tartumaa,58.3561,26.4156
+Rannu vald, Tartumaa, 58.377, 26.289
+Rapina vald Vorumaa,58.1051,27.462
+Rapla vald Harjumaa,58.9999,24.805
+Rapla vald, Harjumaa, 59.015, 24.804
+Rapla, 59.005, 24.792
+Rapla, Harjumaa, 59.007, 24.792
+Rapla, Harjumaa: 58.9945, 24.8059
+Rasina vald Tartumaa,58.4573,26.411
+Rattama talu Viljandimaa,58.4722,25.4064
+Ravila, Harjumaa: 59.2849, 24.8602
+Rebase Kaagjarve Valgamaa,57.7766,26.1865
+Rebase Kaagjarve Valgamaa,58.0692,26.2446
+Reigi, Hiiumaa, 58.866, 22.618
+Reiu Parnumaa,58.3792,24.4782
+Reiu vald, Pärnumaa, 58.5019, 24.47962
+Ridala, Läänemaa: 58.9293, 23.7779
+Riia,56.9496,24.1052
+Riidaja Viljandimaa,58.3639,25.2604
+Riidaja vald Viljandimaa,58.3021,25.3723
+Riidaja vald, Viljandimaa: 58.3639,25.2604
+Risti, Harjumaa, 59.025, 24.176
+Ristimae kula Undla Virumaa,59.0032,27.592
+Roela Tartumaa,58.7022,26.3647
+Roela Tartumaa,58.7691,26.613
+Roela Virumaa,59.3001,26.635
+Roela vald, Tartumaa: 58.7998, 26.1659e
+Roela vald, Viljandimaa: 59.2837, 26.3536
+Roela vald, Virumaa: 59.3664, 26.4285
+Rongu kirikum Tartumaa, 58.30962, 26.64904
+Rongu vald, Tartumaa, 58.221, 26.430
+Rongu, 58.210, 26.455
+Rongu, Tartumaa, 58.207, 26.486
+Rongu, Tartumaa, 58.30962, 26.64904
+Ropka vald, Tartumaa, 58.411, 26.716
+Ruhja alev, Latvia: 57.2902, 25.9362
+Räpina vald, Tartumaa, 58.096, 27.467
+Räpina vald, Võrumaa: 58.0956, 27.4701
+Rõngu vald, Tartumaa: 58.2459, 26.2617
+Rõuge vald, Võrumaa: 57.7332, 26.9951
+Rõuge, Võrumaa: 57.7324, 26.9955
+Saadjarve vald, Tartumaa: 58.3290, 26.3720
+Saadjärve vald, Tartumaa, 58.12156, 26.4229
+Saadjärve, Tartumaa: 58.4308, 26.7591
+Saare vald, Saaremaa: 58.2833, 22.5737
+Saaremaa,58.4908,22.7678
+Saksi vald, Virumaa, 59.222, 26.840
+Saku Harjumaa,59.3136,24.6524
+Saku vald, Harjumaa, 59.29327, 24.6515
+Salla vald, Virumaa, 59.373, 26.597
+Salla vald, Virumaa: 59.1806, 26.4221
+Salla, Virumaa: 59.0008, 27.0652
+Sammuli Viljandi,58.2404,25.6037
+Sammuli Viljandi,58.5037,25.5217
+Sammulil Viljandi,58.2404,25.6037
+Sammulil Viljandi,58.3423,25.5583
+San Francisco,37.7749,-122.4194
+Sangaste Korval Valgamaa, 57.81743, 26.09809
+Sangaste vald Valgamaa,57.8765,26.0766
+Sangaste vald, Valgamaa, 57.878, 26.149
+Sangaste, 57.992, 26.098
+Sangaste, Valgamaa: 57.9333, 26.0677
+Sarevere vald Jarvamaa,58.9464,25.5952
+Saru vald, Võrumaa, 57.745, 26.668
+Saru vald, Võrumaa: 57.7687, 26.9659
+Saue vald, Harjumaa, 59.312, 24.553
+Saue vald, Harjumaa, 59.31768, 24.57772
+Sauga Rannaküla, Pärnumaa: 58.4011, 24.5125
+Sauga vald, Pärnumaa: 58.2694, 24.5543
+Saulepi vald Laanemaa,59.0406,23.6148
+Seidla Jarvamaa,59.2275,25.8408
+Seli vald, Pärnumaa: 58.2196, 24.5782
+Seli vald, Pärnumaa: 58.4203, 24.4776
+Sikassaare küla, Saaremaa: 58.1653, 22.0832
+Simuna Virumaa,59.2559,26.3449
+Simuna küla, Virumaa, 59.301, 26.473
+Sinalepa vald, Läänemaa, 58.88269, 23.64317
+Sinalepa vald, Läänemaa: 58.9240, 23.9702
+Sindi Parnumaa,58.4068,24.6611
+Sindi, Pärnumaa, 58.39467, 24.66061
+Sindi,58.4071,24.6655
+Sindis Parnumaa,58.1349,24.7559
+Sindis Parnumaa,58.4534,24.7276
+Sippa vald Laanemaa,58.8366,23.5713
+Sooniste vald, Läänemaa, 58.94294, 24.13241
+Sooniste, Läänemaa: 58.8781, 24.0247
+Sooru vald, Valgamaa, 57.870, 26.397
+Soosaare Viljandimaa, 58.66306, 25.94716
+Soosaare mõis, Viljandimaa, 58.383, 25.913
+Soosaare vald Viljandimaa,58.5454,25.6909
+Soosaare vald, Viljandimaa, 58.347, 25.824
+Sootaga Tartumaa, 58.3554, 26.8837
+Sootaga vald, Tartumaa, 58.429, 26.330
+Sootaga vald, Tartumaa: 58.3586, 27.0429
+Sosnitsa vald, Peterburg, 59.9005, 30.5761
+Suigu vald, Pärnumaa: 58.6787, 24.4896
+Surgavere vald, Viljandimaa: 58.3726, 25.7989
+Sutlepa vald Laanemaa,59.025,23.5299
+Suur-Irbeni kula Kuramaa,57.7694,22.0434
+Suur-Konguta vald, Tartumaa, 58.343, 26.584
+Suure-Jaani, Viljandimaa: 58.5364, 25.4276
+Suure-Kambja vald, Tartumaa: 58.3177, 26.1358
+Suure-Kopu vald Viljandimaa,58.4587,25.6197
+Suure-Kõpu vald, Viljandimaa, 58.06517, 25.87318
+Suuremoisa Hiiumaa,58.8404,22.9987
+Suuremoisa Hiiumaa,58.8555,22.4532
+Suurevald Hiiumaa,58.9027,22.7124
+Szolnok Ungari,47.1867,20.1814
+Sänna mõis, Võrumaa: 57.8806, 26.6705
+Särevere Järvamaa, 58.7943, 25.6057
+Sõmerpalu Võrumaa, 57.9243, 26.9425
+Sõmerpalu vald, Võrumaa, 57.848, 27.209
+Taagepera Viljandimaa,57.8807,25.6535
+Taagepera Viljandimaa,58.0264,25.1926
+Taagepera vald Valgamaa,57.9345,26.2235
+Taagepera vald, Valgamaa, 57.953, 25.948
+Taagepera vald, Viljandimaa: 58.0656, 25.5452
+Taagepera, Valgamaa, 58.118, 25.608
+Taali Parnumaa,58.3305,24.6969
+Taali Parnumaa,58.3427,24.6284
+Taali vald Parnumaa,58.3711,24.7846
+Taali vald, Pärnumaa: 58.2304, 24.4238
+Taebla vald, Läänemaa, 58.997, 23.679
+Taevere vald Viljandimaa,58.3723,25.3827
+Taevere vald, Viljandimaa, 58.09924, 25.8584
+Taevere, Viljandimaa: 58.5225, 25.4117
+Taheva vald, Valgamaa: 57.8196, 26.1205
+Tahkuranna vald Parnumaa,58.3122,24.3473
+Tahkuranna vald, Pärnumaa: 58.2795, 24.5423
+Tahkvere vald, Tartumaa, 58.31483, 26.87521
+Tahtvere Tartumaa,58.3322,26.6885
+Tahtvere vald, Tartumaa, 58.413, 26.640
+Talli vald, Pärnumaa, 58.37288, 24.28622
+Tallinn, Harjumaa: 59.4370, 24.7536
+Tallinn,59.437,24.7536
+Tamme vald, Tartumaa: 58.2465, 26.3312
+Tammiste mois Parnumaa,58.1574,24.7512
+Tammiste vald, Pärnumaa: 58.3302, 24.8302
+Tammiste, 58.269, 26.759
+Tamse mõis, Muhu, 58.605, 23.318
+Tapa, Virumaa: 59.2596, 25.9601
+Tartu vald, Tartumaa, 58.343, 26.556
+Tartu, Tartumaa: 58.3776, 26.7290
+Tartu,58.3776,26.7291
+Tartumaa: 58.4634, 26.7295
+Tartvastu Viljandimaa,58.4696,25.8119
+Tarvastu Viljandimaa,58.2876,25.8309
+Tarvastu Viljandimaa,58.2884,25.7176
+Tarvastu vald Viljandimaa,58.1287,25.6122
+Tarvastu vald, Viljandimaa: 58.4462, 25.8255
+Tbilisi: 41.7151, 44.8271
+Timo vald Vorumaa,57.8018,27.3174
+Tohkri Vorumaa,57.8423,26.9992
+Tohkri Vorumaa,58.3079,27.2431
+Toila, Ida-Virumaa: 59.4023, 27.5022
+Tolliste vald Valgamaa,57.9035,25.7031
+Toolamaa vald, Võrumaa, 57.871, 27.030
+Toolamaa vald, Võrumaa: 57.6786, 27.1357
+Torgu Saaremaa,58.2779,22.183
+Torgu vald, Saaremaa, 58.219, 22.213
+Torgu vald, Saaremaa: 58.1611, 22.1907
+Tori Parnumaa,58.3913,24.4778
+Tori Seljal Parnumaa,58.6034,24.3993
+Tori kirikuvald, Pärnumaa, 58.654, 24.395
+Tori vald Parnumaa,58.4841,23.9384
+Tori vald, Pärnumaa, 58.39085, 24.57823
+Torma vald, Tartumaa, 58.764, 26.118
+Torma vald, Tartumaa: 58.7701, 26.4216
+Torma, Tartumaa, 58.689, 26.996
+Torva,58.0031,25.9306
+Triigi vald Harjumaa,58.9541,23.2325
+Triigi vald, Harjumaa, 59.57712, 24.97345
+Triigi, 58.797, 23.091
+Triigi-Avispea koolimaja,59.1861,23.2604
+Tsooru vald, Võrumaa: 57.9350, 26.6977
+Tsooru, 58.013, 27.576
+Tsooru, Võrumaa, 58.013, 27.576
+Tudulinna vald Virumaa, 59.0324, 27.3144
+Tuhalaane vald, Viljandimaa, 58.237, 25.767
+Tuhalaane vald, Viljandimaa: 58.1422, 25.3683
+Tuhalaane, Viljandimaa: 58.5401, 26.5727
+Tuhalaanes Viljandimaa,57.9395,25.4666
+Tuhalaanes Viljandimaa,58.1022,25.6
+Tuhulaane vald, Viljandimaa, 58.36651, 25.97324
+Tuki mõis, Tartumaa, 58.501, 26.712
+Tuula kubermang, Venemaa, 55.96291, 37.85572
+Tuusula, Soome,60.4057,25.0244
+Tõdva-Kõnnu, Virumaa: 59.4808983,25.7282547
+Tõdva-Kõnnu, Võrumaa: 57.7541, 26.9017
+Tõlliste vald, Valgamaa, 57.725, 26.132
+Tõstamaa vald, Pärnumaa, 58.553, 24.285
+Tõstamaa vald, Pärnumaa: 58.3722, 23.7306
+Tõstamaa, 58.310, 23.696
+Türi, Järvamaa: 58.8094, 25.4251
+Uderna Tartumaa,58.4135,26.3903
+Uderna Tartumaa,58.4823,26.4801
+Uderna vald, Tartumaa: 58.3330, 26.7333
+Uderna, 58.266, 26.727
+Uduvere Saaremaa,58.3131,22.0876
+Uduvere Saaremaa,58.3602,21.9096
+Ulila vald Tartumaa,58.4019,26.3543
+Ulila vald, Tartumaa, 58.221, 26.481
+Undla vald Virumaa,59.1596,26.7099
+Undla vald, Virumaa: 58.3639,25.2604
+Undla, Virumaa, 59.426, 26.344
+Urvaste Võrumaa, 57.82471, 26.93148
+Urvaste vald, Võrumaa: 57.7316, 26.9424
+Urvaste, 57.9039, 26.7181
+Uue Kariste Parnumaa,58.2874,24.9982
+Uue Kariste Parnumaa,58.3399,24.5727
+Uue Vandra Parnumaa,58.3345,24.8619
+Uue-Antsla mõis, Võrumaa: 57.7285, 27.0715
+Uue-Antsla, Võrumaa: 57.7643, 26.3802
+Uue-Kariste vald, Pärnumaa: 58.4167, 25.1667
+Uue-Mõisa vald, Saaremaa, 58.46153, 22.10428
+Uue-Poltsamaa Viljandimaa,58.4804,25.7917
+Uue-Suislepa vald, Viljandimaa, 58.391, 25.384
+Uue-Vändra vald, Pärnumaa: 58.6047, 25.1687
+Uue-Võidu vald, Viljandimaa: 58.1922, 25.6935
+Uuemoisa Saaremaa,58.4389,21.9085
+Uulu vald Parnumaa,58.4313,24.3175
+Uulu vald, Pärnumaa, 58.11399, 24.44968
+Uusna Viljandimaa, 58.3014, 25.598
+Uusna vald Viljandimaa,58.3988,25.3388
+Vaabina Vorumaa,57.7578,26.8893
+Vaatsa Jarvamaa,58.8692,26.7917
+Vaatsa Jarvamaa,58.8782,26.1093
+Vahastu vald, Järvamaa: 58.7915, 25.7192
+Vahastu vald, Järvamaa: 58.9787, 25.8424
+Vahi mõis, Tartumaa: 58.4933, 27.0601
+Vaigala, Läänemaa, 58.884, 24.354
+Vaikna vald, Läänemaa: 58.998, 23.766
+Vaikna, Läänemaa, 58.998, 23.766
+Vaimastvere vald Tartumaa,58.5734,26.4187
+Vaimastvere vald, Tartumaa, 58.31509, 26.87412
+Vaimela vald, Võrumaa: 57.7921, 27.0569
+Vainjärve vald, Järvamaa, 58.93062, 25.77776
+Vainjärve vald, Järvamaa: 58.9467, 25.6925
+Vaiste mõis, Läänemaa: 58.7857, 24.2754
+Vaivara Virumaa, 59.3305, 27.7637
+Vaivara vald, Virumaa, 59.39929, 27.75369
+Vaivara vald, Virumaa, 59.416, 27.797
+Valaste kula Jarvamaa,59.2087,26.2612
+Valaste kula Jarvamaa,59.3264,26.0372
+Valga, Valgamaa: 57.7782, 26.0471
+Valga,57.7744,26.0455
+Valgamaa, 57.7638, 26.053
+Valgejarva vald Vorumaa,57.8303,26.8512
+Valgjarve vald Tartumaa,57.9133,26.6602
+Valgjärve vald, Võrumaa, 57.834, 26.804
+Valgjärve vald, Võrumaa: 58.0089, 26.8255
+Valguta vald, Tartumaa: 58.2115, 27.0012
+Valguta vald, Tartumaa: 58.3497, 27.3113
+Valguta, 57.727, 26.641
+Valjala, Saaremaa: 58.3853, 22.4701
+Vana Laitsna Vorumaa,57.9853,27.0191
+Vana Laitsna Vorumaa,58.0253,27.2129
+Vana Poltsamaa Viljandimaa,58.4978,25.4594
+Vana Poltsamaa Viljandimaa,58.504,25.9051
+Vana Suislepa Viljandimaa,58.479,25.5077
+Vana Vandra Parnumaa,58.2823,24.9573
+Vana-Antsla Vorumaa,57.7844,26.5217
+Vana-Antsla vald, Võrumaa, 57.78926, 27.21177
+Vana-Antsla vald, Võrumaa: 57.8697, 26.5083
+Vana-Antsla, 57.759, 27.017
+Vana-Kariste vald, Pärnumaa: 58.3005, 24.9163
+Vana-Kariste vald, Pärnumaa: 58.3264, 24.9026
+Vana-Koiola vald Vorumaa,57.6948,26.9457
+Vana-Kuuste vald Tartumaa, 58.1509, 26.1849
+Vana-Kuustevald Tartumaa,58.4591,26.703
+Vana-Otepää vald, Tartumaa, 58.012, 26.459
+Vana-Piigaste, Võrumaa, 57.785, 26.902
+Vana-Põltsamaa vald, Viljandimaa: 58.5646, 25.9127
+Vana-Põltsamaa, 58.662, 26.060
+Vana-Roosa vald, Võrumaa: 57.8592, 26.6606
+Vana-Suislepa vald Viljandimaa,58.479,25.5077
+Vana-Suislepa vald, Viljandimaa: 58.1447, 25.2861
+Vana-Tänassilma vald, Viljandimaa, 58.30618, 25.80874
+Vana-Tänassilma vald, Viljandimaa: 58.30618, 25.80874
+Vana-Tänassilma, Viljandimaa, 58.289, 25.475
+Vana-Vända vald Pärnumaa, 58.6186, 24.4498
+Vana-Vändra vald, Pärnumaa: 58.4952, 24.8172
+Vana-Vändra vald, Pärnumaa: 58.6114, 24.6718
+Vana-Vändra, Pärnumaa, 58.572, 24.832
+Vana-Vändra, Pärnumaa, 58.61462, 24.45348
+Vana-Võidu vald, Viljandimaa: 58.4754, 25.4640
+Vanda vald Pärnumaa, 58.6085, 24.4835
+Vandra Parnumaa,58.5368,24.9487
+Vandra Parnumaa,58.6169,24.9167
+Vandra vald Parnumaa,58.3908,25.4894
+Vandra-Viluvere, Pärnumaa: 58.4840, 24.8997
+Vao vald Virumaa,59.2875,25.6948
+Vao vald, Virumaa, 59.29645, 26.67835
+Vao, Virumaa: 59.2139, 26.3408
+Vara vald Tartumaa,58.3047,26.4025
+Vara vald, Tartumaa, 58.31289, 26.35075
+Varangu vald, Virumaa, 59.26343, 26.58866
+Varbla kihelkond, Läänemaa: 58.7346, 23.9048
+Varbla vald, Läänemaa, 58.482, 23.528
+Varbola vald, Harjumaa, 59.090, 24.334
+Vasknarva vald, Virumaa, 59.326, 27.876
+Vastemoisa Viljandimaa,58.0623,25.5286
+Vastemoisa Viljandimaa,58.4856,25.5703
+Vastemõisa vald, Viljandimaa, 58.727, 25.437
+Vastemõisa vald, Viljandimaa: 58.4120, 25.4572
+Vastse Noo Tartumaa,58.2465,26.9011
+Vastse-Kuuste vald Tartumaa,58.1481,26.9577
+Vastse-Kuuste vald, Tartumaa, 58.08597, 26.8911
+Vastse-Moisa vald Viljandimaa,58.3937,25.4464
+Vastse-Nõo vald, Tartumaa: 58.1379, 26.4166
+Vastse-Otepää vald, Tartumaa, 58.052, 26.476
+Vastseliina Vorumaa,57.8301,27.1973
+Vastseliina Vorumaa,57.8325,27.2716
+Vastseliina vald Vorumaa,57.8185,27.1756
+Vastseliina vald, Võrumaa, 57.788, 27.040
+Vasula vald Tartumaa,58.2831,26.8616
+Vee vald Parnumaa,58.3857,25.6746
+Velise vald, Läänemaa, 59.101, 24.138
+Veltsa vald, Läänemaa, 58.89183, 24.17219
+Veltsa vald, Läänemaa, 58.899, 23.882
+Venemaa (Tartu): 58.3727, 26.7249
+Venevere vald, Virumaa, 59.019, 26.554
+Veriora Võrumaa, 57.9988, 27.0577
+Veriora vald, Võrumaa: 57.9477, 27.0683
+Veriora vald, Võrumaa: 57.9678, 27.2457
+Veriora, 57.976, 27.180
+Veski vald, Tartumaa: 58.4146, 26.3635
+Vesneri vald Tartumaa,58.547
+Vesneri vald, Tartumaa, 58.501, 26.667
+Vesneri, Tartumaa: 58.2174, 27.0516
+Vigala vald, Läänemaa: 58.8792, 24.3714
+Vigala vald, Läänemaa: 58.9341, 24.2828
+Vigala, Läänemaa, 58.903, 23.903
+Vihterpalu vald, Harjumaa, 59.27603, 25.60337
+Vihula vald Virumaa,59.5739,26.198
+Vihula vald, Virumaa, 59.545, 26.215
+Viiburi kihelkond, Finland: 60.5953309,28.0784155
+Viiburi, 60.71278, 28.75722
+Viimsi mõis, Harjumaa, 59.509, 24.847
+Viiratsi vald, Viljandimaa, 58.365, 25.579
+Viiratsi vald, Viljandimaa: 58.3647, 25.6226
+Viljandi Viljandimaa, 58.36389, 25.59083
+Viljandi vald Viljandimaa,58.3259,25.6164
+Viljandi vald, 58.35067, 25.67802
+Viljandi,58.3639,25.5906
+Viljandimaa: 58.3739, 25.5938
+Viru-Jaagupi, Virumaa, 59.092, 26.313
+Viru-Nigula, Ida-Virumaa, 59.400, 26.692
+Virumaa, 59.30118, 26.36694
+Vohmuta Jarvamaa,58.8992,25.8044
+Vohmuta Jarvamaa,58.8993,26.188
+Voisiku vald Viljandimaa,58.0925,25.8751
+Voisiku vald, Viljandimaa: 58.3882, 25.4887
+Voisiku, Viljandimaa: 58.2852, 25.4301
+Voka vald, Virumaa, 59.392, 27.573
+Voltveti vald, Pärnumaa, 58.615, 24.516
+Voltveti, Pärnumaa, 58.170, 24.072
+Vonnu maakond, Lääne maakond, 58.88167, 23.85667
+Voopsu alev Vorumaa,57.863,27.1375
+Voopsu,58.5454,26.1689
+Voru,57.8363,27.0196
+Vorumaa,57.8302,26.9778
+Vosu Virumaa,59.5451,25.8754
+Votikvere vald, Tartumaa, 58.343, 26.663
+Votikvere vald, Tartumaa, 58.46465, 27.19521
+Väike-Antsla vald, Võrumaa, 57.708, 26.563
+Väike-Lähtru vald, Läänemaa: 58.913333, 23.890556
+Väike-Maarja kihelkond, Virumaa: 59.1686, 26.1349
+Väike-Maarja: 59.0991, 26.1831
+Vändra vald, Pärnumaa: 58.6296, 24.8137
+Värmland, Sweden: 59.5263, 13.2495
+Vääbina vald, Võrumaa, 57.706, 26.665
+Võhmuta vald, Järvamaa, 58.98702, 25.72966
+Võnnu vald Virumaa, 58.8766, 27.2192
+Võnnu, Läänemaa: 58.9696, 23.9478
+Võnnu, Virumaa: 58.9580, 26.5862
+Võru vald, Võrumaa, 57.903, 26.985
+Änge vald, Pärnumaa: 58.4756, 24.6829
+Õisu vald, Viljandimaa: 58.0991, 25.5009
+Ülila, Tartumaa: 58.4037, 26.7287
