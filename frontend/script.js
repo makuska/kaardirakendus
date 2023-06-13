@@ -158,7 +158,7 @@ searchbox.onButton("click", function () {
 searchbox.onInput("keyup", function (e) {
   let value = searchbox.getValue();
   if (value !== "") {
-    const searchUrl = `http://localhost:8080/api/v1/searchByFirstName?name=${value}`;
+    const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
 
     fetch(searchUrl)
         .then(response => response.json())
@@ -170,7 +170,13 @@ searchbox.onInput("keyup", function (e) {
 
           // Add the persons as dropdown options
           persons.forEach(person => {
-            searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
+            if (person.varjunimi == null){
+              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
+              // searchbox.addItem(person.perekonnanimi + " " + person.eesnimi);
+            } else {
+              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
+            }
+
           });
         })
         .catch(error => {
@@ -247,44 +253,6 @@ function getCenterOfMap() {
 
 const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
-
-// Temporary stuff
-// center the map when popup is clicked
-
-// let tammikas = {
-//   name: "Anton Hansen",
-//   coordinates: [58.290005, 24.622421],
-//   popupContent: "Eesnimi: Anton\n" +
-//       "\nPerekonnanimi: Hansen \n" +
-//       "Varjunimi: Tammsaare\n" +
-//       "Sünniaeg: 30.01.1878\n" +
-//       "Kasvukoht: Albu vald Järvamaa\n" +
-//       "Valdkond: Kirjandus\n" +
-//       "Tunnus: Kirjanik"
-// }
-//
-// function clickZoom(e) {
-//   const selectedPerson = e.target.getPopup().getContent();
-//
-//   // Find the corresponding person from the points array
-//   const person = tammikas.find(item => item.name === selectedPerson);
-//
-//   if (person) {
-//     const [lat, lng] = person.coordinates;
-//     map.setView([lat, lng], 15); // Center the map on the predefined coordinates with a zoom level of 15
-//   }
-// }
-
-const kml = '/Users/Diana/Downloads/koik.kml';
-
-// // Create a new layer group for the KML data
-// const kmlLayer = L.layerGroup();
-//
-// // Load the KML file using omnivore
-// omnivore.kml(kml).addTo(kmlLayer);
-//
-// // Add the KML layer to the map
-// map.addLayer(kmlLayer);
 
 
 // MiniMap
