@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Repository("jdbc")
+@Repository("jdbc-person")
 public class PersonJDBCDataAccessService implements PersonDao {
 
     private final JdbcTemplate jdbcTemplate;
@@ -41,6 +41,15 @@ public class PersonJDBCDataAccessService implements PersonDao {
                 SELECT *
                 FROM synnigeograafia.avalikud_koos_koordinaatidega
                 LIMIT 1000 -- To make sure that user can't request large chunks of data
+                """;
+        return jdbcTemplate.query(sql, personRowMapper);
+    }
+
+    @Override
+    public List<Person> selectAllPersonsNoLimit() {
+        var sql = """
+                SELECT *
+                FROM synnigeograafia.avalikud_koos_koordinaatidega
                 """;
         return jdbcTemplate.query(sql, personRowMapper);
     }

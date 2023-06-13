@@ -1,13 +1,11 @@
 package com.synnigeograafia.backend.controller;
 
-import com.synnigeograafia.backend.model.PersonDTO;
-import com.synnigeograafia.backend.repository.DAO.PersonDao;
+import com.synnigeograafia.backend.DTO.PersonDTO;
 
 import com.synnigeograafia.backend.service.PersonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

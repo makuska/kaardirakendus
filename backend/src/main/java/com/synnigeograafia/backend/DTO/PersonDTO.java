@@ -1,4 +1,4 @@
-package com.synnigeograafia.backend.model;
+package com.synnigeograafia.backend.DTO;
 
 import lombok.*;
 

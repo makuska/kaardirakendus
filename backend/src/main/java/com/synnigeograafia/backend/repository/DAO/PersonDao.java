@@ -10,5 +10,6 @@ import java.util.UUID;
 public interface PersonDao {
     Optional<Person> selectPersonById(UUID id);
     List<Person> selectAllPersons();
+    List<Person> selectAllPersonsNoLimit();
     List<Person> selectPersonByNameLikeIgnoreCase(String name);
 }
