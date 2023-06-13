@@ -43,76 +43,6 @@ const zoom = 8;
 const lat = 58.636856;
 const lng = 25.334473;
 
-// sidebar
-
-const menuItems = document.querySelectorAll(".menu-item");
-const sidebar = document.querySelector(".sidebar");
-const buttonClose = document.querySelector(".close-button");
-
-menuItems.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    const target = e.target;
-
-    if (
-        target.classList.contains("active-item") ||
-        !document.querySelector(".active-sidebar")
-    ) {
-      document.body.classList.toggle("active-sidebar");
-    }
-
-    // show content
-    showContent(target.dataset.item);
-    // add active class to menu item
-    addRemoveActiveItem(target, "active-item");
-  });
-});
-
-// close sidebar when click on close button
-buttonClose.addEventListener("click", () => {
-  closeSidebar();
-});
-
-// remove active class from menu item and content
-function addRemoveActiveItem(target, className) {
-  const element = document.querySelector(`.${className}`);
-  target.classList.add(className);
-  if (!element) return;
-  element.classList.remove(className);
-}
-
-// show specific content
-function showContent(dataContent) {
-  const idItem = document.querySelector(`#${dataContent}`);
-  addRemoveActiveItem(idItem, "active-content");
-}
-
-// --------------------------------------------------
-// close when click esc
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeSidebar();
-  }
-});
-
-// close sidebar when click outside
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".sidebar")) {
-    closeSidebar();
-  }
-});
-
-// --------------------------------------------------
-// close sidebar
-
-function closeSidebar() {
-  document.body.classList.remove("active-sidebar");
-  const element = document.querySelector(".active-item");
-  const activeContent = document.querySelector(".active-content");
-  if (!element) return;
-  element.classList.remove("active-item");
-  activeContent.classList.remove("active-content");
-}
-
 // coordinate array with popup text
 let points = [
   [59.091382, 25.817871, "point 1"],
@@ -228,7 +158,11 @@ searchbox.onButton("click", function () {
 searchbox.onInput("keyup", function (e) {
   let value = searchbox.getValue();
   if (value !== "") {
+<<<<<<< Updated upstream
     const searchUrl = `http://localhost:8080/api/v1/searchByFirstName?name=${value}`;
+=======
+    const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
+>>>>>>> Stashed changes
 
     fetch(searchUrl)
         .then(response => response.json())
@@ -240,7 +174,13 @@ searchbox.onInput("keyup", function (e) {
 
           // Add the persons as dropdown options
           persons.forEach(person => {
-            searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
+            if (person.varjunimi == null){
+              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
+              // searchbox.addItem(person.perekonnanimi + " " + person.eesnimi);
+            } else {
+              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
+            }
+
           });
         })
         .catch(error => {
@@ -317,44 +257,6 @@ function getCenterOfMap() {
 
 const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
-
-// Temporary stuff
-// center the map when popup is clicked
-
-// let tammikas = {
-//   name: "Anton Hansen",
-//   coordinates: [58.290005, 24.622421],
-//   popupContent: "Eesnimi: Anton\n" +
-//       "\nPerekonnanimi: Hansen \n" +
-//       "Varjunimi: Tammsaare\n" +
-//       "Sünniaeg: 30.01.1878\n" +
-//       "Kasvukoht: Albu vald Järvamaa\n" +
-//       "Valdkond: Kirjandus\n" +
-//       "Tunnus: Kirjanik"
-// }
-//
-// function clickZoom(e) {
-//   const selectedPerson = e.target.getPopup().getContent();
-//
-//   // Find the corresponding person from the points array
-//   const person = tammikas.find(item => item.name === selectedPerson);
-//
-//   if (person) {
-//     const [lat, lng] = person.coordinates;
-//     map.setView([lat, lng], 15); // Center the map on the predefined coordinates with a zoom level of 15
-//   }
-// }
-
-const kml = '/Users/Diana/Downloads/koik.kml';
-
-// // Create a new layer group for the KML data
-// const kmlLayer = L.layerGroup();
-//
-// // Load the KML file using omnivore
-// omnivore.kml(kml).addTo(kmlLayer);
-//
-// // Add the KML layer to the map
-// map.addLayer(kmlLayer);
 
 
 // MiniMap
