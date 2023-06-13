@@ -172,18 +172,46 @@ function createCustomDivIcon() {
 }
 
 
-// Add markers to the layer
-for (let i = 0; i < points.length; i++) {
-  const [lat, lng, title] = points[i];
+// // Add markers to the layer
+// for (let i = 0; i < points.length; i++) {
+//   const [lat, lng, title] = points[i];
+//
+//   // Create a marker with the custom divIcon
+//   const marker = L.marker(new L.LatLng(lat, lng), {
+//     icon: createCustomDivIcon(i + 1), // Use the number (i + 1) as the content for the bubble
+//   }).bindPopup(title).on("click", clickZoom); //Centers the map when popup is clicked
+//
+//   // Add the marker to the marker cluster group
+//   markers.addLayer(marker);
+// }
 
-  // Create a marker with the custom divIcon
-  const marker = L.marker(new L.LatLng(lat, lng), {
-    icon: createCustomDivIcon(i + 1), // Use the number (i + 1) as the content for the bubble
-  }).bindPopup(title).on("click", clickZoom); //Centers the map when popup is clicked
+// Fetch marker data from the backend API
+// Define a function to fetch and create markers
+function loadMarkers() {
+  fetch('http://localhost:8080/api/v1/marker/getMarkers')
+      .then(response => response.json())
+      .then(markerData => {
+        // Iterate over the marker data and create markers
+        markerData.forEach(data => {
+          const { latitude, longitude, title } = data;
 
-  // Add the marker to the marker cluster group
-  markers.addLayer(marker);
+          // Create a marker with the custom divIcon
+          const marker = L.marker(new L.LatLng(latitude, longitude), {
+            icon: createCustomDivIcon(), // Use your custom icon here
+          }).bindPopup(title).on("click", clickZoom);
+
+          // Add the marker to the marker cluster group
+          markers.addLayer(marker);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching marker data:', error);
+      });
 }
+
+// Call the loadMarkers function when the page loads
+window.addEventListener('load', loadMarkers);
+
 
 
 // Add all markers to map
