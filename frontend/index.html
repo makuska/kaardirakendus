@@ -42,6 +42,97 @@
   </head>
 
   <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M15.422 16.594 14.016 18l-6-6 6-6 1.406 1.406L10.828 12z" />
+    </symbol>
+    <symbol id="icon-clear" viewBox="0 0 24 24">
+      <path
+              d="M18.984 6.422 13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"
+      />
+    </symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24">
+      <path
+              d="M20.016 8.016V6L12 11.016 3.984 6v2.016L12 12.985zm0-4.032q.797 0 1.383.609t.586 1.406v12q0 .797-.586 1.406t-1.383.609H3.985q-.797 0-1.383-.609t-.586-1.406v-12q0-.797.586-1.406t1.383-.609h16.031z"
+      />
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path
+              d="M3 13h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2zm0-6h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2zm0 12h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2z"
+      />
+    </symbol>
+    <symbol id="icon-person" viewBox="0 0 24 24">
+      <path
+              d="M12 14.016q2.531 0 5.273 1.102t2.742 2.883v2.016H3.984v-2.016q0-1.781 2.742-2.883t5.273-1.102zM12 12q-1.641 0-2.813-1.172T8.015 8.015t1.172-2.836T12 3.984t2.813 1.195 1.172 2.836-1.172 2.813T12 12z"
+      />
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24">
+      <path
+              d="M12 15.516q1.453 0 2.484-1.031t1.031-2.484-1.031-2.484T12 8.486 9.516 9.517t-1.031 2.484 1.031 2.484T12 15.516zm7.453-2.532 2.109 1.641q.328.234.094.656L19.64 18.75q-.188.328-.609.188l-2.484-.984q-.984.703-1.688.984l-.375 2.625q-.094.422-.469.422H9.984q-.375 0-.469-.422l-.375-2.625q-.891-.375-1.688-.984l-2.484.984q-.422.141-.609-.188l-2.016-3.469q-.234-.422.094-.656l2.109-1.641q-.047-.328-.047-.984t.047-.984L2.437 9.375q-.328-.234-.094-.656L4.359 5.25q.188-.328.609-.188l2.484.984q.984-.703 1.688-.984l.375-2.625q.094-.422.469-.422h4.031q.375 0 .469.422l.375 2.625q.891.375 1.688.984l2.484-.984q.422-.141.609.188l2.016 3.469q.234.422-.094.656l-2.109 1.641q.047.328.047.984t-.047.984z"
+      />
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <path
+              d="M17.9 16.3l3.5 3.5-1.4 1.4-3.5-3.5c-1.4.9-3 1.4-4.7 1.4C4.5 20 0 15.5 0 10S4.5 0 10 0s10 4.5 10 10c0 1.8-.5 3.4-1.4 4.7zM10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8c0-4.4-3.6-8-8-8z"
+      />
+    </symbol>
+  </svg>
+  <div class="sidebar">
+    <button aria-label="close sidebar" type="button" class="close-button">
+      <svg>
+        <use xlink:href="#icon-clear" />
+      </svg>
+    </button>
+
+    <ul class="sidebar-menu">
+      <li class="menu-item" data-item="menu">
+        <svg><use xlink:href="#icon-menu"></use></svg>
+      </li>
+      <li class="menu-item" data-item="person">
+        <svg><use xlink:href="#icon-person"></use></svg>
+      </li>
+      <li class="menu-item" data-item="email">
+        <svg><use xlink:href="#icon-email"></use></svg>
+      </li>
+      <li class="menu-item" data-item="search">
+        <svg><use xlink:href="#icon-search"></use></svg>
+      </li>
+      <li class="menu-item" data-item="settings">
+        <svg><use xlink:href="#icon-settings"></use></svg>
+      </li>
+
+    </ul>
+
+    <div class="sidebar-content">
+      <div class="item-content" id="menu">
+        <h2>Eesti avalike tegelaste sünnigeograafia kaart</h2>
+        <div class="content">
+          Siin on mingi jutt meie grupi kohta.
+        </div>
+      </div>
+      <div class="item-content" id="person">
+        <h2>Admini sisselogimine</h2>
+        <div class="content">
+          Siit saab admin sisse logida
+        </div>
+      </div>
+      <div class="item-content" id="email">
+        <h2>Võtke meiega ühendust!</h2>
+        <div class="content">
+          LAIZALToü@laizalt.ee
+        </div>
+      </div>
+      <div class="item-content" id="settings">
+        <h2>Lae alla</h2>
+        <div class="content">settings</div>
+      </div>
+      <div class="item-content" id="search">
+        <h2>Otsing</h2>
+      </div>
+    </div>
+    </div>
+
+
     <div id="map"></div>
     <script type="module" src="script.js"></script>
 <!--    <script src="./dist/bundle.js" defer></script>-->

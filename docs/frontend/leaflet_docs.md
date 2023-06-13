@@ -314,3 +314,96 @@ const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
 ***
 
+```javascript
+const menuItems = document.querySelectorAll(".menu-item");
+const sidebar = document.querySelector(".sidebar");
+const buttonClose = document.querySelector(".close-button");
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const target = e.target;
+
+    if (
+        target.classList.contains("active-item") ||
+        !document.querySelector(".active-sidebar")
+    ) {
+      document.body.classList.toggle("active-sidebar");
+    }
+
+    // show content
+    showContent(target.dataset.item);
+    // add active class to menu item
+    addRemoveActiveItem(target, "active-item");
+  });
+});
+
+// close sidebar when click on close button
+buttonClose.addEventListener("click", () => {
+  closeSidebar();
+});
+
+// remove active class from menu item and content
+function addRemoveActiveItem(target, className) {
+  const element = document.querySelector(`.${className}`);
+  target.classList.add(className);
+  if (!element) return;
+  element.classList.remove(className);
+}
+
+// show specific content
+function showContent(dataContent) {
+  const idItem = document.querySelector(`#${dataContent}`);
+  addRemoveActiveItem(idItem, "active-content");
+}
+
+// --------------------------------------------------
+// close when click esc
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeSidebar();
+  }
+});
+
+// close sidebar when click outside
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".sidebar")) {
+    closeSidebar();
+  }
+});
+
+// --------------------------------------------------
+// close sidebar
+
+function closeSidebar() {
+  document.body.classList.remove("active-sidebar");
+  const element = document.querySelector(".active-item");
+  const activeContent = document.querySelector(".active-content");
+  if (!element) return;
+  element.classList.remove("active-item");
+  activeContent.classList.remove("active-content");
+}
+```
+The code begins by selecting all elements with the class "menu-item" and assigning them to the menuItems variable. It also selects the element with the class "sidebar" and assigns it to the sidebar variable. Finally, it selects the element with the class "close-button" and assigns it to the buttonClose variable.
+
+The forEach loop iterates over each menu item and adds a click event listener to it. When a menu item is clicked, the following actions are performed:
+a. The target of the click event is stored in the target variable.
+b. If the clicked menu item already has the class "active-item" or there is no element with the class "active-sidebar", the class "active-sidebar" is toggled on the document.body element.
+c. The showContent function is called with the data-item value of the clicked menu item, which is used to show specific content.
+d. The addRemoveActiveItem function is called to add the "active-item" class to the clicked menu item and remove it from any other menu item.
+
+The buttonClose element has a click event listener attached to it, so when the close button is clicked, the closeSidebar function is called.
+
+The addRemoveActiveItem function is a reusable function that adds the specified class to the target element and removes the same class from any other element with that class name.
+
+The showContent function is responsible for showing specific content based on the provided dataContent. It selects the element with the corresponding ID and calls the addRemoveActiveItem function to add the "active-content" class.
+
+The code listens for the "keydown" event on the document and checks if the pressed key is "Escape" (key code 27). If it is, the closeSidebar function is called.
+
+The code listens for the "click" event on the document and checks if the clicked element is not a child of the element with the class "sidebar". If it's not, the closeSidebar function is called.
+
+The closeSidebar function is responsible for closing the sidebar:
+a. It removes the "active-sidebar" class from the document.body element.
+b. It selects the element with the class "active-item" and the element with the class "active-content", and removes the "active-item" and "active-content" classes from them, respectively.
+
+Overall, this code sets up event listeners for menu items, the close button, the "Escape" key press, and clicks outside the sidebar to handle opening and closing the sidebar, showing specific content, and adding/removing active classes from menu items and content elements.
+

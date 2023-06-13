@@ -43,6 +43,76 @@ const zoom = 8;
 const lat = 58.636856;
 const lng = 25.334473;
 
+// sidebar
+
+const menuItems = document.querySelectorAll(".menu-item");
+const sidebar = document.querySelector(".sidebar");
+const buttonClose = document.querySelector(".close-button");
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const target = e.target;
+
+    if (
+        target.classList.contains("active-item") ||
+        !document.querySelector(".active-sidebar")
+    ) {
+      document.body.classList.toggle("active-sidebar");
+    }
+
+    // show content
+    showContent(target.dataset.item);
+    // add active class to menu item
+    addRemoveActiveItem(target, "active-item");
+  });
+});
+
+// close sidebar when click on close button
+buttonClose.addEventListener("click", () => {
+  closeSidebar();
+});
+
+// remove active class from menu item and content
+function addRemoveActiveItem(target, className) {
+  const element = document.querySelector(`.${className}`);
+  target.classList.add(className);
+  if (!element) return;
+  element.classList.remove(className);
+}
+
+// show specific content
+function showContent(dataContent) {
+  const idItem = document.querySelector(`#${dataContent}`);
+  addRemoveActiveItem(idItem, "active-content");
+}
+
+// --------------------------------------------------
+// close when click esc
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeSidebar();
+  }
+});
+
+// close sidebar when click outside
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".sidebar")) {
+    closeSidebar();
+  }
+});
+
+// --------------------------------------------------
+// close sidebar
+
+function closeSidebar() {
+  document.body.classList.remove("active-sidebar");
+  const element = document.querySelector(".active-item");
+  const activeContent = document.querySelector(".active-content");
+  if (!element) return;
+  element.classList.remove("active-item");
+  activeContent.classList.remove("active-content");
+}
+
 // coordinate array with popup text
 let points = [
   [59.091382, 25.817871, "point 1"],
