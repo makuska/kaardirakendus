@@ -41,4 +41,17 @@ public class PersonService {
                 .map(personMapper::personToPersonDto)
                 .collect(Collectors.toList());
     }
+    public List<PersonDTO> getPersonByFirstNameIgnoreCaseLike2(String firstName, String lastName){
+        return this.personDao.selectPersonsBySearchCriteria(firstName, lastName)
+                .stream()
+                .map(personMapper::personToPersonDto)
+                .collect(Collectors.toList());
+    }
+
+    public List<PersonDTO> getPersonByFirstNameIgnoreCaseLike2(String fullName) {
+        return this.personDao.selectPersonsBySearchFullName(fullName)
+                .stream()
+                .map(personMapper::personToPersonDto)
+                .collect(Collectors.toList());
+    }
 }

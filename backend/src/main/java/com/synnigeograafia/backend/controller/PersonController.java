@@ -47,4 +47,19 @@ public class PersonController {
         return ResponseEntity.ok(this.personService.getPersonByFirstNameIgnoreCaseLike(name));
     }
 
+    @GetMapping("/searchByName")
+    public ResponseEntity<List<PersonDTO>> searchPersonByNameLikeCaseInsensitive2(
+            @RequestParam(required = false) String firstName,
+            @RequestParam(required = false) String lastName){
+//        logger.info("Received request to fetch person with name: {}", name);
+        return ResponseEntity.ok(this.personService.getPersonByFirstNameIgnoreCaseLike2(firstName, lastName));
+    }
+
+    @GetMapping("/searchByFullName")
+    public ResponseEntity<List<PersonDTO>> searchPersonByNameLikeCaseInsensitive3(
+            @RequestParam String fullName){
+//        logger.info("Received request to fetch person with name: {}", name);
+        return ResponseEntity.ok(this.personService.getPersonByFirstNameIgnoreCaseLike2(fullName));
+    }
+
 }
