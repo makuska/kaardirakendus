@@ -90,6 +90,12 @@ svg:not(:root) {
   border-right: 2px solid rgba(0, 0, 0, 0.2);
   height: 100%;
 }
+@media (prefers-color-scheme: dark) {
+    .sidebar{
+        background-color: #000;
+        color: white;
+    }
+}
 
 .active-sidebar .sidebar {
   max-width: 760px;

@@ -19,14 +19,6 @@ const stamenAttrib = 'Map data &copy; <a href="https://stamen.com">Stamen</a> co
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
-const stamenMap = L.tileLayer(stamenUrl, {
-  attribution: stamenAttrib,
-  subdomains: 'abcd',
-  minZoom: 0,
-  maxZoom: 20,
-  ext: 'png',
-});
-
 // config map
 let config = {
   // See siin määrab ära default mapi
@@ -192,10 +184,10 @@ map.addLayer(markers);
 let baseLayers = {
   "Klassika": osmMap,
   "Dark mode": landMap,
-  "Stamen Toner": stamenMap,
 };
 
 L.control.layers(baseLayers).addTo(map);
+map.on("baselayerchange", function(kiht){console.log(kiht)} )
 
 // Scale: imperial (miles) is set to false, only the metric scale is implemented
 L.control.scale({imperial: false, maxWidth: 100}).addTo(map);
@@ -328,3 +320,7 @@ const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 // MiniMap
 const osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13});
 const miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
+
+
+
