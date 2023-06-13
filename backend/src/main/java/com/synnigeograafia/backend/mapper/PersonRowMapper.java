@@ -20,7 +20,9 @@ public class PersonRowMapper implements RowMapper<Person> {
         String surmaaeg = rs.getString("surmaaeg");
         String valdkond = rs.getString("valdkond");
         String tunnus = rs.getString("tunnus");
+        String x_koordinaat = rs.getString("x_koordinaat");
+        String y_koordinaat = rs.getString("y_koordinaat");
 
-        return new Person(id, eesnimi, perekonnanimi, varjunimi, synniaeg, kasvukoht, surmaaeg, valdkond, tunnus);
+        return new Person(id, eesnimi, perekonnanimi, varjunimi, synniaeg, kasvukoht, surmaaeg, valdkond, tunnus, x_koordinaat, y_koordinaat);
     }
 }

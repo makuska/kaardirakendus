@@ -41,7 +41,7 @@ public class PersonController {
     }
 
     // http://localhost:8080/api/v1/searchByFirstName?name=
-    @GetMapping("/searchByFirstName")
+    @GetMapping("/searchByName")
     public ResponseEntity<List<PersonDTO>> searchPersonByNameLikeCaseInsensitive(@RequestParam String name){
         logger.info("Received request to fetch person with name: {}", name);
         return ResponseEntity.ok(this.personService.getPersonByFirstNameIgnoreCaseLike(name));

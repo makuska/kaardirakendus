@@ -14,6 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "avalikud_koos_lpprdinaatidega")
 public class Person {
 
     @Id //Will be changed to uuid
@@ -45,5 +46,11 @@ public class Person {
     @Nullable
     @Column(name = "tunnus")
     private String tunnus;
+    @Nullable
+    @Column(name = "x_koordinaat")
+    private String x_koordinaat;
+    @Nullable
+    @Column(name = "y_koordinaat")
+    private String y_koordinaat;
 
 }
