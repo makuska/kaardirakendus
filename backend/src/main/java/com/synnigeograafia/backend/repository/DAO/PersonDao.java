@@ -11,6 +11,4 @@ public interface PersonDao {
     Optional<Person> selectPersonById(UUID id);
     List<Person> selectAllPersons();
     List<Person> selectPersonByNameLikeIgnoreCase(String name);
-    List<Person> selectPersonsBySearchCriteria(String firstName, String lastName);
-    List<Person> selectPersonsBySearchFullName(String fullName);
 }
