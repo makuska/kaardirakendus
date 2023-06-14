@@ -13,19 +13,19 @@ const osmAttrib = `&copy; ${osmLink} Contributors`;
 const landUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png";
 const cartoAttrib = `&copy; ${osmLink} Contributors & ${cartoDB}`;
 
-const stamenUrl = 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}';
-const stamenAttrib = 'Map data &copy; <a href="https://stamen.com">Stamen</a> contributors';
+// const stamenUrl = 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}';
+// const stamenAttrib = 'Map data &copy; <a href="https://stamen.com">Stamen</a> contributors';
 
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
-const stamenMap = L.tileLayer(stamenUrl, {
-  attribution: stamenAttrib,
-  subdomains: 'abcd',
-  minZoom: 0,
-  maxZoom: 20,
-  ext: 'png',
-});
+// const stamenMap = L.tileLayer(stamenUrl, {
+//   attribution: stamenAttrib,
+//   subdomains: 'abcd',
+//   minZoom: 0,
+//   maxZoom: 20,
+//   ext: 'png',
+// });
 
 // config map
 let config = {
@@ -122,10 +122,50 @@ map.addLayer(markers);
 let baseLayers = {
   "Klassika": osmMap,
   "Dark mode": landMap,
-  "Stamen Toner": stamenMap,
 };
 
 L.control.layers(baseLayers).addTo(map);
+map.on("baselayerchange", function(kiht){console.log(kiht)} )
+
+map.on("baselayerchange", function(event) {
+  let selectedLayer = event.name;
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBefore = document.querySelector(".sidebar::before");
+  let activeItem = document.querySelector(".active-item");
+  let submitButton = document.querySelector(".item-content input[type='submit']");
+  let sidebarContent = document.querySelector(".sidebar-content");
+  let sidebarHeaderText = document.querySelector(".sidebar-content h2");
+  let sidebar2 = document.querySelector(".item-content form");
+  let sidebar3 = document.querySelector(".item-content .content");
+  let sidebar4 = document.querySelector(".item-content");
+
+
+  if (selectedLayer === "Klassika") {
+    sidebar.style.background = "#fff"; // Light color
+    sidebarBefore.style.background = "#7ccae3";
+    activeItem.style.background = "#7ccae3";
+    submitButton.style.backgroundColor = "#5299af";
+    submitButton.style.color = "white";
+    sidebarContent.style.opacity = "0";
+    sidebarContent.style.pointerEvents = "none";
+    sidebarHeaderText.style.color = "black";
+    sidebar2.style.color ="black";
+    sidebar3.style.color ="black";
+    sidebar4.style.color ="black";
+  } else if (selectedLayer === "Dark mode") {
+    sidebar.style.background = "#333"; // Dark color
+    sidebarBefore.style.background = "#333";
+    activeItem.style.background = "#333";
+    submitButton.style.backgroundColor = "#5299af";
+    submitButton.style.color = "white";
+    sidebarContent.style.opacity = "1";
+    sidebarContent.style.pointerEvents = "visible";
+    sidebarHeaderText.style.color = "#ccc"; // Lighter text color
+    sidebar2.style.color ="#ccc";
+    sidebar3.style.color ="#ccc";
+    sidebar4.style.color ="#ccc";
+  }
+});
 
 // Scale: imperial (miles) is set to false, only the metric scale is implemented
 L.control.scale({imperial: false, maxWidth: 100}).addTo(map);

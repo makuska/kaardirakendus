@@ -210,6 +210,9 @@ svg:not(:root) {
   margin-top: 8px;
   padding-right: 10px;
   height: 100%;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
 }
 
 .item-content .content {
@@ -217,6 +220,9 @@ svg:not(:root) {
   margin-top: 15px;
   height: calc(100% - 50px);
   padding-right: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
 }
 
 .sidebar-content {
