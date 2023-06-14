@@ -199,20 +199,39 @@ L.control.layers(baseLayers).addTo(map);
 // Scale: imperial (miles) is set to false, only the metric scale is implemented
 L.control.scale({imperial: false, maxWidth: 100}).addTo(map);
 
-map.on("baselayerchange", function(event) {
-  let selectedLayer = event.name;
+function setStyles(selectedLayer) {
   let sidebar = document.querySelector(".sidebar");
   let sidebartext = document.querySelector(".sidebar-content");
-
+  let sidebarelements = document.querySelector(".sidebar svg");
 
   if (selectedLayer === "Klassika") {
     sidebar.style.background = "#fff"; // Light color
-    sidebartext.style.color ="black";
+    sidebartext.style.color = "black";
+    sidebarelements.style.fill ="#3f3f3f";
+    document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #64a1e8; }";
+    sidebar.classList.add("klassika");
+    sidebar.classList.remove("dark-mode");
   } else if (selectedLayer === "Dark mode") {
     sidebar.style.background = "#333"; // Dark color
-    sidebartext.style.color ="#ccc";
+    sidebartext.style.color = "#ccc";
+    sidebarelements.style.fill ="#ccc";
+    document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #163c48; }";
+    sidebar.classList.add("dark-mode");
+    sidebar.classList.remove("klassika");
   }
+}
+
+map.on("baselayerchange", function(event) {
+  let selectedLayer = event.name;
+  setStyles(selectedLayer);
 });
+
+// Set initial styles when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  setStyles("Klassika");
+});
+
+
 
 
 // Searchbox
