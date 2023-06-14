@@ -199,6 +199,21 @@ L.control.layers(baseLayers).addTo(map);
 // Scale: imperial (miles) is set to false, only the metric scale is implemented
 L.control.scale({imperial: false, maxWidth: 100}).addTo(map);
 
+map.on("baselayerchange", function(event) {
+  let selectedLayer = event.name;
+  let sidebar = document.querySelector(".sidebar");
+  let sidebartext = document.querySelector(".sidebar-content");
+
+
+  if (selectedLayer === "Klassika") {
+    sidebar.style.background = "#fff"; // Light color
+    sidebartext.style.color ="black";
+  } else if (selectedLayer === "Dark mode") {
+    sidebar.style.background = "#333"; // Dark color
+    sidebartext.style.color ="#ccc";
+  }
+});
+
 
 // Searchbox
 let searchbox = L.control.searchbox({
