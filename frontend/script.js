@@ -113,42 +113,6 @@ function closeSidebar() {
   activeContent.classList.remove("active-content");
 }
 
-// coordinate array with popup text
-let points = [
-  [59.091382, 25.817871, "point 1"],
-  [59.068802, 25.169678, "point 2"],
-  [58.551061, 24.290771, "point 3"],
-  [58.81943, 23.928223, "point 4"],
-  [58.499435, 24.433594, "point 5"],
-  [58.338334, 25.070801, "point 6"],
-  [58.585436, 23.291016, "point 7"],
-  [57.815504, 27.279053, "point 8"],
-  [57.838903, 26.531982, "point 9"],
-  [58.378679, 26.993408, "point 10"],
-  [59.226556, 26.740723, "point 11"],
-  [59.417138, 26.542969, "point 12"],
-  [58.345542, 24.183655, "point 13"],
-  [58.331125, 24.818115, "point 14"],
-  [58.377238, 24.614868, "point 15"],
-  [58.450607, 24.587402, "point 16"],
-  [58.284952, 24.194641, "point 17"],
-  [58.352748, 24.796143, "point 18"],
-  [58.297944, 24.623108, "point 19"],
-  [58.256063, 24.568176, "point 20"],
-  [58.543895, 24.499512, "point 21"],
-  [58.454918, 24.716492, "point 22"],
-  [58.452044, 24.988403, "point 23"],
-  [58.2882, 24.614182, "point 24"],
-  [58.2882, 24.575043, "point 25"],
-  [58.290005, 24.622421, "Eesnimi: Anton" + '<br>' +
-  "\nPerekonnanimi: Hansen"+ '<br>' +
-  "Varjunimi: Tammsaare"+ '<br>' +
-  "Sünniaeg: 30.01.1878"+ '<br>' +
-  "Kasvukoht: Albu vald Järvamaa"+ '<br>' +
-  "Valdkond: Kirjandus"+ '<br>' +
-  "Tunnus: Kirjanik"]
-];
-
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
 
@@ -158,7 +122,7 @@ osmMap.addTo(map);
 // L.MarkerClusterGroup extends L.FeatureGroup
 // by clustering the markers contained within
 let markers = L.markerClusterGroup({
-  spiderfyOnMaxZoom: false, // Disable spiderfying behavior
+  spiderfyOnMaxZoom: true, // Disable spiderfying behavior
   showCoverageOnHover: false, // Disable cluster spiderfier polygon
 });
 
@@ -171,20 +135,6 @@ function createCustomDivIcon() {
   });
 }
 
-
-// // Add markers to the layer
-// for (let i = 0; i < points.length; i++) {
-//   const [lat, lng, title] = points[i];
-//
-//   // Create a marker with the custom divIcon
-//   const marker = L.marker(new L.LatLng(lat, lng), {
-//     icon: createCustomDivIcon(i + 1), // Use the number (i + 1) as the content for the bubble
-//   }).bindPopup(title).on("click", clickZoom); //Centers the map when popup is clicked
-//
-//   // Add the marker to the marker cluster group
-//   markers.addLayer(marker);
-// }
-
 // Fetch marker data from the backend API
 // Define a function to fetch and create markers
 function loadMarkers() {
@@ -193,12 +143,31 @@ function loadMarkers() {
       .then(markerData => {
         // Iterate over the marker data and create markers
         markerData.forEach(data => {
-          const { latitude, longitude, title } = data;
+          const { latitude, longitude, title, body } = data;
 
           // Create a marker with the custom divIcon
           const marker = L.marker(new L.LatLng(latitude, longitude), {
             icon: createCustomDivIcon(), // Use your custom icon here
-          }).bindPopup(title).on("click", clickZoom);
+          });
+
+          // Create the popup content
+          const popupContent = document.createElement('div');
+
+          // Create the title element
+          const titleElement = document.createElement('h3');
+          titleElement.textContent = title;
+          popupContent.appendChild(titleElement);
+
+          // Create the body element
+          const bodyElement = document.createElement('div');
+          bodyElement.innerHTML = body;
+          popupContent.appendChild(bodyElement);
+
+          // Bind the popup to the marker and set the content
+          marker.bindPopup(popupContent);
+
+          // Add a click event listener to zoom the map
+          marker.on("click", clickZoom);
 
           // Add the marker to the marker cluster group
           markers.addLayer(marker);
@@ -208,6 +177,8 @@ function loadMarkers() {
         console.error('Error fetching marker data:', error);
       });
 }
+
+
 
 // Call the loadMarkers function when the page loads
 window.addEventListener('load', loadMarkers);
