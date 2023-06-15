@@ -148,6 +148,7 @@ function loadMarkers() {
           // Create a marker with the custom divIcon
           const marker = L.marker(new L.LatLng(latitude, longitude), {
             icon: createCustomDivIcon(), // Use your custom icon here
+            title: data.title
           });
 
           // Create the popup content
@@ -179,10 +180,8 @@ function loadMarkers() {
 }
 
 
-
 // Call the loadMarkers function when the page loads
 window.addEventListener('load', loadMarkers);
-
 
 
 // Add all markers to map
@@ -239,14 +238,47 @@ searchbox.onInput("keyup", function (e) {
 
           // Add the persons as dropdown options
           persons.forEach(person => {
-            if (person.varjunimi == null){
+            if (person.varjunimi == null) {
               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
-              // searchbox.addItem(person.perekonnanimi + " " + person.eesnimi);
             } else {
               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
             }
-
           });
+
+          // Add click event listener to search result items
+          const searchResultItems = searchbox.getValue();
+
+          if (typeof searchResultItems === "string") {
+            const selectedValue = searchResultItems;
+            // Find the marker associated with the selected value
+            const marker = findMarkerByTitle(selectedValue);
+            console.log("marker log: " + marker); //WORKS
+            if (marker) {
+              // Open the marker's popup if it exists
+              const popup = marker.getPopup();
+              if (popup) {
+                popup.openOn(map);
+              } else {
+                console.error('Popup not found for marker:', marker);
+              }
+            } else {
+              console.error('Marker not found for title:', selectedValue);
+            }
+          } else if (Array.isArray(searchResultItems)) { // Check if it's an array
+            searchResultItems.forEach(item => {
+              item.addEventListener('click', function () {
+                const selectedValue = item.innerText;
+
+                // Find the marker associated with the selected value
+                const marker = findMarkerByTitle(selectedValue);
+                if (marker) {
+                  // Open the marker's popup
+                  marker.openPopup();
+                }
+              });
+            });
+          }
+
         })
         .catch(error => {
           console.error(error);
@@ -256,12 +288,30 @@ searchbox.onInput("keyup", function (e) {
   }
 });
 
+// Helper function to find the marker by title
+function findMarkerByTitle(title) {
+  const markerData = markers.getLayers();
+  // console.log("findMarkerByTitle method log: " + markerData);
+  for (const marker of markerData) {
+    // console.log(marker.options.title)
+    // see töötab, leiab inimese nimed (title) üles
+    if (marker.options.title === title) {
+      return marker;
+    }
+  }
+  return null;
+}
+
 
 // center the map when popup is clicked
 function clickZoom(e) {
-  map.setView(e.target.getLatLng(), 15); //see siin os veits sus, vahest zoomib liiga sisse
-  // pantTo version
-  // map.panTo(e.target.getLatLng());
+  //TODO zoom peaks eristama individuaalseid markereid ja gorupis olevaid. Zoomib sisse ainult üksikutele markeritele, kuid mitte clusteris olevatele
+  const marker = e.target;
+
+  if (!marker.__parent) {
+    // Marker is not part of a cluster
+    map.setView(marker.getLatLng(), 15);
+  }
 }
 
 // back to home button
@@ -321,8 +371,6 @@ function getCenterOfMap() {
 }
 
 const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-
-
 
 // MiniMap
 const osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13});

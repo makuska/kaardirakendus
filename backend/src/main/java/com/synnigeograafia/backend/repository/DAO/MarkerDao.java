@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface MarkerDao {
     public List<MarkerDataDTO> selectAllMarkers();
+//    public MarkerDataDTO selectMarkerById();
 }
