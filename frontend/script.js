@@ -14,7 +14,6 @@ const landUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/
 const cartoAttrib = `&copy; ${osmLink} Contributors & ${cartoDB}`;
 
 
-
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
@@ -26,8 +25,6 @@ let config = {
   minZoom: 5,
   maxZoom: 18,
 };
-
-
 
 // magnification with which the map will start
 const zoom = 8;

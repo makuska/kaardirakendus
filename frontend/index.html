@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaardirakendus</title>
-
+  <style id="dynamic-styles"></style>
   <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"
@@ -122,6 +122,21 @@
         <input type="submit" value="Saada">
       </form>
     </div>
+    <div class="item-content" id="settings">
+      <h2>Lae alla</h2>
+      <button type="button" onclick="openAPIWindow()">Lae alla</button>
+      <div class="content">settings</div>
+      <div class="content">settings</div>
+    </div>
+
+    <script>
+      function openAPIWindow() {
+        // Make API request to retrieve person data
+        let apiURL = "http://localhost:8080/api/v1/marker/getMarkers";
+        let newWindow = window.open(apiURL, "_blank");
+        newWindow.focus();
+      }
+    </script>
   </div>
 </div>
 
