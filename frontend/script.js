@@ -13,19 +13,11 @@ const osmAttrib = `&copy; ${osmLink} Contributors`;
 const landUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png";
 const cartoAttrib = `&copy; ${osmLink} Contributors & ${cartoDB}`;
 
-const stamenUrl = 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}';
-const stamenAttrib = 'Map data &copy; <a href="https://stamen.com">Stamen</a> contributors';
+
 
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
-const stamenMap = L.tileLayer(stamenUrl, {
-  attribution: stamenAttrib,
-  subdomains: 'abcd',
-  minZoom: 0,
-  maxZoom: 20,
-  ext: 'png',
-});
 
 // config map
 let config = {
@@ -195,13 +187,46 @@ map.addLayer(markers);
 let baseLayers = {
   "Klassika": osmMap,
   "Dark mode": landMap,
-  "Stamen Toner": stamenMap,
 };
 
 L.control.layers(baseLayers).addTo(map);
 
 // Scale: imperial (miles) is set to false, only the metric scale is implemented
 L.control.scale({imperial: false, maxWidth: 100}).addTo(map);
+
+function setStyles(selectedLayer) {
+  let sidebar = document.querySelector(".sidebar");
+  let sidebartext = document.querySelector(".sidebar-content");
+  let sidebarelements = document.querySelector(".sidebar svg");
+
+  if (selectedLayer === "Klassika") {
+    sidebar.style.background = "#fff"; // Light color
+    sidebartext.style.color = "black";
+    sidebarelements.style.fill ="#3f3f3f";
+    document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #64a1e8; }";
+    sidebar.classList.add("klassika");
+    sidebar.classList.remove("dark-mode");
+  } else if (selectedLayer === "Dark mode") {
+    sidebar.style.background = "#415a77"; // Dark color
+    sidebartext.style.color = "#ffffff";
+    sidebarelements.style.fill ="#ccc";
+    document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #163c48; }";
+    sidebar.classList.add("dark-mode");
+    sidebar.classList.remove("klassika");
+  }
+}
+
+map.on("baselayerchange", function(event) {
+  let selectedLayer = event.name;
+  setStyles(selectedLayer);
+});
+
+// Set initial styles when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  setStyles("Klassika");
+});
+
+
 
 
 // Searchbox
