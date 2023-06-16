@@ -147,25 +147,29 @@ function loadMarkers() {
 
           // Create a marker with the custom divIcon
           const marker = L.marker(new L.LatLng(latitude, longitude), {
-            icon: createCustomDivIcon(), // Use your custom icon here
-            title: data.title
+            icon: createCustomDivIcon(),
+            title: title
           });
 
-          // Create the popup content
-          const popupContent = document.createElement('div');
+          // Create the popup content (markeri body pmst)
+          // const popupContent = `<div><h3>${title}</h3><div>${body}</div></div>`;
 
-          // Create the title element
+
+          //SELLEGA TEEN ERLADI HTML ELEMENDID
+          const popupContent = document.createElement('div');
+          // title
           const titleElement = document.createElement('h3');
           titleElement.textContent = title;
           popupContent.appendChild(titleElement);
-
-          // Create the body element
+          // body
           const bodyElement = document.createElement('div');
           bodyElement.innerHTML = body;
           popupContent.appendChild(bodyElement);
 
           // Bind the popup to the marker and set the content
-          marker.bindPopup(popupContent);
+          marker.bindPopup(popupContent).on("popupopen", function() {
+            console.log("Popup open event triggered!");
+          });
 
           // Add a click event listener to zoom the map
           marker.on("click", clickZoom);
@@ -173,6 +177,7 @@ function loadMarkers() {
           // Add the marker to the marker cluster group
           markers.addLayer(marker);
         });
+
       })
       .catch(error => {
         console.error('Error fetching marker data:', error);
@@ -250,17 +255,25 @@ searchbox.onInput("keyup", function (e) {
 
           if (typeof searchResultItems === "string") {
             const selectedValue = searchResultItems;
+            console.log("selectedValue: " + selectedValue)
             // Find the marker associated with the selected value
             const marker = findMarkerByTitle(selectedValue);
+            console.log("marker title log: " + marker.options.title); //WORKS
             console.log("marker log: " + marker); //WORKS
             if (marker) {
-              // Open the marker's popup if it exists
               const popup = marker.getPopup();
-              if (popup) {
-                popup.openOn(map);
-              } else {
-                console.error('Popup not found for marker:', marker);
-              }
+              console.log("Popup log: " + popup);
+              console.log("Popup title log: " + popup.getContent().innerHTML);
+              // if (popup) {
+              //   const popupOptions = popup.options;
+              //   console.log("Popup title log: " + popupOptions.title);
+              //   marker.openPopup();
+              // } else {
+              //   console.error('Popup not found for marker:', marker);
+              // }
+              marker.openPopup();
+              console.log("Marker location:", marker.getLatLng());
+              console.log("Markers in cluster group:", markers.getLayers());
             } else {
               console.error('Marker not found for title:', selectedValue);
             }
@@ -288,7 +301,6 @@ searchbox.onInput("keyup", function (e) {
   }
 });
 
-// Helper function to find the marker by title
 function findMarkerByTitle(title) {
   const markerData = markers.getLayers();
   // console.log("findMarkerByTitle method log: " + markerData);
@@ -301,7 +313,6 @@ function findMarkerByTitle(title) {
   }
   return null;
 }
-
 
 // center the map when popup is clicked
 function clickZoom(e) {
