@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -102,9 +102,9 @@
 
   <div class="sidebar-content">
     <div class="item-content" id="menu">
-      <h2>Eesti avalike tegelaste sünnigeograafia kaart</h2>
+      <h2>Natuke meist</h2>
       <div class="content">
-        Siin on mingi jutt meie grupi kohta.
+        Oleme informaatika esmakursuse tudengid Tallinna Ülikoolist. Meie grupp koosneb viiest inimesest. Kahest digimeedia suuna tudengist: Susanna Veskist ja Kristiin Marleen Suikist. Ja ka kolmest tarkvaraarenduse suuna tudengist: Jan Henrik Levertandist, Roland Siltist ning meie grupijuhist, Sander Nõlvakust. See projekt, "Eesti avalike tegelaste sünnigeograafia kaart", on koostatud kooli poolt pakutud praktika raames. Eesmärgiks on rikastada Eesti kultuuri ja hoida elus mälestusi meie riigi avalike elu tegelastest. Kõik, kes kaardil on, on võetud toimetaja Richard Kleisi poolt koostatud raamatust "Eesti avalikud tegelased". Meile esitas tellimuse Kädi Riismaa, kes on Tallinna Ülikoolis digitehnoloogia instituudis teabehalduse lektor ning ka teadatuntud dokumendihalduse spetsialist. Suured tänuavaldused meie õppejõududele: Jaagup Kippar, Andrus Rinde ning Inga Petuhhov.
       </div>
     </div>
     <div class="item-content" id="person">
@@ -122,6 +122,20 @@
         <input type="submit" value="Saada">
       </form>
     </div>
+    <div class="item-content" id="settings">
+      <h2>Lae andmed alla!</h2>
+      <button type="button" onclick="openAPIWindow()">Lae alla</button>
+    </div>
+
+    <script>
+      function openAPIWindow() {
+        // Make API request to retrieve person data
+        let apiURL = "http://localhost:8080/api/v1/marker/getMarkers";
+        let newWindow = window.open(apiURL, "_blank");
+        newWindow.focus();
+      }
+    </script>
+
   </div>
 </div>
 

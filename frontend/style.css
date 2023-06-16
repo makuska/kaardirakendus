@@ -285,3 +285,21 @@ svg:not(:root) {
 .item-content input[type="submit"]:hover {
   background-color: lightblue;
 }
+
+.item-content button {
+  background-color: #5299af;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.item-content button:hover {
+  background-color: #5299af;
+}
+
+#settings button {
+  margin-top: 20px;
+}
+

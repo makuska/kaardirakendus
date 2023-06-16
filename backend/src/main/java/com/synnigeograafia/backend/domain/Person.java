@@ -14,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "avalikud_koos_lpprdinaatidega")
+@Table(name = "andmebaas.synnigeograafia.avalikud_koos_koordinaatidega")
 public class Person {
 
     @Id //Will be changed to uuid
