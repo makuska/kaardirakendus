@@ -2,6 +2,7 @@ package com.synnigeograafia.backend.service;
 
 import com.synnigeograafia.backend.domain.Person;
 import com.synnigeograafia.backend.DTO.MarkerDataDTO;
+import com.synnigeograafia.backend.exception.PersonNotFoundException;
 import com.synnigeograafia.backend.repository.DAO.MarkerDao;
 import com.synnigeograafia.backend.repository.DAO.PersonDao;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class MarkerService {
@@ -43,6 +45,7 @@ public class MarkerService {
                               "Tunnus: " + person.getTunnus();
 
                 MarkerDataDTO markerData = new MarkerDataDTO(latitude, longitude, title, body);
+                markerData.setId(person.getId()); // Set the unique identifier for the marker data
                 markerDataList.add(markerData);
             }
         }
