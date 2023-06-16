@@ -281,7 +281,7 @@ svg:not(:root) {
   cursor: pointer;
 }
 
-/ Styles for the form submit button on hover */
+
 .item-content input[type="submit"]:hover {
   background-color: lightblue;
 }
