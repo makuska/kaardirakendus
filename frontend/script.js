@@ -13,19 +13,11 @@ const osmAttrib = `&copy; ${osmLink} Contributors`;
 const landUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png";
 const cartoAttrib = `&copy; ${osmLink} Contributors & ${cartoDB}`;
 
-const stamenUrl = 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}';
-const stamenAttrib = 'Map data &copy; <a href="https://stamen.com">Stamen</a> contributors';
+
 
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
-const stamenMap = L.tileLayer(stamenUrl, {
-  attribution: stamenAttrib,
-  subdomains: 'abcd',
-  minZoom: 0,
-  maxZoom: 20,
-  ext: 'png',
-});
 
 // config map
 let config = {
@@ -191,7 +183,6 @@ map.addLayer(markers);
 let baseLayers = {
   "Klassika": osmMap,
   "Dark mode": landMap,
-  "Stamen Toner": stamenMap,
 };
 
 L.control.layers(baseLayers).addTo(map);
@@ -212,8 +203,8 @@ function setStyles(selectedLayer) {
     sidebar.classList.add("klassika");
     sidebar.classList.remove("dark-mode");
   } else if (selectedLayer === "Dark mode") {
-    sidebar.style.background = "#333"; // Dark color
-    sidebartext.style.color = "#ccc";
+    sidebar.style.background = "#415a77"; // Dark color
+    sidebartext.style.color = "#ffffff";
     sidebarelements.style.fill ="#ccc";
     document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #163c48; }";
     sidebar.classList.add("dark-mode");
@@ -361,3 +352,7 @@ const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 // MiniMap
 const osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13});
 const miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
+
+
+
