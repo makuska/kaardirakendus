@@ -31,7 +31,7 @@ public class EmailController {
         logger.info("Email request received");
         this.emailService.sendEmail(RECIPIENT, name, subject);
         return ResponseEntity.ok("Email sent successfully");
-//        String redirectUrl = "http://localhost:8080"; // Replace with your desired homepage URL
+//        String redirectUrl = "http://localhost:8080";
 //        return ResponseEntity.status(HttpStatus.FOUND)
 //                .header("Location", redirectUrl)
 //                .body("Email sent successfully");

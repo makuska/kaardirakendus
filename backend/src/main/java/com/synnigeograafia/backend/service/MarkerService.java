@@ -2,7 +2,6 @@ package com.synnigeograafia.backend.service;
 
 import com.synnigeograafia.backend.domain.Person;
 import com.synnigeograafia.backend.DTO.MarkerDataDTO;
-import com.synnigeograafia.backend.exception.PersonNotFoundException;
 import com.synnigeograafia.backend.repository.DAO.MarkerDao;
 import com.synnigeograafia.backend.repository.DAO.PersonDao;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class MarkerService {
@@ -36,13 +34,7 @@ public class MarkerService {
                 double latitude = Double.parseDouble(latitudeStr.trim());
                 double longitude = Double.parseDouble(longitudeStr.trim());
                 String title = person.getEesnimi() + " " + person.getPerekonnanimi();
-                String body = "Eesnimi: " + person.getEesnimi() + "<br>" +
-                              "Perekonnanimi: " + person.getPerekonnanimi() + "<br>" +
-                              "Varjunimi: " + person.getVarjunimi() + "<br>" +
-                              "Sünniaeg: " + person.getSynniaeg() + "<br>" +
-                              "Kasvukoht: " + person.getKasvukoht() + "<br>" +
-                              "Valdkond: " + person.getValdkond() + "<br>" +
-                              "Tunnus: " + person.getTunnus();
+                String body = constructMarkerBody(person);
 
                 MarkerDataDTO markerData = new MarkerDataDTO(latitude, longitude, title, body);
                 markerData.setId(person.getId()); // Set the unique identifier for the marker data
@@ -52,4 +44,30 @@ public class MarkerService {
 
         return markerDataList;
     }
+
+    private String constructMarkerBody(Person person){
+        StringBuilder bodyBuilder = new StringBuilder();
+        String newLine = "<br>";
+        if (person.getEesnimi() != null) {
+            bodyBuilder.append("Eesnimi: ").append(person.getEesnimi()).append(newLine);
+        }
+        bodyBuilder.append("Perekonnanimi: ").append(person.getPerekonnanimi()).append(newLine);
+        if (person.getVarjunimi() != null) {
+            bodyBuilder.append("Varjunimi: ").append(person.getVarjunimi()).append(newLine);
+        }
+        if (person.getSynniaeg() != null) {
+            bodyBuilder.append("Sünniaeg: ").append(person.getSynniaeg()).append(newLine);
+        }
+        if (person.getKasvukoht() != null) {
+            bodyBuilder.append("Kasvukoht: ").append(person.getKasvukoht()).append(newLine);
+        }
+        if (person.getValdkond() != null) {
+            bodyBuilder.append("Valdkond: ").append(person.getValdkond()).append(newLine);
+        }
+        if (person.getTunnus() != null) {
+            bodyBuilder.append("Tunnus: ").append(person.getTunnus()).append(newLine);
+        }
+        return bodyBuilder.toString();
+    }
+
 }

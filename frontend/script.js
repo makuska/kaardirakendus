@@ -250,6 +250,7 @@ let searchbox = L.control.searchbox({
 // Close and clear searchbox 600ms after pressing ENTER in the search box
 searchbox.onInput("keyup", function (e) {
   if (e.keyCode === 13) {
+    // map.setZoom(11);
     setTimeout(function () {
       searchbox.hide();
       searchbox.clear();
@@ -260,105 +261,86 @@ searchbox.onInput("keyup", function (e) {
 // Close and clear searchbox 600ms after clicking the search button
 searchbox.onButton("click", function () {
   setTimeout(function () {
+    // map.setZoom(11);
     searchbox.hide();
     searchbox.clear();
   }, 600);
 });
 
-// searchbox.onInput("keyup", function (e) {
-//   let value = searchbox.getValue();
-//   if (value !== "") {
-//     const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
-//
-//     fetch(searchUrl)
-//         .then(response => response.json())
-//         .then(data => {
-//           const persons = data;
-//
-//           // Clear the existing dropdown options
-//           searchbox.clearItems();
-//
-//           // Add the persons as dropdown options
-//           persons.forEach(person => {
-//             if (person.varjunimi == null) {
-//               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
-//             } else {
-//               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
-//             }
-//           });
-//
-//           // Add click event listener to search result items
-//           const searchResultItems = searchbox.getValue();
-//
-//           if (typeof searchResultItems === "string") {
-//             const selectedValue = searchResultItems;
-//             console.log("selectedValue: " + selectedValue)
-//             // Find the marker associated with the selected value
-//             const marker = findMarkerByTitle(selectedValue);
-//             console.log("marker title log: " + marker.options.title); //WORKS
-//             console.log("marker log: " + marker); //WORKS
-//             // ...
-//             if (marker) {
-//               const cluster = marker.__parent;
-//               if (cluster && cluster.getAllChildMarkers().length > 1) {
-//                 // Marker is part of a cluster
-//                 cluster.spiderfy();
-//                 map.panTo(cluster.getLatLng());
-//                 marker.fire("click");
-//               } else {
-//                 // Marker is not part of a cluster
-//                 if (cluster) {
-//                   // Remove the marker from the cluster
-//                   cluster.removeLayer(marker);
-//                 }
-//                 markers.addLayer(marker); // Add the marker to the marker cluster group
-//                 map.panTo(marker.getLatLng());
-//                 marker.fire("click");
-//               }
-//             } else {
-//               console.error('Marker not found for title:', selectedValue);
-//             }
-//           } else if (Array.isArray(searchResultItems)) { // Check if it's an array
-//             searchResultItems.forEach(item => {
-//               item.addEventListener('click', function () {
-//                 const selectedValue = item.innerText;
-//
-//                 // Find the marker associated with the selected value
-//                 const marker = findMarkerByTitle(selectedValue);
-//                 if (marker) {
-//                   // Open the marker's popup
-//                   marker.openPopup();
-//
-//                   // Check if the marker is part of a cluster
-//                   const cluster = marker.__parent;
-//                   if (cluster) {
-//                     // Open the cluster if it hasn't been spiderfied
-//                     if (!cluster.__spiderfied) {
-//                       cluster.fire("click");
-//                     }
-//                     // Zoom to the cluster bounds
-//                     map.fitBounds(cluster.getBounds());
-//                     // Open the marker's popup after the cluster is opened
-//                     setTimeout(() => {
-//                       marker.openPopup();
-//                     }, 100);
-//                   } else {
-//                     // Center the map on the marker and open the popup
-//                     map.setView(marker.getLatLng(), map.getMaxZoom());
-//                   }
-//                 }
-//               });
-//             });
-//           }
-//
-//         })
-//         .catch(error => {
-//           console.error(error);
-//         });
-//   } else {
-//     searchbox.clearItems();
-//   }
-// });
+searchbox.onInput("keyup", function (e) {
+  let value = searchbox.getValue();
+  if (value !== "") {
+    if (map.getZoom() < 11){
+      map.setZoom(11);
+    }
+    const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
+
+    fetch(searchUrl)
+        .then(response => response.json())
+        .then(data => {
+          const persons = data;
+
+          // Clear the existing dropdown options
+          searchbox.clearItems();
+
+          // Add the persons as dropdown options
+          persons.forEach(person => {
+            if (person.varjunimi == null) {
+              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
+            } else {
+              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
+            }
+          });
+
+          // Add click event listener to search result items
+          const searchResultItems = searchbox.getValue();
+
+          if (typeof searchResultItems === "string") {
+            const selectedValue = searchResultItems;
+            const marker = findMarkerByTitle(selectedValue);
+            if (marker) {
+              const popup = marker.getPopup();
+              if (popup) {
+                // Check if the marker is part of a cluster
+                const cluster = marker.__parent;
+                if (cluster) {
+                  console.log("Zoom level for search:", map.getZoom());
+                  // Zoom to the cluster bounds
+                  map.fitBounds(cluster.getBounds());
+
+                  // Open the cluster after zooming
+                  setTimeout(() => {
+                    cluster.spiderfy();
+                  }, 100);
+
+                  // Open the marker's popup after a short delay
+                  setTimeout(() => {
+                    marker.openPopup();
+                  }, 200);
+                } else {
+                  // Center the map on the marker and open the popup
+                  map.setView(marker.getLatLng(), map.getMaxZoom());
+                  marker.openPopup();
+                }
+              }
+              // else {
+              //   // console.error('Popup not found for marker:', marker);
+              // }
+            } else {
+              console.error('Marker not found for title:', selectedValue);
+            }
+          } else if (Array.isArray(searchResultItems)) {
+            // Handle multiple search result items if needed
+            // ...
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+  } else {
+    searchbox.clearItems();
+  }
+});
 
 
 
@@ -499,86 +481,4 @@ function sendEmail(event) {
         })
   });
 }
-
-
-
-
-//Buggy version:
-
-// Okay, yet again very interesting results.
-// 1) When the user hasn't opened a cluster in a spidered way (many points with exactly the same coordinates), then it will find the right cluster but it can't open the cluster with the same coordinates and it won't open the popup as well.
-// 2) When the user has opened any of the clusters which have markers with exactly the same coordinates (spider-like cluster), then it will find the right cluster and it will open the popup.
-// 3) In some edge cases when there are no clusters around singular markers, then it can't find the right one and it'll go to the nearest cluster.
-// 4) sometimes it zooms way too close in the map and cluster won't be visible at all and sometimes it will seemingly zoom correctly but the cluster won't open.
-
-searchbox.onInput("keyup", function (e) {
-  let value = searchbox.getValue();
-  if (value !== "") {
-    const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
-
-    fetch(searchUrl)
-        .then(response => response.json())
-        .then(data => {
-          const persons = data;
-
-          // Clear the existing dropdown options
-          searchbox.clearItems();
-
-          // Add the persons as dropdown options
-          persons.forEach(person => {
-            if (person.varjunimi == null) {
-              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
-            } else {
-              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
-            }
-          });
-
-          // Add click event listener to search result items
-          const searchResultItems = searchbox.getValue();
-
-          if (typeof searchResultItems === "string") {
-            const selectedValue = searchResultItems;
-            const marker = findMarkerByTitle(selectedValue);
-            if (marker) {
-              const popup = marker.getPopup();
-              if (popup) {
-                // Check if the marker is part of a cluster
-                const cluster = marker.__parent;
-                if (cluster) {
-                  console.log("Current Zoom Level:", map.getZoom());
-                  // Zoom to the cluster bounds
-                  map.fitBounds(cluster.getBounds());
-
-                  // Open the cluster after zooming
-                  setTimeout(() => {
-                    cluster.spiderfy();
-                  }, 100);
-
-                  // Open the marker's popup after a short delay
-                  setTimeout(() => {
-                    marker.openPopup();
-                  }, 200);
-                } else {
-                  // Center the map on the marker and open the popup
-                  map.setView(marker.getLatLng(), map.getMaxZoom());
-                  marker.openPopup();
-                }
-              } else {
-                console.error('Popup not found for marker:', marker);
-              }
-            } else {
-              console.error('Marker not found for title:', selectedValue);
-            }
-          } else if (Array.isArray(searchResultItems)) {
-            // Handle multiple search result items if needed
-            // ...
-          }
-        })
-        .catch(error => {
-          console.error(error);
-        });
-  } else {
-    searchbox.clearItems();
-  }
-});
 
