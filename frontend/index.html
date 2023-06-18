@@ -115,17 +115,17 @@
     </div>
     <div class="item-content" id="email">
       <h2>Anna tagasisidet!</h2>
-      <form action="mailto:sants@tlu.ee" method="post" enctype="text/plain">
-        Nimi:<input type="text" name="name"><br>
+      <form id="emailForm" action="http://localhost:8080/api/v1/email/sendEmail" method="post">
+        Nimi:<input type="text" name="email-name" id="email-name"><br>
         Jäta oma kommentaar siia:<br>
-        <textarea name="subject" rows="4"></textarea><br>
+        <textarea name="subject" id="subject" rows="4"></textarea><br>
         <input type="submit" value="Saada">
       </form>
     </div>
     <div class="item-content" id="settings">
       <h2>Lae alla</h2>
       <button type="button" onclick="openAPIWindow()">Lae alla</button>
-      <div class="content">settings</div>
+<!--      <div class="content">settings</div>-->
       <div class="content">settings</div>
     </div>
 

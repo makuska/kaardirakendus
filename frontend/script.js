@@ -1,7 +1,8 @@
-// import axios from 'axios';
-// console.log(axios.isCancel('something'));
-
 //https://leaflet-extras.github.io/leaflet-providers/preview/
+
+// --------------------------------------------------------------- //
+// --------------- Layer links and attribution ------------------- //
+// --------------------------------------------------------------- //
 
 const osmLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 const cartoDB = '<a href="http://cartodb.com/attributions">CartoDB</a>';
@@ -18,6 +19,9 @@ const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
 
+// ---------------------------------------------------- //
+// ------------------- Map config --------------------- //
+// ---------------------------------------------------- //
 // config map
 let config = {
   // See siin määrab ära default mapi
@@ -32,12 +36,28 @@ const zoom = 8;
 const lat = 58.636856;
 const lng = 25.334473;
 
+// calling map
+const map = L.map("map", config).setView([lat, lng], zoom);
+// Scale: imperial (miles) is set to false, only the metric scale is implemented
+L.control.scale({imperial: false, maxWidth: 100}).addTo(map);
+
+// osm layer
+osmMap.addTo(map);
+
+let baseLayers = {
+  "Klassika": osmMap,
+  "Dark mode": landMap,
+};
+
+L.control.layers(baseLayers).addTo(map);
+// ------------------------------------------------------ //
+// ---------------------- Sidebar ----------------------- //
+// ------------------------------------------------------ //
 // sidebar
 
 const menuItems = document.querySelectorAll(".menu-item");
 const sidebar = document.querySelector(".sidebar");
 const buttonClose = document.querySelector(".close-button");
-
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     const target = e.target;
@@ -102,95 +122,11 @@ function closeSidebar() {
   activeContent.classList.remove("active-content");
 }
 
-// calling map
-const map = L.map("map", config).setView([lat, lng], zoom);
-
-// osm layer
-osmMap.addTo(map);
-
-// L.MarkerClusterGroup extends L.FeatureGroup
-// by clustering the markers contained within
-let markers = L.markerClusterGroup({
-  spiderfyOnMaxZoom: true, // Disable spiderfying behavior
-  showCoverageOnHover: false, // Disable cluster spiderfier polygon
-});
-
-// Create a custom divIcon with a small circle
-function createCustomDivIcon() {
-  return L.divIcon({
-    className: 'custom-div-icon',
-    html: '<div class="circle-icon"></div>',
-    iconSize: [12, 12],
-  });
-}
-
-// Fetch marker data from the backend API
-// Define a function to fetch and create markers
-function loadMarkers() {
-  fetch('http://localhost:8080/api/v1/marker/getMarkers')
-      .then(response => response.json())
-      .then(markerData => {
-        // Iterate over the marker data and create markers
-        markerData.forEach(data => {
-          const { latitude, longitude, title, body } = data;
-
-          // Create a marker with the custom divIcon
-          const marker = L.marker(new L.LatLng(latitude, longitude), {
-            icon: createCustomDivIcon(),
-            title: title
-          });
-
-          // Create the popup content (markeri body pmst)
-          // const popupContent = `<div><h3>${title}</h3><div>${body}</div></div>`;
 
 
-          //SELLEGA TEEN ERLADI HTML ELEMENDID
-          const popupContent = document.createElement('div');
-          // title
-          const titleElement = document.createElement('h3');
-          titleElement.textContent = title;
-          popupContent.appendChild(titleElement);
-          // body
-          const bodyElement = document.createElement('div');
-          bodyElement.innerHTML = body;
-          popupContent.appendChild(bodyElement);
-
-          // Bind the popup to the marker and set the content
-          marker.bindPopup(popupContent).on("popupopen", function() {
-            console.log("Popup open event triggered!");
-          });
-
-          // Add a click event listener to zoom the map
-          marker.on("click", clickZoom);
-
-          // Add the marker to the marker cluster group
-          markers.addLayer(marker);
-        });
-
-      })
-      .catch(error => {
-        console.error('Error fetching marker data:', error);
-      });
-}
-
-
-// Call the loadMarkers function when the page loads
-window.addEventListener('load', loadMarkers);
-
-
-// Add all markers to map
-map.addLayer(markers);
-
-let baseLayers = {
-  "Klassika": osmMap,
-  "Dark mode": landMap,
-};
-
-L.control.layers(baseLayers).addTo(map);
-
-// Scale: imperial (miles) is set to false, only the metric scale is implemented
-L.control.scale({imperial: false, maxWidth: 100}).addTo(map);
-
+// -------------------------------------------------------- //
+// --------------- Modify styles for layers --------------- //
+// -------------------------------------------------------- //
 function setStyles(selectedLayer) {
   let sidebar = document.querySelector(".sidebar");
   let sidebartext = document.querySelector(".sidebar-content");
@@ -225,6 +161,85 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// ------------------------------------------------------------ //
+// ------------------ Marker/Cluster config ------------------- //
+// ------------------------------------------------------------ //
+
+// L.MarkerClusterGroup extends L.FeatureGroup
+// by clustering the markers contained within
+let markers = L.markerClusterGroup({
+  spiderfyOnMaxZoom: true, // Disable spiderfying behavior
+  showCoverageOnHover: false, // Disable cluster spiderfier polygon
+
+});
+
+// Create a custom divIcon with a small circle
+function createCustomDivIcon() {
+  return L.divIcon({
+    className: 'custom-div-icon',
+    html: '<div class="circle-icon"></div>',
+    iconSize: [12, 12],
+  });
+}
+
+
+
+// ------------------------------------------------------- //
+// --------------- Load Markers to the map --------------- //
+// ------------------------------------------------------- //
+
+// Fetch marker data from the backend API
+// Define a function to fetch and create markers
+function loadMarkers() {
+  fetch('http://localhost:8080/api/v1/marker/getMarkers')
+      .then(response => response.json())
+      .then(markerData => {
+        // Iterate over the marker data and create markers
+        markerData.forEach(data => {
+          const { latitude, longitude, title, body } = data;
+
+          // Create a marker with the custom divIcon
+          const marker = L.marker(new L.LatLng(latitude, longitude), {
+            icon: createCustomDivIcon(),
+            title: title
+          });
+
+          // Create the popup content
+          const popupContent = document.createElement('div');
+          const titleElement = document.createElement('h3');
+          titleElement.textContent = title;
+          popupContent.appendChild(titleElement);
+          const bodyElement = document.createElement('div');
+          bodyElement.innerHTML = body;
+          popupContent.appendChild(bodyElement);
+
+          // Bind the popup to the marker and set the content
+          marker.bindPopup(popupContent);
+
+          // Add a click event listener to zoom the map
+          marker.on("click", clickZoom);
+
+          // Add the marker to the marker cluster group
+          markers.addLayer(marker);
+        });
+        // Add the marker cluster group to the map after all markers are loaded
+        map.addLayer(markers);
+      })
+      .catch(error => {
+        console.error('Error fetching marker data:', error);
+      });
+}
+
+// Call the loadMarkers function when the page loads
+window.addEventListener('load', loadMarkers);
+
+// Add all markers to map
+map.addLayer(markers);
+
+
+// ---------------------------------------------------- //
+// --------------- Search functionality --------------- //
+// ---------------------------------------------------- //
 
 // Searchbox
 let searchbox = L.control.searchbox({
@@ -282,20 +297,24 @@ searchbox.onInput("keyup", function (e) {
             const marker = findMarkerByTitle(selectedValue);
             console.log("marker title log: " + marker.options.title); //WORKS
             console.log("marker log: " + marker); //WORKS
+            // ...
             if (marker) {
-              const popup = marker.getPopup();
-              console.log("Popup log: " + popup);
-              console.log("Popup title log: " + popup.getContent().innerHTML);
-              // if (popup) {
-              //   const popupOptions = popup.options;
-              //   console.log("Popup title log: " + popupOptions.title);
-              //   marker.openPopup();
-              // } else {
-              //   console.error('Popup not found for marker:', marker);
-              // }
-              marker.openPopup();
-              console.log("Marker location:", marker.getLatLng());
-              console.log("Markers in cluster group:", markers.getLayers());
+              const cluster = marker.__parent;
+              if (cluster && cluster.getAllChildMarkers().length > 1) {
+                // Marker is part of a cluster
+                cluster.spiderfy();
+                map.panTo(cluster.getLatLng());
+                marker.fire("click");
+              } else {
+                // Marker is not part of a cluster
+                if (cluster) {
+                  // Remove the marker from the cluster
+                  cluster.removeLayer(marker);
+                }
+                markers.addLayer(marker); // Add the marker to the marker cluster group
+                map.panTo(marker.getLatLng());
+                marker.fire("click");
+              }
             } else {
               console.error('Marker not found for title:', selectedValue);
             }
@@ -309,6 +328,24 @@ searchbox.onInput("keyup", function (e) {
                 if (marker) {
                   // Open the marker's popup
                   marker.openPopup();
+
+                  // Check if the marker is part of a cluster
+                  const cluster = marker.__parent;
+                  if (cluster) {
+                    // Open the cluster if it hasn't been spiderfied
+                    if (!cluster.__spiderfied) {
+                      cluster.fire("click");
+                    }
+                    // Zoom to the cluster bounds
+                    map.fitBounds(cluster.getBounds());
+                    // Open the marker's popup after the cluster is opened
+                    setTimeout(() => {
+                      marker.openPopup();
+                    }, 100);
+                  } else {
+                    // Center the map on the marker and open the popup
+                    map.setView(marker.getLatLng(), map.getMaxZoom());
+                  }
                 }
               });
             });
@@ -322,6 +359,8 @@ searchbox.onInput("keyup", function (e) {
     searchbox.clearItems();
   }
 });
+
+
 
 function findMarkerByTitle(title) {
   const markerData = markers.getLayers();
@@ -343,12 +382,15 @@ function clickZoom(e) {
 
   if (!marker.__parent) {
     // Marker is not part of a cluster
-    map.setView(marker.getLatLng(), 15);
+    map.setView(cluster.getLatLng(), map.getMaxZoom() + 3);
   }
 }
 
-// back to home button
 
+
+// ---------------------------------------------------- //
+// --------------- Back to home button ---------------- //
+// ---------------------------------------------------- //
 const htmlTemplate = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 18.451L16 6.031 0 18.451v-5.064L16 .967l16 12.42zM28 18v12h-8v-8h-8v8H4V18l12-9z" /></svg>';
 // const htmlTemplate = 'img/search_icon.png'
 
@@ -372,7 +414,7 @@ const customControl = L.Control.extend({
   },
 });
 
-// adding new button to map controll
+// adding new button to map control
 map.addControl(new customControl());
 
 // on drag end
@@ -405,6 +447,174 @@ function getCenterOfMap() {
 
 const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
+
+// ---------------------------------------------------- //
+// ---------------------- MiniMap --------------------- //
+// ---------------------------------------------------- //
 // MiniMap
 const osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13});
 const miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
+
+
+// ---------------------------------------------------- //
+// ----------------------- Email ---------------------- //
+// ---------------------------------------------------- //
+function sendEmail(event) {
+  document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // formi väärtused
+    const name = document.getElementById('email-name').value;
+    const subject = document.getElementById('email-subject').value;
+
+    // Request body
+    const emailRequest = {
+      recipient: '1521e4565f2885@inbox.mailtrap.io',
+      subject: name,
+      body: subject
+    };
+    console.log(emailRequest)
+
+    // Send the POST request to the backend
+    fetch('http://localhost:8080/api/v1/email/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(emailRequest)
+    })
+        .then(response => {
+          if (response.ok) {
+            console.log('Email sent successfully');
+            alert('Email sent successfully!');
+          } else {
+            console.log('Failed to send email');
+            alert('Failed to send email. Please try again later.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred while sending the email. Please try again later.');
+        })
+  });
+}
+
+
+
+
+//Buggy version:
+
+// Okay, yet again very interesting results.
+// 1) When the user hasn't opened a cluster in a spidered way (many points with exactly the same coordinates), then it will find the right cluster but it can't open the cluster with the same coordinates and it won't open the popup as well.
+// 2) When the user has opened any of the clusters which have markers with exactly the same coordinates (spider-like cluster), then it will find the right cluster and it will open the popup.
+// 3) In some edge cases when there are no clusters around singular markers, then it can't find the right one and it'll go to the nearest cluster.
+// 4) sometimes it zooms way too close in the map and cluster won't be visible at all and sometimes it will seemingly zoom correctly but the cluster won't open.
+
+// searchbox.onInput("keyup", function (e) {
+//   let value = searchbox.getValue();
+//   if (value !== "") {
+//     const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
+//
+//     fetch(searchUrl)
+//         .then(response => response.json())
+//         .then(data => {
+//           const persons = data;
+//
+//           // Clear the existing dropdown options
+//           searchbox.clearItems();
+//
+//           // Add the persons as dropdown options
+//           persons.forEach(person => {
+//             if (person.varjunimi == null) {
+//               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
+//             } else {
+//               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
+//             }
+//           });
+//
+//           // Add click event listener to search result items
+//           const searchResultItems = searchbox.getValue();
+//
+//           if (typeof searchResultItems === "string") {
+//             const selectedValue = searchResultItems;
+//             console.log("selectedValue: " + selectedValue)
+//             // Find the marker associated with the selected value
+//             const marker = findMarkerByTitle(selectedValue);
+//             console.log("marker title log: " + marker.options.title); //WORKS
+//             console.log("marker log: " + marker); //WORKS
+//             if (marker) {
+//               const popup = marker.getPopup();
+//               console.log("Popup log: " + popup);
+//               console.log("Popup title log: " + popup.getContent().innerHTML);
+//               if (popup) {
+//                 const popupOptions = popup.options;
+//                 console.log("Popup title log: " + popupOptions.title);
+//                 marker.openPopup();
+//
+//                 // Check if the marker is part of a cluster
+//                 const cluster = marker.__parent;
+//                 if (cluster) {
+//                   // Open the cluster if it hasn't been spiderfied
+//                   if (!cluster.__spiderfied) {
+//                     cluster.fire("click");
+//                   }
+//                   // Zoom to the cluster bounds
+//                   map.fitBounds(cluster.getBounds());
+//                   // Open the marker's popup after the cluster is opened
+//                   setTimeout(() => {
+//                     marker.openPopup();
+//                   }, 100);
+//                 } else {
+//                   // Center the map on the marker and open the popup
+//                   map.setView(marker.getLatLng(), map.getMaxZoom());
+//                 }
+//               } else {
+//                 console.error('Popup not found for marker:', marker);
+//               }
+//               console.log("Marker location:", marker.getLatLng());
+//               console.log("Markers in cluster group:", markers.getLayers());
+//             } else {
+//               console.error('Marker not found for title:', selectedValue);
+//             }
+//           } else if (Array.isArray(searchResultItems)) { // Check if it's an array
+//             searchResultItems.forEach(item => {
+//               item.addEventListener('click', function () {
+//                 const selectedValue = item.innerText;
+//
+//                 // Find the marker associated with the selected value
+//                 const marker = findMarkerByTitle(selectedValue);
+//                 if (marker) {
+//                   // Open the marker's popup
+//                   marker.openPopup();
+//
+//                   // Check if the marker is part of a cluster
+//                   const cluster = marker.__parent;
+//                   if (cluster) {
+//                     // Open the cluster if it hasn't been spiderfied
+//                     if (!cluster.__spiderfied) {
+//                       cluster.fire("click");
+//                     }
+//                     // Zoom to the cluster bounds
+//                     map.fitBounds(cluster.getBounds());
+//                     // Open the marker's popup after the cluster is opened
+//                     setTimeout(() => {
+//                       marker.openPopup();
+//                     }, 100);
+//                   } else {
+//                     // Center the map on the marker and open the popup
+//                     map.setView(marker.getLatLng(), map.getMaxZoom());
+//                   }
+//                 }
+//               });
+//             });
+//           }
+//
+//         })
+//         .catch(error => {
+//           console.error(error);
+//         });
+//   } else {
+//     searchbox.clearItems();
+//   }
+// });

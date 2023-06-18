@@ -113,7 +113,7 @@
 }
 
 .collapsed .leaflet-searchbox-button {
-    border-radius: 50%;
+    border-radius: 5%; /* if set to 0, then box sized */
     transition-delay: 0.2s;
     border: 1px rgb(0, 0, 0, 0.3) solid;
 }
