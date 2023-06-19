@@ -258,7 +258,7 @@ let searchbox = L.control.searchbox({
   expand: 'left'
 }).addTo(map);
 
-// Close and clear searchbox 600ms after pressing ENTER in the search box
+// Close and clear searchbox 600ms after pressing "ENTER" in the search box
 searchbox.onInput("keyup", function (e) {
   if (e.keyCode === 13) {
     // map.setZoom(11);
@@ -284,7 +284,7 @@ searchbox.onInput("keyup", function (e) {
     if (map.getZoom() < 11){
       map.setZoom(11);
     }
-    const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
+    const searchUrl = `http://localhost:8080/api/v1/person/searchByName?name=${value}`;
 
     fetch(searchUrl)
         .then(response => response.json())
@@ -453,6 +453,7 @@ const miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 // ---------------------------------------------------- //
 // ----------------------- Email ---------------------- //
 // ---------------------------------------------------- //
+
 // Add an event listener to the form submission
 document.getElementById('emailForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission behavior
