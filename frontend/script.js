@@ -131,21 +131,30 @@ function setStyles(selectedLayer) {
   let sidebar = document.querySelector(".sidebar");
   let sidebartext = document.querySelector(".sidebar-content");
   let sidebarelements = document.querySelector(".sidebar svg");
+  let icons = document.querySelector(".circle-icon");
 
   if (selectedLayer === "Klassika") {
     sidebar.style.background = "#fff"; // Light color
     sidebartext.style.color = "black";
-    sidebarelements.style.fill ="#3f3f3f";
+    sidebarelements.style.fill = "#3f3f3f";
+    icons.style.backgroundColor = "green"; // Light color for marker
     document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #64a1e8; }";
     sidebar.classList.add("klassika");
     sidebar.classList.remove("dark-mode");
   } else if (selectedLayer === "Dark mode") {
     sidebar.style.background = "#415a77"; // Dark color
     sidebartext.style.color = "#ffffff";
-    sidebarelements.style.fill ="#ccc";
+    sidebarelements.style.fill = "#ccc";
+    icons.style.backgroundColor = "purple"; // Dark color for marker
     document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #163c48; }";
     sidebar.classList.add("dark-mode");
     sidebar.classList.remove("klassika");
+
+    // Additional code for dark mode marker color
+    let markerIcons = document.querySelectorAll(".circle-icon");
+    for (let i = 0; i < markerIcons.length; i++) {
+      markerIcons[i].style.backgroundColor = "purple";
+    }
   }
 }
 
@@ -158,6 +167,8 @@ map.on("baselayerchange", function(event) {
 document.addEventListener("DOMContentLoaded", function() {
   setStyles("Klassika");
 });
+
+
 
 
 
@@ -247,7 +258,7 @@ let searchbox = L.control.searchbox({
   expand: 'left'
 }).addTo(map);
 
-// Close and clear searchbox 600ms after pressing ENTER in the search box
+// Close and clear searchbox 600ms after pressing "ENTER" in the search box
 searchbox.onInput("keyup", function (e) {
   if (e.keyCode === 13) {
     // map.setZoom(11);
@@ -273,7 +284,7 @@ searchbox.onInput("keyup", function (e) {
     if (map.getZoom() < 11){
       map.setZoom(11);
     }
-    const searchUrl = `http://localhost:8080/api/v1/searchByName?name=${value}`;
+    const searchUrl = `http://localhost:8080/api/v1/person/searchByName?name=${value}`;
 
     fetch(searchUrl)
         .then(response => response.json())
@@ -442,43 +453,42 @@ const miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 // ---------------------------------------------------- //
 // ----------------------- Email ---------------------- //
 // ---------------------------------------------------- //
-function sendEmail(event) {
-  document.getElementById('submitBtn').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent form submission
 
-    // formi väärtused
-    const name = document.getElementById('email-name').value;
-    const subject = document.getElementById('email-subject').value;
+// Add an event listener to the form submission
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
 
-    // Request body
-    const emailRequest = {
-      recipient: '1521e4565f2885@inbox.mailtrap.io',
-      subject: name,
-      body: subject
-    };
-    console.log(emailRequest)
+  const name = document.getElementById('name').value;
+  const subject = document.getElementById('subject').value;
 
-    // Send the POST request to the backend
-    fetch('http://localhost:8080/api/v1/email/sendEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(emailRequest)
-    })
-        .then(response => {
-          if (response.ok) {
-            console.log('Email sent successfully');
-            alert('Email sent successfully!');
-          } else {
-            console.log('Failed to send email');
-            alert('Failed to send email. Please try again later.');
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          alert('An error occurred while sending the email. Please try again later.');
-        })
-  });
-}
+  // Create an object with the necessary data from your form
+  const emailRequest = {
+    recipient: '1521e4565f2885@inbox.mailtrap.io',
+    name: name,
+    subject: subject
+  };
+  console.log(emailRequest)
 
+  // Send the POST request to the backend
+  fetch('http://localhost:8080/api/v1/email/sendEmail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(emailRequest)
+  })
+      .then(response => {
+        if (response.ok) {
+          console.log('Email sent successfully');
+          alert('Email sent successfully!');
+        } else {
+          console.log(response)
+          console.log('Failed to send email');
+          alert('Failed to send email. Please try again later.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while sending the email. Please try again later.');
+      });
+});

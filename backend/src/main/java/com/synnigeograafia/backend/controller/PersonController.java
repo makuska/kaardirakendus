@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/person")
 public class PersonController {
 
     private final Logger logger = LoggerFactory.getLogger(PersonController.class);
