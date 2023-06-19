@@ -45,8 +45,6 @@ public class PersonController {
     @PostMapping("/addPerson")
         public ResponseEntity<PersonDTO> addPerson(@RequestBody PersonDTO personDTO) {
             logger.info("Received request to add a person: {}", personDTO);
-            logger.info(personDTO.getPerekonnanimi());
-
 
             PersonDTO addedPerson = this.personService.addPerson(personDTO);
             return new ResponseEntity<>(addedPerson, HttpStatus.CREATED);
