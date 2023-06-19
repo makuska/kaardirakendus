@@ -39,6 +39,7 @@ public class SecurityConfig {
                         .requestMatchers("/login").authenticated()
                         .requestMatchers(MARKER_PATH + "/**",  PERSON_PATH + "/**").permitAll()
                         .requestMatchers(HttpMethod.POST,EMAIL_PATH + "/sendEmail").permitAll()
+                        .requestMatchers(HttpMethod.POST, PERSON_PATH + "/addPerson").permitAll()
                 );
         http.formLogin();
         http.httpBasic();

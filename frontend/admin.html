@@ -3,20 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Adminileht</title>
+    <link rel="stylesheet" type="text/css" href="admin-style.css">
 </head>
 <body>
 <h1>Lisa isikuid andmebaasi</h1>
-<!--<p>ID: <input type = text placeholder = id></p>-->
-<!--<p>Eesnimi: <input type = text placeholder = eesnimi></p>-->
-<!--<p>Perekonnanimi: <input type = text placeholder = perekonnanimi></p>-->
-<!--<p>Varjunimi: <input type = text placeholder = varjunimi></p>-->
-<!--<p>Sünniaeg: <input type = text placeholder = sünniaeg></p>-->
-<!--<p>Kasvukoht: <input type = text placeholder = kasvukoht></p>-->
-<!--<p>Surmaaeg: <input type = text placeholder = surmaaeg></p>-->
-<!--<p>Valdkond: <input type = text placeholder = valdkond></p>-->
-<!--<p>Tunnus: <input type = text placeholder = tunnus></p>-->
-<!--<p>X koordinaadid: <input type = text placeholder = x koordinaadid></p>-->
-<!--<p>Y koordinaadid: <input type = text placeholder = y koordinaadid></p>-->
+
 <form id="personForm">
 <!--<form action="/api/v1/person/addPerson" method="POST">-->
     <label for="eesnimi">Eesnimi:</label>
@@ -49,7 +40,7 @@
     <label for="y_koordinaat">Y koordinaadid:</label>
     <input type="text" id="y_koordinaat" name="y_koordinaat">
     <br>
-    <input type="submit">
+    <input type="submit" value="Sisesta andmebaasi!">
 </form>
 <script>
     document.getElementById("personForm").addEventListener("submit", function(event) {
@@ -67,23 +58,33 @@
         console.log(personData);
 
         // Make an HTTP POST request to the backend API
-        fetch("http://localhost:8080/api/v1/addPerson", {
+        fetch("http://localhost:8080/api/v1/person/addPerson", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(personData)
         })
-            .then(response => response.json())
-            .then(data => {
-                // Handle the response from the server
-                console.log(data);
-                // Display a success message or perform other actions
+            .then(response => {
+                if (response.ok) {
+                    // If the response is successful (status code 200)
+                    return response.json().then(data => {
+                        // Display a success message
+                        alert("Person added successfully!");
+                        console.log(data);
+                        // Perform other actions if needed
+                    });
+                } else {
+                    // If the response is unsuccessful
+                    throw new Error("Request failed with status " + response.status);
+                }
             })
             .catch(error => {
                 // Handle any errors that occurred during the request
                 console.error(error);
-                // Display an error message or perform other error handling
+                // Display an error message
+                alert("An error occurred while adding the person.");
+                // Perform other error handling if needed
             });
     });
 </script>
