@@ -6,11 +6,9 @@ import com.synnigeograafia.backend.service.PersonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -43,6 +41,13 @@ public class PersonController {
     public ResponseEntity<List<PersonDTO>> searchPersonByNameLikeCaseInsensitive(@RequestParam String name){
         logger.info("Received request to fetch person with name: {}", name);
         return ResponseEntity.ok(this.personService.getPersonByFirstNameIgnoreCaseLike(name));
+    }
+    @PostMapping("/addPerson")
+        public ResponseEntity<PersonDTO> addPerson(@RequestBody PersonDTO personDTO) {
+            logger.info("Received request to add a person: {}", personDTO);
+
+            PersonDTO addedPerson = this.personService.addPerson(personDTO);
+            return new ResponseEntity<>(addedPerson, HttpStatus.CREATED);
     }
 
 }

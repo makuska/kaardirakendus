@@ -65,4 +65,27 @@ public class PersonJDBCDataAccessService implements PersonDao {
         return jdbcTemplate.query(sql, personRowMapper, name + "%", name + "%"); // Appending the wildcard character %
     }
 
+    @Override
+    public void insertPerson(Person person) {
+        var sql = """
+            INSERT INTO synnigeograafia.avalikud_koos_koordinaatidega (id, eesnimi, perekonnanimi, varjunimi, synniaeg, kasvukoht, surmaaeg, valdkond, tunnus, x_koordinaat, y_koordinaat)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """;
+        jdbcTemplate.update(
+                sql,
+                person.getId(),
+                person.getEesnimi(),
+                person.getPerekonnanimi(),
+                person.getVarjunimi(),
+                person.getSynniaeg(),
+                person.getKasvukoht(),
+                person.getSurmaaeg(),
+                person.getValdkond(),
+                person.getTunnus(),
+                person.getX_koordinaat(),
+                person.getY_koordinaat()
+        );
+    }
+
+
 }

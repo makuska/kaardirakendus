@@ -1,5 +1,6 @@
 package com.synnigeograafia.backend.service;
 
+import com.synnigeograafia.backend.domain.Person;
 import com.synnigeograafia.backend.repository.DAO.PersonDao;
 import com.synnigeograafia.backend.exception.PersonNotFoundException;
 import com.synnigeograafia.backend.mapper.PersonMapper;
@@ -40,5 +41,22 @@ public class PersonService {
                 .stream()
                 .map(personMapper::personToPersonDto)
                 .collect(Collectors.toList());
+    }
+    public PersonDTO addPerson(PersonDTO personDTO) {
+        // Convert the PersonDTO to Person entity
+        Person person = this.personMapper.personDtoToPerson(personDTO);
+        //Problem with mapping from DTO to POJO, mapped x and y coordinates manually
+        person.setX_koordinaat(personDTO.getX_koordinaat());
+        person.setY_koordinaat(personDTO.getY_koordinaat());
+
+        // Generate a new UUID for the person
+        UUID personId = UUID.randomUUID();
+        person.setId(personId);
+
+        // Save the person in the database
+        this.personDao.insertPerson(person);
+
+        // Convert the saved Person entity back to PersonDTO
+        return this.personMapper.personToPersonDto(person);
     }
 }

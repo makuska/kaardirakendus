@@ -20,5 +20,7 @@ public class PersonDTO {
     private String surmaaeg;
     private String valdkond;
     private String tunnus;
+    private String x_koordinaat;
+    private String y_koordinaat;
 
 }
