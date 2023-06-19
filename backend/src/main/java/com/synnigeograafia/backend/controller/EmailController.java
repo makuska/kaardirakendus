@@ -21,19 +21,10 @@ public class EmailController {
         this.emailService = emailService;
     }
 
-//    @PostMapping("/sendEmail")
-//    public void sendEmail(@RequestBody EmailRequest emailRequest){
-//        logger.info("Email request received: " + emailRequest.getRecipient(), emailRequest.getSubject(), emailRequest.getBody());
-//        this.emailService.sendEmail(emailRequest.getRecipient(), emailRequest.getSubject(), emailRequest.getBody());
-//    }
     @PostMapping("/sendEmail")
-    public ResponseEntity<String> sendEmail(@RequestParam("name") String name, @RequestParam("subject") String subject) {
-        logger.info("Email request received");
-        this.emailService.sendEmail(RECIPIENT, name, subject);
-        return ResponseEntity.ok("Email sent successfully");
-//        String redirectUrl = "http://localhost:8080";
-//        return ResponseEntity.status(HttpStatus.FOUND)
-//                .header("Location", redirectUrl)
-//                .body("Email sent successfully");
+    public void sendEmail(@RequestBody EmailRequest emailRequest){
+        logger.info("Email request received: " + emailRequest.getRecipient(), emailRequest.getName(), emailRequest.getSubject());
+        this.emailService.sendEmail(emailRequest.getRecipient(), emailRequest.getName(), emailRequest.getSubject());
     }
+
 }

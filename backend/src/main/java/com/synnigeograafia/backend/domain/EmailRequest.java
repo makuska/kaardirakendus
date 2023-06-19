@@ -2,14 +2,14 @@ package com.synnigeograafia.backend.domain;
 
 public class EmailRequest {
     private String recipient;
+    private String name;
     private String subject;
-    private String body;
 
 
-    public EmailRequest(String recipient, String subject, String body) {
+    public EmailRequest(String recipient, String name, String subject) {
         this.recipient = recipient;
+        this.name = name;
         this.subject = subject;
-        this.body = body;
     }
 
     public String getRecipient() {
@@ -20,6 +20,14 @@ public class EmailRequest {
         this.recipient = recipient;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getSubject() {
         return subject;
     }
@@ -28,22 +36,12 @@ public class EmailRequest {
         this.subject = subject;
     }
 
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
     @Override
     public String toString() {
         return "EmailRequest{" +
-               "recipient='" + recipient + '\'' +
-               ", subject='" + subject + '\'' +
-               ", body='" + body + '\'' +
-               '}';
+                "recipient='" + recipient + '\'' +
+                ", name='" + name + '\'' +
+                ", subject='" + subject + '\'' +
+                '}';
     }
-
-
 }

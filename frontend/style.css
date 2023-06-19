@@ -52,6 +52,9 @@ body {
   border-radius: 50%;
   background-color: green;
 }
+.circle-icon.dark-mode {
+  background-color: purple; /* Dark mode marker color */
+}
 
 
 /* Custom marker cluster styles */
