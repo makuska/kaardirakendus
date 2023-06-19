@@ -127,47 +127,46 @@ function closeSidebar() {
 // -------------------------------------------------------- //
 // --------------- Modify styles for layers --------------- //
 // -------------------------------------------------------- //
-function setStyles(selectedLayer) {
-  let sidebar = document.querySelector(".sidebar");
-  let sidebartext = document.querySelector(".sidebar-content");
-  let sidebarelements = document.querySelector(".sidebar svg");
-  let icons = document.querySelector(".circle-icon");
-
-  if (selectedLayer === "Klassika") {
-    sidebar.style.background = "#fff"; // Light color
-    sidebartext.style.color = "black";
-    sidebarelements.style.fill = "#3f3f3f";
-    icons.style.backgroundColor = "green"; // Light color for marker
-    document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #64a1e8; }";
-    sidebar.classList.add("klassika");
-    sidebar.classList.remove("dark-mode");
-  } else if (selectedLayer === "Dark mode") {
-    sidebar.style.background = "#415a77"; // Dark color
-    sidebartext.style.color = "#ffffff";
-    sidebarelements.style.fill = "#ccc";
-    icons.style.backgroundColor = "purple"; // Dark color for marker
-    document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #163c48; }";
-    sidebar.classList.add("dark-mode");
-    sidebar.classList.remove("klassika");
-
-    // Additional code for dark mode marker color
-    let markerIcons = document.querySelectorAll(".circle-icon");
-    for (let i = 0; i < markerIcons.length; i++) {
-      markerIcons[i].style.backgroundColor = "purple";
-    }
-  }
-}
-
-map.on("baselayerchange", function(event) {
-  let selectedLayer = event.name;
-  setStyles(selectedLayer);
-});
-
-// Set initial styles when the page loads
-document.addEventListener("DOMContentLoaded", function() {
-  setStyles("Klassika");
-});
-
+// function setStyles(selectedLayer) {
+//   let sidebar = document.querySelector(".sidebar");
+//   let sidebartext = document.querySelector(".sidebar-content");
+//   let sidebarelements = document.querySelector(".sidebar svg");
+//   let icons = document.querySelector(".circle-icon");
+//
+//   if (selectedLayer === "Klassika") {
+//     sidebar.style.background = "#fff"; // Light color
+//     sidebartext.style.color = "black";
+//     sidebarelements.style.fill = "#3f3f3f";
+//     icons.style.backgroundColor = "green"; // Light color for marker
+//     document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #64a1e8; }";
+//     sidebar.classList.add("klassika");
+//     sidebar.classList.remove("dark-mode");
+//   } else if (selectedLayer === "Dark mode") {
+//     sidebar.style.background = "#415a77"; // Dark color
+//     sidebartext.style.color = "#ffffff";
+//     sidebarelements.style.fill = "#ccc";
+//     icons.style.backgroundColor = "purple"; // Dark color for marker
+//     document.getElementById("dynamic-styles").textContent = ".sidebar::before { background: #163c48; }";
+//     sidebar.classList.add("dark-mode");
+//     sidebar.classList.remove("klassika");
+//
+//     // Additional code for dark mode marker color
+//     let markerIcons = document.querySelectorAll(".circle-icon");
+//     for (let i = 0; i < markerIcons.length; i++) {
+//       markerIcons[i].style.backgroundColor = "purple";
+//     }
+//   }
+// }
+//
+// map.on("baselayerchange", function(event) {
+//   let selectedLayer = event.name;
+//   setStyles(selectedLayer);
+// });
+//
+// // Set initial styles when the page loads
+// document.addEventListener("DOMContentLoaded", function() {
+//   setStyles("Klassika");
+// });
 
 
 

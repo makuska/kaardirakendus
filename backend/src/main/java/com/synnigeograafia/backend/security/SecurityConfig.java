@@ -2,11 +2,9 @@ package com.synnigeograafia.backend.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.cors.CorsConfiguration;
-
-import java.util.Collections;
 
 @Configuration
 public class SecurityConfig {
@@ -35,9 +33,12 @@ public class SecurityConfig {
 //                            return config;
 //                        })
 //                );
+                .cors().disable()
+                .csrf().disable()
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/login").authenticated()
-                        .requestMatchers(MARKER_PATH + "/**",  PERSON_PATH + "/**", EMAIL_PATH + "/**").permitAll()
+                        .requestMatchers(MARKER_PATH + "/**",  PERSON_PATH + "/**").permitAll()
+                        .requestMatchers(HttpMethod.POST,EMAIL_PATH + "/sendEmail").permitAll()
                 );
         http.formLogin();
         http.httpBasic();

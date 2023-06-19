@@ -52,9 +52,9 @@ body {
   border-radius: 50%;
   background-color: green;
 }
-.circle-icon.dark-mode {
-  background-color: purple; /* Dark mode marker color */
-}
+/*.circle-icon.dark-mode {*/
+/*  background-color: purple; !* Dark mode marker color *!*/
+/*}*/
 
 
 /* Custom marker cluster styles */
@@ -288,4 +288,22 @@ svg:not(:root) {
 .item-content input[type="submit"]:hover {
   background-color: lightblue;
 }
+
+.item-content button {
+  background-color: #5299af;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.item-content button:hover {
+  background-color: #5299af;
+}
+
+#settings button {
+  margin-top: 20px;
+}
+
 
