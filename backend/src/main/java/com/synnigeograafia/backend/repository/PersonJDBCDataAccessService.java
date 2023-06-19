@@ -27,7 +27,7 @@ public class PersonJDBCDataAccessService implements PersonDao {
     public Optional<Person> selectPersonById(UUID id) {
         var sql = """
                 SELECT id, eesnimi, perekonnanimi, varjunimi, synniaeg, kasvukoht, surmaaeg, valdkond, tunnus
-                FROM postgres.postgres.avalikud_koos_koordinaatidega
+                FROM synnigeograafia.avalikud_koos_koordinaatidega
                 WHERE id = ?
                 """;
         return jdbcTemplate.query(sql, personRowMapper, id)
@@ -39,7 +39,7 @@ public class PersonJDBCDataAccessService implements PersonDao {
     public List<Person> selectAllPersons() {
         var sql = """
                 SELECT *
-                FROM postgres.postgres.avalikud_koos_koordinaatidega
+                FROM synnigeograafia.avalikud_koos_koordinaatidega
                 LIMIT 1000 -- To make sure that user can't request large chunks of data
                 """;
         return jdbcTemplate.query(sql, personRowMapper);
@@ -49,7 +49,7 @@ public class PersonJDBCDataAccessService implements PersonDao {
     public List<Person> selectAllPersonsNoLimit() {
         var sql = """
                 SELECT *
-                FROM postgres.postgres.avalikud_koos_koordinaatidega
+                FROM synnigeograafia.avalikud_koos_koordinaatidega
                 """;
         return jdbcTemplate.query(sql, personRowMapper);
     }
@@ -58,7 +58,7 @@ public class PersonJDBCDataAccessService implements PersonDao {
     public List<Person> selectPersonByNameLikeIgnoreCase(String name) {
         var sql = """
             SELECT *
-            FROM postgres.postgres.avalikud_koos_koordinaatidega
+            FROM synnigeograafia.avalikud_koos_koordinaatidega
             WHERE eesnimi ILIKE ? OR perekonnanimi ILIKE ? -- ILIKE performs a case-insensitive search
             LIMIT 10
             """;
