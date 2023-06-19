@@ -12,4 +12,5 @@ public interface PersonDao {
     List<Person> selectAllPersons();
     List<Person> selectAllPersonsNoLimit();
     List<Person> selectPersonByNameLikeIgnoreCase(String name);
+    void insertPerson(Person person);
 }

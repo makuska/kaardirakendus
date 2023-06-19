@@ -285,11 +285,11 @@ searchbox.onInput("keyup", function (e) {
 
           // Add the persons as dropdown options
           persons.forEach(person => {
-            if (person.varjunimi == null) {
+            // if (person.varjunimi == null) {
               searchbox.addItem(person.eesnimi + " " + person.perekonnanimi);
-            } else {
-              searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
-            }
+          //   } else {
+          //     searchbox.addItem(person.eesnimi + " " + person.perekonnanimi + " " + person.varjunimi);
+          //   }
           });
 
           // Add click event listener to search result items

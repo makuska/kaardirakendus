@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adminileht</title>
+</head>
+<body>
+<h1>Lisa isikuid andmebaasi</h1>
+<!--<p>ID: <input type = text placeholder = id></p>-->
+<!--<p>Eesnimi: <input type = text placeholder = eesnimi></p>-->
+<!--<p>Perekonnanimi: <input type = text placeholder = perekonnanimi></p>-->
+<!--<p>Varjunimi: <input type = text placeholder = varjunimi></p>-->
+<!--<p>Sünniaeg: <input type = text placeholder = sünniaeg></p>-->
+<!--<p>Kasvukoht: <input type = text placeholder = kasvukoht></p>-->
+<!--<p>Surmaaeg: <input type = text placeholder = surmaaeg></p>-->
+<!--<p>Valdkond: <input type = text placeholder = valdkond></p>-->
+<!--<p>Tunnus: <input type = text placeholder = tunnus></p>-->
+<!--<p>X koordinaadid: <input type = text placeholder = x koordinaadid></p>-->
+<!--<p>Y koordinaadid: <input type = text placeholder = y koordinaadid></p>-->
+<form id="personForm">
+<!--<form action="/api/v1/person/addPerson" method="POST">-->
+    <label for="eesnimi">Eesnimi:</label>
+    <input type="text" id="eesnimi" name="eesnimi">
+    <br>
+    <label for="perekonnanimi">Perekonnanimi:</label>
+    <input type="text" id="perekonnanimi" name="perekonnanimi">
+    <br>
+    <label for="varjunimi">Varjunimi:</label>
+    <input type="text" id="varjunimi" name="varjunimi">
+    <br>
+    <label for="synniaeg">Sünniaeg:</label>
+    <input type="text" id="synniaeg" name="synniaeg">
+    <br>
+    <label for="kasvukoht">Kasvukoht:</label>
+    <input type="text" id="kasvukoht" name="kasvukoht">
+    <br>
+    <label for="surmaaeg">Surmaaeg:</label>
+    <input type="text" id="surmaaeg" name="surmaaeg">
+    <br>
+    <label for="valdkond">Valdkond:</label>
+    <input type="text" id="valdkond" name="valdkond">
+    <br>
+    <label for="tunnus">Tunnus:</label>
+    <input type="text" id="tunnus" name="tunnus">
+    <br>
+    <label for="x_koordinaat">X koordinaadid:</label>
+    <input type="text" id="x_koordinaat" name="x_koordinaat">
+    <br>
+    <label for="y_koordinaat">Y koordinaadid:</label>
+    <input type="text" id="y_koordinaat" name="y_koordinaat">
+    <br>
+    <input type="submit">
+</form>
+<script>
+    document.getElementById("personForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the form data
+        const form = document.getElementById("personForm");
+        const formData = new FormData(form);
+
+        // Convert the form data to JSON
+        const personData = {};
+        formData.forEach((value, key) => {
+            personData[key] = value;
+        });
+        console.log(personData);
+
+        // Make an HTTP POST request to the backend API
+        fetch("http://localhost:8080/api/v1/addPerson", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(personData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server
+                console.log(data);
+                // Display a success message or perform other actions
+            })
+            .catch(error => {
+                // Handle any errors that occurred during the request
+                console.error(error);
+                // Display an error message or perform other error handling
+            });
+    });
+</script>
+</body>
+</html>
