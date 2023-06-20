@@ -1,17 +1,23 @@
 package com.synnigeograafia.backend.security;
 
+
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig {
 
     private final String MARKER_PATH = "/api/v1/marker";
     private final String PERSON_PATH = "/api/v1/person";
     private final String EMAIL_PATH = "/api/v1/email";
+    private final String ADMIN_PAGE = "http://localhost:63342/kaardirakendus/frontend/admin.html";
 
 
     @Bean
@@ -36,13 +42,22 @@ public class SecurityConfig {
                 .cors().disable()
                 .csrf().disable()
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/login").authenticated()
-                        .requestMatchers(MARKER_PATH + "/**",  PERSON_PATH + "/**").permitAll()
+                        .requestMatchers(PERSON_PATH + "/AllPersons", PERSON_PATH + "/searchById", PERSON_PATH + "/searchByName").permitAll()
+                        .requestMatchers(MARKER_PATH + "/**").permitAll()
                         .requestMatchers(HttpMethod.POST,EMAIL_PATH + "/sendEmail").permitAll()
-                        .requestMatchers(HttpMethod.POST, PERSON_PATH + "/addPerson").permitAll()
-                );
-        http.formLogin();
-        http.httpBasic();
+                        .requestMatchers(HttpMethod.POST, PERSON_PATH + "/addPerson").authenticated()
+                        .requestMatchers(ADMIN_PAGE).authenticated()
+                )
+                //Toimib
+                .formLogin()
+                    .defaultSuccessUrl(ADMIN_PAGE, true) // Redirect to admin.html after successful login
+                    .permitAll()
+                .and()
+                .logout()
+                    .permitAll()
+                .and()
+                .httpBasic();
         return http.build();
     }
+
 }

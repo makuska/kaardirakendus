@@ -63,9 +63,9 @@
             d="M12 14.016q2.531 0 5.273 1.102t2.742 2.883v2.016H3.984v-2.016q0-1.781 2.742-2.883t5.273-1.102zM12 12q-1.641 0-2.813-1.172T8.015 8.015t1.172-2.836T12 3.984t2.813 1.195 1.172 2.836-1.172 2.813T12 12z"
     />
   </symbol>
-  <symbol id="icon-settings" viewBox="0 0 24 24">
+  <symbol id="icon-download" viewBox="0 0 24 24">
     <path
-            d="M12 15.516q1.453 0 2.484-1.031t1.031-2.484-1.031-2.484T12 8.486 9.516 9.517t-1.031 2.484 1.031 2.484T12 15.516zm7.453-2.532 2.109 1.641q.328.234.094.656L19.64 18.75q-.188.328-.609.188l-2.484-.984q-.984.703-1.688.984l-.375 2.625q-.094.422-.469.422H9.984q-.375 0-.469-.422l-.375-2.625q-.891-.375-1.688-.984l-2.484.984q-.422.141-.609-.188l-2.016-3.469q-.234-.422.094-.656l2.109-1.641q-.047-.328-.047-.984t.047-.984L2.437 9.375q-.328-.234-.094-.656L4.359 5.25q.188-.328.609-.188l2.484.984q.984-.703 1.688-.984l.375-2.625q.094-.422.469-.422h4.031q.375 0 .469.422l.375 2.625q.891.375 1.688.984l2.484-.984q.422-.141.609.188l2.016 3.469q.234.422-.094.656l-2.109 1.641q.047.328.047.984t-.047.984z"
+            d="M19,18H5V16H19M19,11H15V3H9V11H5L12,18L19,11Z"
     />
   </symbol>
   <!--  <symbol id="icon-search" viewBox="0 0 24 24">-->
@@ -94,8 +94,8 @@
     <!--    <li class="menu-item" data-item="search">-->
     <!--      <svg><use xlink:href="#icon-search"></use></svg>-->
     <!--    </li>-->
-    <li class="menu-item" data-item="settings">
-      <svg><use xlink:href="#icon-settings"></use></svg>
+    <li class="menu-item" data-item="download">
+      <svg><use xlink:href="#icon-download"></use></svg>
     </li>
 
   </ul>
@@ -104,13 +104,15 @@
     <div class="item-content" id="menu">
       <h2>Natuke meist</h2>
       <div class="content">
-        Oleme informaatika esmakursuse tudengid Tallinna Ülikoolist. Meie grupp koosneb viiest inimesest. Kahest digimeedia suuna tudengist: Susanna Veskist ja Kristiin Marleen Suikist. Ja ka kolmest tarkvaraarenduse suuna tudengist: Jan Henrik Levertandist, Roland Siltist ning meie grupijuhist, Sander Nõlvakust. See projekt, "Eesti avalike tegelaste sünnigeograafia kaart", on koostatud kooli poolt pakutud praktika raames. Eesmärgiks on rikastada Eesti kultuuri ja hoida elus mälestusi meie riigi avalike elu tegelastest. Kõik, kes kaardil on, on võetud toimetaja Richard Kleisi poolt koostatud raamatust "Eesti avalikud tegelased". Meile esitas tellimuse Kädi Riismaa, kes on Tallinna Ülikoolis digitehnoloogia instituudis teabehalduse lektor ning ka teadatuntud dokumendihalduse spetsialist. Suured tänuavaldused meie õppejõududele: Jaagup Kippar, Andrus Rinde ning Inga Petuhhov.
+        Oleme informaatika esmakursuse tudengid Tallinna Ülikoolist. Meie grupp koosneb viiest inimesest. Kahest digimeedia suuna tudengist: Susanna Veskist ja Kristiin Marleen Suikist. Ja ka kolmest tarkvaraarenduse suuna tudengist: Jan Henrik Levertandist, Roland Siltist ning meie grupijuhist, Sander Nõlvakust. See projekt, "Eesti avalike tegelaste sünnigeograafia kaart", on koostatud kooli poolt pakutud praktika raames. Eesmärgiks on rikastada Eesti kultuuri ja hoida elus mälestusi meie riigi avalike elu tegelastest. Kõik, kes kaardil on, on võetud toimetaja Richard Kleisi poolt koostatud teosest "Eesti avalikud tegelased". Meile esitas tellimuse Kädi Riismaa, kes on Tallinna Ülikoolis digitehnoloogia instituudis teabehalduse lektor ning ka teadatuntud dokumendihalduse spetsialist. Suured tänuavaldused meie õppejõududele: Jaagup Kippar, Andrus Rinde ning Inga Petuhhov.
       </div>
     </div>
     <div class="item-content" id="person">
       <h2>Admini sisselogimine</h2>
       <div class="content">
-        Siit saab admin sisse logida
+        <a href="http://localhost:8080/login">
+          <button class="custom-button" type="button">Admin</button>
+        </a>
       </div>
     </div>
     <div class="item-content" id="email">
@@ -122,11 +124,9 @@
         <input type="submit" value="Saada">
       </form>
     </div>
-    <div class="item-content" id="settings">
+    <div class="item-content" id="download">
       <h2>Lae alla</h2>
-      <button type="button" onclick="openAPIWindow()">Lae alla</button>
-<!--      <div class="content">settings</div>-->
-<!--      <div class="content">settings</div>-->
+      <button class="custom-button1" type="button" onclick="openAPIWindow()">Lae alla</button>
     </div>
 
     <script>

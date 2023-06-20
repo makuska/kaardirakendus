@@ -28,3 +28,4 @@ node_modules
 package-lock.json
 package.json
 
+.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_5.xml

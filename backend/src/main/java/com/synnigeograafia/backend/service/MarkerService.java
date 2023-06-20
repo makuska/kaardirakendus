@@ -2,7 +2,6 @@ package com.synnigeograafia.backend.service;
 
 import com.synnigeograafia.backend.domain.Person;
 import com.synnigeograafia.backend.DTO.MarkerDataDTO;
-import com.synnigeograafia.backend.repository.DAO.MarkerDao;
 import com.synnigeograafia.backend.repository.DAO.PersonDao;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -13,11 +12,9 @@ import java.util.List;
 @Service
 public class MarkerService {
 
-    private final MarkerDao markerDao;
     private final PersonDao personDao;
 
-    public MarkerService(@Qualifier("jdbc-marker") MarkerDao markerDao, @Qualifier("jdbc-person") PersonDao personDao) {
-        this.markerDao = markerDao;
+    public MarkerService(@Qualifier("jdbc-person") PersonDao personDao) {
         this.personDao = personDao;
     }
 

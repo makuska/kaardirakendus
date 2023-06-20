@@ -1,0 +1,45 @@
+package com.synnigeograafia.backend.security;
+
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import javax.servlet.FilterChain;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Collections;
+
+public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+
+    private final JwtUtil jwtUtil;
+    private final AuthenticationManager authenticationManager;
+
+    public JwtAuthenticationFilter(JwtUtil jwtUtil, AuthenticationManager authenticationManager) {
+        this.jwtUtil = jwtUtil;
+        this.authenticationManager = authenticationManager;
+        setFilterProcessesUrl("/login"); // Set the URL for authentication
+    }
+
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) {
+        String username = obtainUsername((jakarta.servlet.http.HttpServletRequest) request);
+        String password = obtainPassword((jakarta.servlet.http.HttpServletRequest) request);
+
+        // Authenticate the user with the provided username and password
+        UsernamePasswordAuthenticationToken authenticationToken =
+                new UsernamePasswordAuthenticationToken(username, password, Collections.emptyList());
+
+        return authenticationManager.authenticate(authenticationToken);
+    }
+
+    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response,
+                                            FilterChain chain, Authentication authResult) throws IOException {
+        // Generate JWT token
+        String username = authResult.getName();
+        String token = jwtUtil.generateToken(username);
+
+        // Add the token to the response header
+        response.addHeader("Authorization", "Bearer " + token);
+    }
+}

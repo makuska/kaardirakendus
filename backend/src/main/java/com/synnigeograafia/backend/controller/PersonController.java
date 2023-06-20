@@ -42,6 +42,7 @@ public class PersonController {
         logger.info("Received request to fetch person with name: {}", name);
         return ResponseEntity.ok(this.personService.getPersonByFirstNameIgnoreCaseLike(name));
     }
+
     @PostMapping("/addPerson")
         public ResponseEntity<PersonDTO> addPerson(@RequestBody PersonDTO personDTO) {
             logger.info("Received request to add a person: {}", personDTO);
