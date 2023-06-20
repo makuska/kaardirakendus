@@ -1,4 +1,7 @@
-Kaardirakendus- Eesti avalike tegelaste sünnigeograafia Image 20-06-2023 at 11.20.jpg
+Kaardirakendus- Eesti avalike tegelaste sünnigeograafia
+![355542327_992423468565629_4488291471339597796_n](https://github.com/makuska/kaardirakendus/assets/114921877/4f23808f-6039-49a0-b158-2e430862c58b)
+
+![355583760_978971566562630_2721446250448218827_n](https://github.com/makuska/kaardirakendus/assets/114921877/7d0d7a94-12a0-45dd-81ee-ddcd434df7dd)
 
 Eesmärk ja lühikirjeldus Rakenduseks on Eesti sünnigeograafia avalike isikute ajalooline kaart. 
 Rakendus peab olema kättesaadav igal ajal, ning pakkuma mugavat kasutajakogemust. 
