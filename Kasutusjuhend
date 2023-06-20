@@ -1,0 +1,6 @@
+Kasutusjuhend- Leht on üpriski lihtne ja peaks olema tavakasutajale arusaadav, kuid seletan lahti selle põhifunktsioonid. 
+Paremal üleval on Layer süsteem, millega saab panna kaardi dark mode, et oleks silmadele mugavam. 
+Selle all kohe on otsinguriba, millel trükkides saab kasutaja otsida isikuid nime järgi. 
+Vasakul pool ekraani on menüüriba, millel on tutvustav jutt meist, võimalus jätta tagasisidet, admin sisselogimine ning võimalus alla laadida kõigi kaardil asuvate isikute andmed.
+Kaardil on ka mullikesed,  vastavalt suured või väiksed. Mullikese peale vajutades suumib kaart sisse ja näitab, mis inimesed, kus linnas sündinud on.
+Kaardi vasakul üleval on ka suumimis võimalus + ja - näol.
