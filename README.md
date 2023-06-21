@@ -1,4 +1,4 @@
-# Kaardirakendus- Eesti avalike tegelaste sünnigeograafia
+# Kaardirakendus - Eesti avalike tegelaste sünnigeograafia
 ![355542327_992423468565629_4488291471339597796_n](https://github.com/makuska/kaardirakendus/assets/114921877/4f23808f-6039-49a0-b158-2e430862c58b)
 
 ![355583760_978971566562630_2721446250448218827_n](https://github.com/makuska/kaardirakendus/assets/114921877/7d0d7a94-12a0-45dd-81ee-ddcd434df7dd)
@@ -36,9 +36,9 @@ Projekti autorid: Sander Nõlvak (juht), Susanna Veski, Kristiin Marleen Suik, R
 1) Tuleb teha kloon Githubi repositooriumist (`git clone https://github.com/makuska/kaardirakendus.git`), kuna default branch on 'development', siis ei pea branchi muutma.
 2) Kasutusel on Java 17, seega tuleb veenda, et arvutil oleks installeeritud vähamelt Java 15 (rakendus toimib ka Java 15 peal).
 3) Tuleb luua Postgres andmebaas (võib ka kasutada muud relatsioonilist andmebaasi, nagu MySQL, kuid siis tuleb vahetada `application.yml` failis vastavad konfiguratsioonid). Kuna `application.yml` on `.gitignore` failis, siis tuleb see ise luua (sobib ka `application.properties` fail).
-  3.1) tuleb luua andmebaas kasutades sql skripti (`avalikud_koos_koordinaatidega.sql`).
-  3.2) tuleb luua schema nimega `synnigeograafia`.
-  3.2) Tuleb importida csv fail (`avalikud_koos_koordinaatidega(uus).csv`), antud fail on csv formaadis, ning populaarsemad IDEd pakuvad võimekust seda lisada graafilise kasutajaliidese abil. 
+    * tuleb luua andmebaas kasutades sql skripti (`avalikud_koos_koordinaatidega.sql`).
+    * tuleb luua schema nimega `synnigeograafia`.
+    * Tuleb importida csv fail (`avalikud_koos_koordinaatidega(uus).csv`), antud fail on csv formaadis, ning populaarsemad IDEd pakuvad võimekust seda lisada graafilise kasutajaliidese abil. 
 ```yml
 spring:
   datasource:
