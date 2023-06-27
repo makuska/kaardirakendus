@@ -86,4 +86,9 @@ spring:
 7) Peab arvestama, et Java rakendused on mahukad, arvutil võiks olla piisavalt kettaruumi kõige jooksutamiseks (0.5-1 GB kettaruumi). UNIX laadsetel arvutitel on üldjuhul Python olemas (kui on soovi ise kirutada skripte, soovides andmeid muuta), kuid praeguseid andmeid pole vaja enam mmuuta.
 8) Kui kõik oli edukas, siit peaksid kõik isikud kaardil olema kuvatud ja teised kaardi funktsionaalsused toimima. Kui tekib probleeme rakenduse avamisel/käivitamisel siis võib [liikuda siia](https://github.com/makuska/kaardirakendus/issues) ja teavitada arendajaid probleemidest!
 
+## Litsents
 Viide litsentsile https://github.com/makuska/kaardirakendus/blob/development/LICENSE
+
+#### Testiraport - Roland Silt
+* [esimene](https://github.com/makuska/kaardirakendus/edit/development/docs/Testid1.txt)<br>
+* [teine](https://github.com/makuska/kaardirakendus/edit/development/docs/Testid2.txt)
