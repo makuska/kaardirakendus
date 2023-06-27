@@ -90,5 +90,5 @@ spring:
 Viide litsentsile https://github.com/makuska/kaardirakendus/blob/development/LICENSE
 
 #### Testiraport - Roland Silt
-* [esimene](https://github.com/makuska/kaardirakendus/edit/development/docs/Testid1.txt)<br>
-* [teine](https://github.com/makuska/kaardirakendus/edit/development/docs/Testid2.txt)
+* [esimene](https://github.com/makuska/kaardirakendus/blob/development/docs/Testid1.txt)<br>
+* [teine](https://github.com/makuska/kaardirakendus/blob/development/docs/Testid2.txt)
