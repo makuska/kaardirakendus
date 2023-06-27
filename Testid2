@@ -1,13 +1,14 @@
 1. Sissejuhatus
 Testimisraport käsitleb probleemi, mis ilmnes seoses navigeerimismenüü värvusega Dark Mode'i kasutamisel.
-Probleem seisnes selles, et navigeerimismenüü ei muutunud tumedaks, vaid säilitas samasuguse värvitooni nagu eelmises režiimis.
+Probleem seisnes selles, et navigeerimismenüü ei muutunud tumedaks, vaid säilitas samasuguse värvitooni nagu “klassikalises” režiimis.
 
 2. Testimiseeskirjad
-Testimise käigus järgiti järgmisi reegleid ja eeskirju:
-
-Testiti ainult navigeerimismenüü värvuse muutust Dark Mode'i kasutamisel.
+Testimise käigus järgiti järgmisi reegleid:
+Testiti ainult navigeerimismenüü värvuse muutumist Dark Mode'i kasutamisel.
 Testitav rakendus töötas korrektselt muudes aspektides.
-Testimine viidi läbi käsitsi, mitte automatiseeritud testide abil.
+
+Testimine viidi läbi manuaalselt, mitte automatiseeritud testide abil.
+
 Dark Mode'i režiim oli seadistatud aktiivseks rakenduses.
 
 3. Testimise keskkond
@@ -34,14 +35,12 @@ Menüü säilitas samasuguse värvitooni nagu eelmises režiimis, olles seega mi
 
 6.  Võimalikud põhjused:
 
-Puuduv teemamuutuse loogika:
 CSS  vigane konfiguratsioon: CSS koodis võib esineda vigu või valesti konfigureeritud värvusi, mis mõjutavad navigeerimismenüü Dark Mode'i värvuse muutust.
 6.2. Edasised tegevused:
 
 CSS-i  vigade kontrollimine ja parandamine, et tagada navigeerimismenüü korrektne värvus Dark Mode režiimis.
 
 7. Järeldus
-Antud testimisraport käsitles probleemi navigeerimismenüü värvusega Dark Mode'i kasutamisel. 
-Probleemi tulemused näitasid, et navigeerimismenüü ei muutunud vastavalt Dark Mode'i režiimile, säilitades samasuguse värvitooni nagu eelmises režiimis.
-Edasised tegevused peaksid hõlmama  põhjuse tuvastamist ning vajalike paranduste tegemist probleemi lahendamiseks.
-
+Antud testimisraport käsitles probleemi navigeerimismenüü värvuse muutumisega  Dark Mode'i kasutamisel.
+Probleemi tulemused näitasid, et navigeerimismenüü ei muutunud vastavalt Dark Mode'i režiimile, säilitades sama värvi nagu eelmises “klassikalises” režiimis.
+Edasised tegevused peaksid olema probleemi põhjuse tuvastamine ning vajalike paranduste tegemine.
