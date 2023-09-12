@@ -1,0 +1,56 @@
+Testimisraport: Anomaalia mapzoomi tasemega 11 või suurem searchbari kasutamisel
+
+1. Sissejuhatus
+Antud testimisraport käsitleb anomaaliat, mis ilmnes manuaalse testimise käigus seoses searchbari toimimisega kaardil. 
+Anomaalia seisnes selles, et searchbar ei suutnud leida isikuid kaardilt ülesse, kui mapzoomi tase oli 11 või suurem.
+
+2. Testimiseeskirjad
+Testimise käigus järgiti järgmisi reegleid ja eeskirju:
+
+Testiti ainult searchbari  toimimist seoses isikute leidmisega kaardilt.
+Testitav rakendus töötas korrektselt muudes aspektides.
+Testimine viidi läbi manuaalselt, mitte automatiseeritult. 
+Testiti erinevaid mapzoomi tasemeid, alustades 1-st kuni 11-ni ning seejärel suurendades mapzoomi taset üle 11.
+
+3. Testimise keskkond
+Testimine viidi läbi järgmises keskkonnas:
+
+Operatsioonisüsteem: MacOS Monterey 12.6.6
+Kaardirakenduse andmestik: OpenStreetMap API
+Mapzoomi tasemed: 1 kuni 20
+
+4. Eeltingimused:
+
+Rakendus on avatud ning kaardivaade on kuvatud.
+Searchbar on saadaval kasutajaliideses.
+
+4.1. Testi sammud:
+
+Valiti mapzoomi tase 11 ning sisestati searchbari isiku nimi.
+Vajutati otsingu käivitamiseks search nuppu.
+Kontrolliti, kas otsingutulemused kuvatakse korrektselt kaardil.
+Korrati samu samme  mapzoomi tasemetele 12, 13, 14 ja 15.
+
+5. Anomaalia tulemused
+Testide tulemusena tuvastati anomaalia, kus searchbar ei suutnud leida isikuid kaardilt ülesse, kui mapzoomi tase oli 11 või suurem.
+Mapzoomi tasemel 1-10 kuvati otsingutulemused korrektselt kaardil, kuid mapzoomi tasemel 11 ja edasi otsingutulemusi ei kuvatud.
+
+
+6. Võimalikud põhjused:
+
+Andmebaasi päringuprobleemid: Searchbar'i funktsionaalsus võib olla seotud andmebaasi päringutega, 
+mis ei suuda tulemusi korrektselt tagastada mapzoomi tasemel 11 ja edasi.
+Render Tehnoloogia piirangud: Kaardirakenduse render tehnoloogia võib olla piiratud suurema mapzoomi taseme korral, 
+mistõttu otsingutulemusi ei kuvata.
+
+6.1. Edasised tegevused:
+
+Anomaalia põhjuse kindlakstegemiseks tuleks läbi viia täiendavad testimised ning kaasata arendustiimi.
+Tuleks kontrollida rakenduse koodi võimalike vigade tuvastamiseks.
+Tuleks kontrollida andmebaasi päringuid ja veenduda, et otsingutulemused tagastatakse korrektselt suurema mapzoomi taseme korral.
+
+7. Järeldus
+Antud testimisraport käsitles anomaaliat seoses searchbar'i toimimisega kaardil, kus isikuid ei leitud ülesse, kui mapzoomi tase oli 11 või suurem. 
+Anomaalia tulemused näitavad, et rakenduse funktsionaalsus on puudulik suurema mapzoomi taseme korral. 
+Edasised tegevused peaksid hõlmama täiendavat testimist, põhjuse tuvastamist ning vajalike paranduste tegemist rakenduse arendamiseks ja anomaalia lahendamiseks.
+
