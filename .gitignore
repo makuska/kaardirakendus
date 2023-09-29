@@ -1,31 +1,36 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-### Backend ###
-backend/.mvn/wrapper/maven-wrapper.properties
-backend/src/main/resources/application.properties
-backend/mvnw
-backend/mvnw.cmd
-backend/.mvn/wrapper/maven-wrapper.jar
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-### .idea ###
-.DS_Store
-.idea/compiler.xml
-.idea/encodings.xml
-.idea/jarRepositories.xml
-.idea/kaardirakendus.iml
-.idea/libraries/
-.idea/misc.xml
-.idea/modules.xml
-.idea/dataSources.xml
-.idea/dataSources.xml
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-### Configuration files/Database data ###
-/backend/src/main/resources/application.yml
-.docker-compose.yml
-#backend/src/main/java/com/synnigeograafia/backend/repository/PersonJDBCDataAccessService.java
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### node modules ###
-node_modules
-package-lock.json
-package.json
+### VS Code ###
+.vscode/
 
-.idea/libraries/Maven__org_springframework_data_spring_data_commons_3_0_5.xml
+# Logs
+/log
