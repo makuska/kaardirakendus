@@ -8,18 +8,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import tlu.kaardirakendus.akustika.dto.StageDto;
 import tlu.kaardirakendus.akustika.service.IAkustikaService;
+
+import java.util.List;
 
 @Log4j2
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class AkustikaController {
 
     private final IAkustikaService service;
 
     @GetMapping(value = "/stage", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String getAllStages() {
+    public List<StageDto> getAllStages() {
         log.info("Getting all stages.");
         return service.getAllStages();
     }

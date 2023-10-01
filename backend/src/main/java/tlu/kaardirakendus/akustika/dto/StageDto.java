@@ -11,6 +11,11 @@ public class StageDto {
 
     private String name;
 
-    // etc...
+    private String county;
 
+    private String address;
+
+    private Double longitude;
+
+    private Double latitude;
 }

@@ -20,7 +20,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
                 .authorizeHttpRequests(req -> {
-                  req.requestMatchers("/v1/**").permitAll();
+                  req.requestMatchers("/api/v1/**").permitAll();
                   req.anyRequest().denyAll();
                 })
                 .headers(withDefaults())
