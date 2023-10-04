@@ -7,7 +7,6 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
 
-import java.io.Serializable;
 import java.time.Instant;
 
 @Builder
@@ -18,18 +17,18 @@ import java.time.Instant;
 @AllArgsConstructor
 @SQLDelete(sql = "UPDATE stage SET deleted = true WHERE id = ? AND deleted = false")
 @Where(clause = "deleted = false")
-@Table(name = "stage")
-public class StageModel implements Serializable {
+@Table(name = "stage", schema = "akustika")
+public class StageModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", columnDefinition = "serial")
+    @Column(name = "id")
     private Integer id;
 
     @Column(columnDefinition = "TEXT", name = "name")
     private String name;
 
-    @Column(name = "county") // length default = 255
+    @Column(name = "county")
     private String county;
 
     @Column(columnDefinition = "TEXT", name = "address")
@@ -41,7 +40,7 @@ public class StageModel implements Serializable {
     @Column(name = "latitude")
     private Double latitude;
 
-    @Column(name = "deleted", nullable = false, columnDefinition = "boolean default false")
+    @Column(name = "deleted", nullable = false)
     private Boolean deleted;
 
     @CreationTimestamp
@@ -51,10 +50,5 @@ public class StageModel implements Serializable {
     @UpdateTimestamp
     @Column(name = "edited")
     private Instant edited;
-
-    @PreUpdate
-    protected void onUpdate() {
-        edited = Instant.now();
-    }
 
 }
