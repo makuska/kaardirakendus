@@ -18,7 +18,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @SQLDelete(sql = "UPDATE stage SET deleted = true WHERE id = ? AND deleted = false")
 @Where(clause = "deleted = false")
-@Table(name = "stage", schema = "akustikaproov")
+@Table(name = "stage")
 public class StageModel implements Serializable {
 
     @Id
@@ -56,4 +56,5 @@ public class StageModel implements Serializable {
     protected void onUpdate() {
         edited = Instant.now();
     }
+
 }

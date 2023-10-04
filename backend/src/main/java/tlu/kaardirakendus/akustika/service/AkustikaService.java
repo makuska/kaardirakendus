@@ -14,13 +14,15 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class AkustikaService implements IAkustikaService {
+
     private final StageRepository stageRepository;
+
 
     @Transactional(readOnly = true)
     public List<StageDto> getAllStages() {
-        List<StageDto> stages = StageMapper.mapToDtos(stageRepository.findAll());
+        var stages = StageMapper.mapToDtos(stageRepository.findAll());
         if (stages.isEmpty()) {
-            log.warn("No stages found!");
+            log.info("No stages found!");
         }
         return stages;
     }

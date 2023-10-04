@@ -1,18 +1,18 @@
 CREATE TABLE IF NOT EXISTS stage (
-    id serial  NOT NULL,
-    name text  NOT NULL,
-    county varchar(255)  NOT NULL,
-    address text  NOT NULL,
-    longitude float  NOT NULL,
-    latitude float NOT NULL,
-    deleted boolean  NOT NULL,
-    created timestamp  NOT NULL,
-    edited timestamp  NOT NULL,
-    CONSTRAINT stage_pk PRIMARY KEY (id)
+                                 id serial  NOT NULL,
+                                 name text  NOT NULL,
+                                 county varchar(255)  NOT NULL,
+                                 address text  NOT NULL,
+                                 longitude float  NOT NULL,
+                                 latitude float NOT NULL,
+                                 deleted boolean  NOT NULL,
+                                 created timestamp  NOT NULL,
+                                 edited timestamp  NOT NULL,
+                                 CONSTRAINT stage_pk PRIMARY KEY (id)
 );
 
 -- prefill stage data
-INSERT INTO akustikaproov.stage (name, county, address, latitude, longitude, created, edited, deleted)
+INSERT INTO stage (name, county, address, latitude, longitude, created, edited, deleted)
 VALUES
     ('Kurepalu laululava', 'Tartu', 'Vallamaja tee, 62113, Tartu maakond (Kastre vallavalitsuse taga)', 58.31616104544094, 26.834524835434525, NOW(), NOW(), false),
     ('Aakre laululava', 'Tartu', 'Mõisa tee 12, Aakre, 67212 Tartu maakond (Rahvamaja kõrval)', 58.09841243301046, 26.201474885946595, NOW(), NOW(), false),

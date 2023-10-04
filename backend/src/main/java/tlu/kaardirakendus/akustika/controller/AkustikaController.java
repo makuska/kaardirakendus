@@ -15,7 +15,7 @@ import java.util.List;
 
 @Log4j2
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/v1")
 @RequiredArgsConstructor
 public class AkustikaController {
 
