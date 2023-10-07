@@ -8,6 +8,8 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 @Builder
 @Getter
@@ -39,6 +41,9 @@ public class StageModel {
 
     @Column(name = "latitude", nullable = false)
     private Double latitude;
+
+    @OneToMany(mappedBy = "stageModel")
+    private Set<StageDataModel> stageDataModels = new HashSet<>();
 
     @Column(name = "deleted", nullable = false)
     private Boolean deleted;
