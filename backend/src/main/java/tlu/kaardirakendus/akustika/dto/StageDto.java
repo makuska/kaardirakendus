@@ -1,7 +1,11 @@
 package tlu.kaardirakendus.akustika.dto;
 
+import com.sun.source.tree.CaseTree;
 import lombok.Builder;
 import lombok.Data;
+import tlu.kaardirakendus.akustika.model.StageDataModel;
+
+import java.util.Set;
 
 @Data
 @Builder
@@ -18,4 +22,6 @@ public class StageDto {
     private Double longitude;
 
     private Double latitude;
+
+    private Set<StageDataModel> stageData;
 }
