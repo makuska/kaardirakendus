@@ -25,19 +25,19 @@ public class StageModel {
     @Column(name = "id")
     private Integer id;
 
-    @Column(columnDefinition = "TEXT", name = "name")
+    @Column(columnDefinition = "TEXT", name = "name", nullable = false)
     private String name;
 
     @Column(name = "county")
     private String county;
 
-    @Column(columnDefinition = "TEXT", name = "address")
+    @Column(columnDefinition = "TEXT", name = "address", nullable = false)
     private String address;
 
-    @Column(name = "longitude")
+    @Column(name = "longitude", nullable = false)
     private Double longitude;
 
-    @Column(name = "latitude")
+    @Column(name = "latitude", nullable = false)
     private Double latitude;
 
     @Column(name = "deleted", nullable = false)
