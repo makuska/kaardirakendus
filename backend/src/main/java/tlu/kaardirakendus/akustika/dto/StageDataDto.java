@@ -3,11 +3,11 @@ package tlu.kaardirakendus.akustika.dto;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Set;
-
 @Data
 @Builder
 public class StageDataDto {
+
+    private StageDataTypeDto dataType;
 
     private Integer id;
 
@@ -15,5 +15,4 @@ public class StageDataDto {
 
     private String description;
 
-    private StageDataTypeDto dataType;
 }

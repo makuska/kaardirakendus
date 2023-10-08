@@ -10,4 +10,5 @@ public class StageDataTypeDto {
     private Integer id;
 
     private String type;
+
 }

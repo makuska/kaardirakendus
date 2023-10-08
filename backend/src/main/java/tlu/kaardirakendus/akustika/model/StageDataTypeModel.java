@@ -1,5 +1,7 @@
 package tlu.kaardirakendus.akustika.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -30,6 +32,7 @@ public class StageDataTypeModel {
     @Column(columnDefinition = "TEXT", name = "type")
     private String type;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "stageDataTypeModel")
     private Set<StageDataModel> stageDataModels = new HashSet<>();
 

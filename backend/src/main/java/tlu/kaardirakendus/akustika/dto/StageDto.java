@@ -24,4 +24,5 @@ public class StageDto {
     private Double latitude;
 
     private Set<StageDataModel> stageData;
+
 }

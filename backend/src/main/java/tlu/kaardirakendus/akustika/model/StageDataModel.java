@@ -1,5 +1,7 @@
 package tlu.kaardirakendus.akustika.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -25,10 +27,12 @@ public class StageDataModel {
     @Column(name = "id")
     private Integer id;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "stage_id")
     private StageModel stageModel;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "stage_data_type_id")
     private StageDataTypeModel stageDataTypeModel;

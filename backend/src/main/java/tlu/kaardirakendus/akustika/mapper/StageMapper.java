@@ -1,5 +1,6 @@
 package tlu.kaardirakendus.akustika.mapper;
 
+import org.hibernate.Hibernate;
 import tlu.kaardirakendus.akustika.dto.StageDto;
 import tlu.kaardirakendus.akustika.model.StageModel;
 
@@ -20,6 +21,7 @@ public class StageMapper {
     }
 
     public static StageDto mapToDto(StageModel model) {
+        Hibernate.initialize(model.getStageDataModels());
         return StageDto.builder()
                 .id(model.getId())
                 .name(model.getName())
