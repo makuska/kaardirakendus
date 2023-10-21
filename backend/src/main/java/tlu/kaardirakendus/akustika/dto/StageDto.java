@@ -1,12 +1,9 @@
 package tlu.kaardirakendus.akustika.dto;
 
-import com.sun.source.tree.CaseTree;
 import lombok.Builder;
 import lombok.Data;
-import tlu.kaardirakendus.akustika.model.StageDataModel;
 
 import java.util.HashSet;
-import java.util.Set;
 
 @Data
 @Builder
