@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import tlu.kaardirakendus.akustika.model.StageDataModel;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -23,6 +24,6 @@ public class StageDto {
 
     private Double latitude;
 
-    private Set<StageDataModel> stageData;
+    private HashSet<StageDataDto> stageData;
 
 }

@@ -16,7 +16,7 @@ public class StageMapper {
                 .address(stageDto.getAddress())
                 .longitude(stageDto.getLongitude())
                 .latitude(stageDto.getLatitude())
-                .stageDataModels(stageDto.getStageData())
+                //.stageDataModels(stageDto.getStageData())
                 .build();
     }
 
@@ -29,7 +29,7 @@ public class StageMapper {
                 .address(model.getAddress())
                 .longitude(model.getLongitude())
                 .latitude(model.getLatitude())
-                .stageData(model.getStageDataModels())
+                .stageData(StageDataMapper.mapToDtoList(model.getStageDataModels()))
                 .build();
     }
 
