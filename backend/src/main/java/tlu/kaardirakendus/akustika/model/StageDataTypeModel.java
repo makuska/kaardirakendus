@@ -18,33 +18,21 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@SQLDelete(sql = "UPDATE stage SET deleted = true WHERE id = ? AND deleted = false")
+@SQLDelete(sql = "UPDATE stage_data_type SET deleted = true WHERE id = ? AND deleted = false")
 @Where(clause = "deleted = false")
-@Table(name = "stage", schema = "akustika")
-public class StageModel {
+@Table(name = "stage_data_type", schema = "akustika")
+public class StageDataTypeModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
-    @Column(columnDefinition = "TEXT", name = "name", nullable = false)
-    private String name;
-
-    @Column(name = "county")
-    private String county;
-
-    @Column(columnDefinition = "TEXT", name = "address", nullable = false)
-    private String address;
-
-    @Column(name = "longitude", nullable = false)
-    private Double longitude;
-
-    @Column(name = "latitude", nullable = false)
-    private Double latitude;
+    @Column(columnDefinition = "TEXT", name = "type")
+    private String type;
 
     @JsonManagedReference
-    @OneToMany(mappedBy = "stageModel")
+    @OneToMany(mappedBy = "stageDataTypeModel")
     private Set<StageDataModel> stageDataModels = new HashSet<>();
 
     @Column(name = "deleted", nullable = false)

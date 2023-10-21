@@ -3,6 +3,8 @@ package tlu.kaardirakendus.akustika.dto;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.HashSet;
+
 @Data
 @Builder
 public class StageDto {
@@ -18,4 +20,7 @@ public class StageDto {
     private Double longitude;
 
     private Double latitude;
+
+    private HashSet<StageDataDto> stageData;
+
 }
