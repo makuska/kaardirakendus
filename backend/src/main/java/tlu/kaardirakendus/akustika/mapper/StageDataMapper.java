@@ -15,7 +15,6 @@ public class StageDataMapper {
                 .id(stageDataModel.getId())
                 .type(stageDataModel.getStageDataTypeModel().getType())
                 .value(stageDataModel.getValue())
-                .description(stageDataModel.getDescription())
                 .build();
     }
 

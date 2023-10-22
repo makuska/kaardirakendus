@@ -39,9 +39,6 @@ public class StageDataModel {
     @Column(columnDefinition = "TEXT", name = "value")
     private String value;
 
-    @Column(columnDefinition = "TEXT", name = "description")
-    private String description;
-
     @Column(name = "deleted", nullable = false)
     private Boolean deleted;
 
