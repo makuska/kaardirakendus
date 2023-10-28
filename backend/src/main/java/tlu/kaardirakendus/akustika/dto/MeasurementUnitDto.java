@@ -5,12 +5,10 @@ import lombok.Data;
 
 @Data
 @Builder
-public class StageDataDto {
+public class MeasurementUnitDto {
 
     private Integer id;
 
-    private String type;
-
-    private String value;
+    private String unit;
 
 }

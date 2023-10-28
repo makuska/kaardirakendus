@@ -11,10 +11,11 @@ public class StageDataMapper {
 
     public static StageDataDto mapToDto(StageDataModel stageDataModel) {
         Hibernate.initialize(stageDataModel.getStageDataTypeModel());
+        Hibernate.initialize(stageDataModel.getMeasurementResultModels());
         return StageDataDto.builder()
                 .id(stageDataModel.getId())
                 .type(stageDataModel.getStageDataTypeModel().getType())
-                .value(stageDataModel.getValue())
+                .value(stageDataModel.getValue() != null ? stageDataModel.getValue() : stageDataModel.getMeasurementResultModels()) // measurement results value is always null
                 .build();
     }
 
