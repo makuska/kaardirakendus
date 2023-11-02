@@ -1,0 +1,46 @@
+# https://hub.docker.com/r/saskia02/kaardirakendus/tags
+# https://hub.docker.com/_/postgres
+
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: akustika
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+
+  backend:
+    image: saskia02/kaardirakendus:latest
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/akustika
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: root
+
+networks:
+    backend:
+        driver: bridge
+
+volumes:
+    postgres:
+        driver: local
