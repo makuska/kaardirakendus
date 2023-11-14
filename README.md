@@ -2,7 +2,7 @@
 
 ## Backend
 
-Run BE [docker]([DockerHub](https://link-url-here.org):
+Run BE [docker](https://hub.docker.com/repository/docker/saskia02/kaardirakendus/general):
 
 	.env setup:
 		1. add .env to the root folder.
