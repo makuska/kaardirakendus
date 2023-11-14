@@ -39,7 +39,7 @@ public class MeasurementResultModel {
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "stage_data_id")
-    private StageDataModel stageModel;
+    private StageDataModel stageDataModel;
 
     @Column(name = "value", nullable = false)
     private String value;

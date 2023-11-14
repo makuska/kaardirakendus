@@ -9,9 +9,9 @@ public class MeasurementResultDto {
 
     private Integer id;
 
-    private MeasurementResultTypeDto type;
+    private String type;
 
-    private MeasurementUnitDto unit;
+    private String unit;
 
     private String value;
 

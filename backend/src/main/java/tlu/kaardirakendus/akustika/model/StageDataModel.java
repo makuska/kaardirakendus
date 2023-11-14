@@ -41,7 +41,7 @@ public class StageDataModel {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "stageDataModel")
-    private Set<MeasurementResultModel> measurementResultModels = new HashSet<>();
+    private Set<MeasurementResultModel> measurementResultModel = new HashSet<>();
 
     @Column(columnDefinition = "TEXT", name = "value")
     private String value;

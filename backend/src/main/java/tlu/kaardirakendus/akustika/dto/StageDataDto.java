@@ -11,6 +11,6 @@ public class StageDataDto {
 
     private String type;
 
-    private String value;
+    private Object value;
 
 }
