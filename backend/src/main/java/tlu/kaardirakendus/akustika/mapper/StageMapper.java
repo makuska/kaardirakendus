@@ -21,7 +21,7 @@ public class StageMapper {
     }
 
     public static StageDto mapToDto(StageModel model) {
-        Hibernate.initialize(model.getStageDataModels());
+        Hibernate.initialize(model.getStageDataModel());
         return StageDto.builder()
                 .id(model.getId())
                 .name(model.getName())
@@ -29,7 +29,7 @@ public class StageMapper {
                 .address(model.getAddress())
                 .longitude(model.getLongitude())
                 .latitude(model.getLatitude())
-                .stageData(StageDataMapper.mapToDtoList(model.getStageDataModels()))
+                .stageData(StageDataMapper.mapToDtoList(model.getStageDataModel()))
                 .build();
     }
 

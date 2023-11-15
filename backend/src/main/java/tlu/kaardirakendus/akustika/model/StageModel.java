@@ -45,7 +45,7 @@ public class StageModel {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "stageModel")
-    private Set<StageDataModel> stageDataModels = new HashSet<>();
+    private Set<StageDataModel> stageDataModel = new HashSet<>();
 
     @Column(name = "deleted", nullable = false)
     private Boolean deleted;

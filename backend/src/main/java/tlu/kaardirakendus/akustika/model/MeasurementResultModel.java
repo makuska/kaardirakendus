@@ -1,7 +1,6 @@
 package tlu.kaardirakendus.akustika.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,8 +9,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
 
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.Set;
 
 @Builder
 @Getter
@@ -19,10 +16,10 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@SQLDelete(sql = "UPDATE stage_data SET deleted = true WHERE id = ? AND deleted = false")
+@SQLDelete(sql = "UPDATE measurement_result SET deleted = true WHERE id = ?")
 @Where(clause = "deleted = false")
-@Table(name = "stage_data", schema = "akustika")
-public class StageDataModel {
+@Table(name = "measurement_result", schema = "akustika")
+public class MeasurementResultModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,26 +28,30 @@ public class StageDataModel {
 
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "stage_id")
-    private StageModel stageModel;
+    @JoinColumn(name = "measurement_unit_id")
+    private MeasurementUnitModel measurementUnit;
 
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "stage_data_type_id")
-    private StageDataTypeModel stageDataTypeModel;
+    @JoinColumn(name = "measurement_result_type_id")
+    private MeasurementResultTypeModel measurementResultType;
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "stageDataModel")
-    private Set<MeasurementResultModel> measurementResultModel = new HashSet<>();
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "stage_data_id")
+    private StageDataModel stageDataModel;
 
-    @Column(columnDefinition = "TEXT", name = "value")
+    @Column(name = "value", nullable = false)
     private String value;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "deleted", nullable = false)
     private Boolean deleted;
 
     @CreationTimestamp
-    @Column(name = "created", updatable = false)
+    @Column(name = "created", nullable = false)
     private Instant created;
 
     @UpdateTimestamp
