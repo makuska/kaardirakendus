@@ -27,5 +27,36 @@ DO $$
         CALL measurement_insert('Aruküla laululava', '88.8', '84.5', '78', '80', '73.2', 'edel');
         CALL measurement_insert('Muhu (Hellemaa) laululava', '85.6', '81.5', '75.5', '68', null, 'lõunakagu');
         CALL measurement_insert('Jööri laululaval', '88.5', '85.5', '79', '71', null, 'lääs');
+        -- (name, 3m, 5m, 10m, public, 15m, opening_direction)
+        -- akustikaproov II data
+        CALL measurement_insert('Erra laululava', '93.2', '92.5', '86.1', '77.3', '82.2', 'lääs');
+        CALL measurement_insert('Oonurme laululava', '96.4', '90', '34.4', '79.7', '79.7', 'lõuna');
+        CALL measurement_insert('Jõhvi laululava', '95.5', '92.6', '88.8', '85.6', '86.8', 'lääs');
+        CALL measurement_insert('Sonda kõlakoda', '93.3', '90', '86.1', '78.1', '80.1', 'edel');
+        CALL measurement_insert('Toila laululava', '97.4', '90.6', '79.4', '74.8', '77.8', 'lääs');
+        CALL measurement_insert('Kulja laululava', '96.7', '96.7', '88.9', '86.2', '86.2', 'ida');
+        CALL measurement_insert('Lüganuse laululava', '97.2', '94.1', '90.6', '77', '84.1', 'ida');
+        CALL measurement_insert('Kohtla-Nõmme laululava', '98', '93.1', '85.8', '81', '81.8', 'lõuna');
+        CALL measurement_insert('Saka mõisa suvelava', '95.1', '92.3', '88', '84.4', '84.7', 'edel');
+        CALL measurement_insert('Saka laululava', '94.7', '91.6', '86.1', '90.8', '83.5', 'ida');
+        CALL measurement_insert('Iisaku laululava', '89.9', '88.7', '86.9', '75.7', '79.7', 'lõuna');
+        CALL measurement_insert('Vasknarva kõlakoda (ordulinnuse varemed)', '91', '87', '85.2', '80', '80.1', 'põhi');
+        CALL measurement_insert('Lohusuu', '96.2', '91.1', '83', '80.3', '80.3', 'kirre');
+        CALL measurement_insert('Keava laululava', '90.8', '88.7', '80.8', '79.4', null, 'lääs');
+        CALL measurement_insert('Valtu-Nurme laululava', '86.1', '83.7', '74.8', '73.2', null, 'lõuna');
+        CALL measurement_insert('Kumma laululava', '90.4', '88.2', '79.4', '77.8', null, 'ida');
+        CALL measurement_insert('Ingliste kõlakoda', '88', '86.6', '79.8', '69.7', null, 'kirre');
+        CALL measurement_insert('Käru laululava', '91.3', '89.3', '84.2', '74.6', null, 'lääs');
+        CALL measurement_insert('Audru laululava', '94.7', '93.8', '85.6', '80.2', '84.6', 'edel');
+        CALL measurement_insert('Tootsi laululava', '93.2', '88', '83', '77.1', '78', 'ida');
+        CALL measurement_insert('Mädara laululava', '96.6', '89.7', '83.7', '77', '89.1', 'kagu');
+        CALL measurement_insert('Saue laululava', '94.8', '89', '83.7', '79.8', null, 'põhi');
+        CALL measurement_insert('Vanamõisa laululava', '94.1', '91.6', '87.3', '95.2', null, 'põhi');
+        CALL measurement_insert('Laitse laululava', '93.6', '92.8', '85.8', '89', null, 'põhi');
+        CALL measurement_insert('Kalju-Lava', '90.3', '87.4', '80.9', '75.6', null, 'edel');
+        CALL measurement_insert('Haeska laululava', '92.9', '91.7', '84.2', '84.2', null, 'lääs');
+        CALL measurement_insert('Lihula laululava', '93.5', '89.4', '84.2', '79.1', null, 'lääs');
+        CALL measurement_insert('Pürksi kõlakoda', '94.5', '92.2', '84.9', '77.8', null, 'lääs');
+        CALL measurement_insert('Haapsalu linnus', '94.8', '89.3', '80.3', '80.8', null, 'lääs');
     END
 $$;
