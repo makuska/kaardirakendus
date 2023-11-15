@@ -33,5 +33,4 @@ public class AkustikaController {
         return service.getStageById(id);
     }
 
-
 }
