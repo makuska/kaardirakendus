@@ -23,15 +23,15 @@ AS $$
     DECLARE measuring_id INTEGER;
 
     BEGIN
-        SELECT id INTO measurement_type_id FROM stage_data_type WHERE type = 'Loudness measurement';
+        SELECT id INTO measurement_type_id FROM stage_data_type WHERE type = 'Helitugevuse mõõtmine';
         SELECT id INTO decibel_id FROM measurement_unit WHERE unit = 'dB';
-        SELECT id INTO direction_id FROM measurement_unit WHERE unit = 'direction';
+        SELECT id INTO direction_id FROM measurement_unit WHERE unit = 'suund';
         SELECT id INTO three_m_id FROM measurement_result_type WHERE type = '3m';
         SELECT id INTO five_m_id FROM measurement_result_type WHERE type = '5m';
         SELECT id INTO ten_m_id FROM measurement_result_type WHERE type = '10m';
         SELECT id INTO fifteen_m_id FROM measurement_result_type WHERE type = '15m';
-        SELECT id INTO public_m_id FROM measurement_result_type WHERE type = 'public';
-        SELECT id INTO opening_direction_id FROM measurement_result_type WHERE type = 'stage direction';
+        SELECT id INTO public_m_id FROM measurement_result_type WHERE type = 'publiku keskel';
+        SELECT id INTO opening_direction_id FROM measurement_result_type WHERE type = 'laululava ava suund';
 
         SELECT id INTO selected_stage_id FROM stage WHERE name = stage_name;
         INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)

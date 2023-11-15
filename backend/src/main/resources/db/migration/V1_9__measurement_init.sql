@@ -4,10 +4,10 @@ DO $$
         VALUES ('dB', false, NOW(), NOW());
 
         INSERT INTO measurement_unit (unit, deleted, created, edited)
-        VALUES ('direction', false, NOW(), NOW());
+        VALUES ('suund', false, NOW(), NOW());
 
         INSERT INTO stage_data_type (type, deleted, created, edited)
-        VALUES ('Loudness measurement', false, NOW(), NOW());
+        VALUES ('Helitugevuse mõõtmine', false, NOW(), NOW());
 
         -- populate measurement_result_type
         INSERT INTO measurement_result_type (type, deleted, created, edited)
@@ -23,9 +23,9 @@ DO $$
         VALUES ('15m', false, NOW(), NOW());
 
         INSERT INTO measurement_result_type (type, deleted, created, edited)
-        VALUES ('public', false, NOW(), NOW());
+        VALUES ('publiku keskel', false, NOW(), NOW());
 
         INSERT INTO measurement_result_type (type, deleted, created, edited)
-        VALUES ('stage direction', false, NOW(), NOW());
+        VALUES ('laululava ava suund', false, NOW(), NOW());
     END
 $$;
