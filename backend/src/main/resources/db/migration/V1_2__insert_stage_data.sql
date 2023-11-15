@@ -54,5 +54,5 @@ INSERT INTO stage (name, county, address, latitude, longitude, created, edited, 
     ('Kalju-Lava', 'Harjumaa', 'Kalju-Lava, Kasepere küla, 76006', 59.21601817124922, 24.14819256050035, NOW(), NOW(), false),
     ('Haeska laululava', 'Läänemaa', 'Seltsimaja, Haeska, 90407 Lääne maakond', 58.804452604096085, 23.666965390194406, NOW(), NOW(), false),
     ('Lihula laululava', 'Pärnumaa', 'Linnuse, Lihula, 90303 Lääne maakond', 58.693844914907615, 23.840524606763022, NOW(), NOW(), false),
-    ('Pürksi', 'Läänemaa', 'Pürksi, 91201 Lääne maakond (mõisa park)', 59.00682678557911, 23.525564530348323, NOW(), NOW(), false),
+    ('Pürksi kõlakoda', 'Läänemaa', 'Pürksi, 91201 Lääne maakond (mõisa park)', 59.00682678557911, 23.525564530348323, NOW(), NOW(), false),
     ('Haapsalu linnus', 'Läänemaa', 'Lossiplats 3, Haapsalu, 90502 Lääne maakond', 58.94724624100119, 23.53873808495943, NOW(), NOW(), false);
