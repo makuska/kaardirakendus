@@ -366,5 +366,292 @@ DO $$
             (selected_stage_id, weather_id, 'Selge ja kuiv', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '2 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '13.05.2023', false, NOW(), NOW());
+
+        -- Akustikaproov II data
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Erra laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '5.7m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '4.6m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Jaanuaris 2012 peeti Erra kultuuriseltsis külakoosolek, mille põhiteemaks oli uue laululava rajamine Erra parki. Projekti juhtis külavanem Veiko Rosi, ehitustööd tehti talgutena.. Projekt lõpetati 30.11.2013. (Allikas : http://errakultuuriselts.planet.ee/laululava_valmis.htm)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Oonurme laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10.1m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '1.6m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1998. aastal', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Ants Üleoja lõi 1995. aastal koori ning tema eestvedamisel rajati ka Oonurme laululava. 1997. aastal toimus vastvalminud laululaval esimene kohalik laulupidu, täielikult valmis lava 1998. aastal, kui lavale rajati palkidest sein. Palkide asetus sümboliseerib orelivilede asetust. (Allikas: Oonurme külaselts)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '10.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Jõhvi laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '9.6m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5.6m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Laululava rajati aastal 1996, praegusel kujul valmis peale põhjalikku remonti aastal 2019. (Allikas: Võrguleht Põhjarannik https://pohjarannik.postimees.ee/6746605/johvi-park-saab-uued-konniteed-manguvaljaku-ja-laululava-katuse)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, vähene tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Sonda kõlakoda';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10.2m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '7.1m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Ehitatud MTÜ Sonda Arenduskoolituskeskuse eestvedamisel ning rajatis kuulub MTÜ-le, kõlakoja  alune maa kohalikule omavalitsusele. (Karmen Kõrts). On rajatud aastal 2013.aasta 30. augustil. 2013. aastal toimusid Sondas uue kõlakoja ristsed. (Allikas: MTÜ Virumaa koostöökogu, https://www.viko.ee/sonda-kolakoja-ristsed/)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '10.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Toila laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '23m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '16.8m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '22', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '07.06.1995', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'Projekteerisid Rein Tomingas ja Vello Hütsi', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Hoone avati 7. juunil 1995. aastal, hoone projekteerisid Rein Tomingas ja Vello Hütsi. (Allikas: EPL https://epl.delfi.ee/artikkel/50724677/laululava-katus-kukkus-kokku)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Kulja laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '5.3m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.8m', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1995. aastal', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Lüganuse laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10.5m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '8.2m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Avati 2010. aastal', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Kohtla-Nõmme laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Saka mõisa suvelava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '11.9m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5.9m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kerge vihm ja tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Saka laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '7.4m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.8m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kerge vihm ja tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Iisaku laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10.6m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '6.3m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '6', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Iisaku laululava rajati aastal 1960. Johannes Karri eestvedamisel korrastati rahvamaja põhjapoolse otsa pool asunud võssakasvanud kruusaauk ühistööna vabaõhuürituste tarvis. (Allikas : Laine Nimvitski (2010). Iisaku Rahvamaja 100.)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Vasknarva kõlakoda (ordulinnuse varemed)';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10.8m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '9.8m', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Lohusuu';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10.3m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '4.6m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Lohusuu laululava ajalugu on tihedalt seotud kohalikku eripäraga: kalanduse, mitmekultuurilisuse, kalalaatade, kalurite päeva, kanuuretkedega. Lohusuu laululava on ehitatud aastal 2010 ning selle puitkonstruktsioonid on hakanud mädanema. Selleks, et olukorda parandada sai esitatud Peipsi-Alutaguse Koostöökoja meetmesse projektitaotlus, mille eesmärk oli kohaliku kultuuripärandi säilimiseks ja edasikandmiseks parimate tingimuste loomine Lohusuu laululava renoveerimise abil. Projektitaotlus sai rahastuse ning projekti elluviimise käigus renoveeriti laululava tantsuplats, laululava katusekate ja riietusruumi vahesein. Renoveeritud Lohusuu laululava aktiivne kultuuriline kasutamine aitab kaasa kultuuripärandi hoidmisele ja traditsioonide säilitamisele ning edasikandmisele, mis on piirkonna jaoks väga oluline. ( Allikas: Mustvee vallavalitsuse FB veebileht)', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Keava laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '5.8m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.9m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Ajalugu ulatub 1930. aastatesse. Keava raudteejaama juures tegutses Keava Seltskondlik Ühing, mille eestvõttel koguti pidudel loterii, omaküpsetatud saiakeste, küpsiste jm müügiga raha kõlakoja ehituseks. 1938. aastal valmis vallalt renditud maatükile suuremõõtmeline näitelavaga kõlakoda, milles paiknesid ka ruumid isetegevuslastele. Kõlakoja ette ehitati puidust trepi ja pinkidega tantsuala. Samuti oli suveaias einelaud ning kogu ala ümbritses lippaed. Suveaia kõrval paiknes ka spordiplats, mistõttu sai kogu ala kiirelt väga populaarseks. Seal peeti rajoonide laulu- ja spordipäevi ning orkestriga tantsuõhtuid. Praegune kõlakoda ehitati 2005. aastal ning projekteerimisel võeti aluseks vähendatud mõõtmetega vana kõlakoda. Projekteerijaks Valtu Projekt, Tõnis Kurisoo. 2018. a valmis Eesti Külaliikumine Kodukant kogukondade EV 100 taotlusvooru projektiga suveaeda laste mänguväljak. 2020. aastal renoveeriti kohaliku omaalgatuse programmi toel laululava tantsupõrand. Haldab MTÜ Keava Haridus- ja Kultuuriselts', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '11 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Valtu-Nurme laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '8m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5.5m', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Avati 2012. aastal Nukuteatri etendusega „Naksitrallid“.  Ideid külaplatsi kujundamiseks otsiti kogukondlikult, käies tutvumas ka teiste külaplatsidega. Ehituse esimeses etapis valmis suurem varjualune, mille ehitamisel kasutati oma küla Sarapiku talu enam kui 100 aasta vanuseid sarikaid ja penne ning teises etapis mänguväljaku atraktsioonid, grillikoda, välikäimla ning soetati mööbel. Külaplatsi ehitamist toetas LEADER-programm. 2023. aastal remonditi varjualune ja külaplatsi silt ning puidust varjualuse esine ala asendati tänavakividega.  Remondi- ja ehitustööde projekti rahastati kohaliku omaalgatuse programmist. Külaplats on kohtumispaigaks, vaba aja veetmiseks, koosolekute pidamiseks, väliõppeks, matkasihiks ja avalike sündmuste korraldamiseks avatud kõigile. Haldab MTÜ Valtu-Nurme külaselts.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '4.7 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Kumma laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '3m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '2m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Kiigeplatsi katusealuse ja kõlakoja ehitamist alustati 1987. aastal toonase külavanema Valter Laurimaa initsiatiivil, projekteerijaks Tõnis Kurisoo. Toomi talu koppel oli saanud noortele kokkusaamiskohaks ning võrkpalli mängimiseks juba 1949. aastal. Ehitus oli kooskõlastatud Valtu kolhoosi juhatusega ja kindlustatud majandi rahastusega. Aastate jooksul on platsil tehtud mitmeid hooldus- ja remonditöid, hoonete sindlikatused on välja vahetatud laudkatuste vastu, publiku jaoks on paigaldatud lauad-pingid. Populaarses peopaigas peetakse küla kokkutulekuid, kontserte ja muid üritusi, võistlusi, see on ka praegu noortele tuntud kohtumispaigaks. Kõige ägedam üritus on siiski iga-aastane jaanituli, kuhu tullakse ka kaugematest küladest ning jaanikuks valmistudes peetakse ikka talguid, et plats kenasti korda sättida. Peopaika külastanud esinejad on öelnud, et platsi ümbritsev puudering tekitab väga hea akustika.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '7 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Ingliste kõlakoda';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '7m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '1.5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Lava kohta on leitud esimesed faktipõhised andmed 1972. aastast rajoonilehest Ühistöö. Artiklis kirjutati Ingliste parki uue tantsulava ehitamisest. Võib arvata, et laulutribüün valmis juba aasta varem, 1971. aastal Valtu ja Ingliste kolhoosi ühinemisel, ning seal peeti aastate jooksul mitmeid kolhoosi laulupidusid. 1990. aastal valmis Valtu kolhoosi VI laulupeoks lagunenud lava asemele uus tantsulava, projekteerijaks Tõnis Kurisoo. Seinte ehituseks vajalik paekivi veeti kohale Vao karjäärist, põrand ehitati terratsoplaadist. Vajaminev kogus muinsuskaitse nõuetele vastava profiiliga punaseid katusekive saadi restaureerimisel oleva Inglise mõisahoone varudest, need õnnestus Valtu kolhoosil paari kasti Valtu veiniga „välja ajada“ Leedust.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '9 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Käru laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '7m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '4m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, 'Valmis 2022. aastal', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'valmis 2022. aastal Türi valla kaasava eelarve abil.  Aastaid tuntud peokohana, kuid pikalt tühjana seisvale platsile ehitati kogukondlikuks kasutamiseks laululava Vändra kirivöö mustrist inspiratsiooni saanud suure kivist tantsupõrandaga. Vana laululava lauad läksid taaskasutusse Tolli metsa- ja Saunametsa matkaradade toestamiseks. Plats on kogukondlikuks kasutamiseks. Seal korraldatakse jaaniõhtuid, kontserte ja muid üritusi. Haldab Türi Kultuurikeskus (Käru rahvamaja).', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '26 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Audru laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '11m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '9.5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Vahelduv, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '12.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Tootsi laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '8.5m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Vahelduv, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '12.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Mädara laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '7.6m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5.3m', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Vahelduv, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '12.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Saue laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '12m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5.5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, niiske', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Vanamõisa laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '8m', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, niiske', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '8 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Laitse laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '9m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '7m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Vihmane', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '6 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Kalju-Lava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '17m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '7m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Vihmane', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Haeska laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '6.5m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Selge, niiske', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '6 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Lihula laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '12.5m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '6.7m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Selge, kuiv', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '7 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Pürksi kõlakoda';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '7.5m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '4.5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Selge, niiske', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '4 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Haapsalu linnus';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '13.5m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '9m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Selge, niiske', false, NOW(), NOW()),
+            (selected_stage_id, wind_id, '8 m/s', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
     END
 $$;
