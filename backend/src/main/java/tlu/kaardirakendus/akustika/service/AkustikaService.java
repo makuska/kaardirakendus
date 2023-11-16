@@ -78,6 +78,7 @@ public class AkustikaService implements IAkustikaService {
                 zos.flush();
                 return new ResponseEntity<>(baos.toByteArray(), headers, HttpStatus.OK);
             } catch (IOException e) {
+                log.error("Error reading image file: " + e.getMessage(), e);
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
             }
 
@@ -113,6 +114,7 @@ public class AkustikaService implements IAkustikaService {
             } catch (IOException e) {
                 log.error("Error reading image file: " + stageImage.getFilename());
                 log.error(e.getMessage(), e);
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
             }
 
             return ResponseEntity
