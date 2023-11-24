@@ -4,10 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tlu.kaardirakendus.akustika.dto.StageImageInfoDto;
 import tlu.kaardirakendus.akustika.service.IAkustikaService;
 import tlu.kaardirakendus.akustika.util.ServerRequestUtil;
@@ -18,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1")
 @RequiredArgsConstructor
+@CrossOrigin(maxAge = 3600)
 public class AkustikaImageController {
 
     private final IAkustikaService service;
@@ -33,9 +31,9 @@ public class AkustikaImageController {
         return service.getStageImageByStageIdImageId(stageId, imageId);
     }
 
-    @GetMapping(value = "/stage/{id}/images/zip", produces = "application/zip")
-    public ResponseEntity<byte[]> getStageImagesById(@PathVariable Integer id) {
-        return service.getStageImagesById(id);
-    }
+//    @GetMapping(value = "/stage/{id}/images/zip", produces = "application/zip")
+//    public ResponseEntity<byte[]> getStageImagesById(@PathVariable Integer id) {
+//        return service.getStageImagesById(id);
+//    }
 
 }

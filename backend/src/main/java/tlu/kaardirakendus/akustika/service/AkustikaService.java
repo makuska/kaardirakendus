@@ -2,7 +2,6 @@ package tlu.kaardirakendus.akustika.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,8 +19,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 @Log4j2
 @Service
@@ -43,52 +40,6 @@ public class AkustikaService implements IAkustikaService {
 
     public String getStageById(Integer id){
         return "Siia tuleb päringu vastus :) 2";
-    }
-
-    @Transactional(readOnly = true)
-    public ResponseEntity<byte[]> getStageImagesById(Integer id) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-        headers.setContentDispositionFormData("attachment", "images.zip");
-
-        try {
-            var stageImages = stageImageRepository.findByStageId(id)
-                    .orElseThrow(() -> new RuntimeException("Stage image not found!"));
-
-            String baseDir = System.getProperty("user.dir");
-
-            try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                 ZipOutputStream zos = new ZipOutputStream(baos)) {
-                for (var stageImage : stageImages) {
-                    File img = new File(
-                            baseDir + "/stage/images/" +
-                            stageImage.getStage().getId() + "/" + stageImage.getFilename()
-                    );
-
-                        byte[] imageBytes = Files.readAllBytes(img.toPath());
-
-                        ZipEntry entry = new ZipEntry(stageImage.getFilename());
-                        zos.putNextEntry(entry);
-                        zos.write(imageBytes);
-                        zos.closeEntry();
-
-                }
-
-                zos.finish();
-                zos.flush();
-                return new ResponseEntity<>(baos.toByteArray(), headers, HttpStatus.OK);
-            } catch (IOException e) {
-                log.error("Error reading image file: " + e.getMessage(), e);
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-            }
-
-
-        } catch (Exception e) {
-            log.error(e.getMessage());
-            return ResponseEntity
-                    .status(HttpStatus.NOT_FOUND)
-                    .body(null);
-        }
     }
 
     @Transactional(readOnly = true)

@@ -47,5 +47,7 @@ networks:
 volumes:
     backend:
         driver: local
+    postgres:
+        driver: local
 
 
