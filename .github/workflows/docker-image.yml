@@ -31,10 +31,16 @@ jobs:
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3
 
-            - name: Build and push to Docker
-              uses: docker/build-push-action@v5
-              with:
-                  context: .
-                  file: ./Dockerfile
-                  push: true
-                  tags: ${{ secrets.DOCKERHUB_USERNAME }}/kaardirakendus:latest
+            - name: Conditional Docker Build and push
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              run: |
+                  docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/kaardirakendus:latest -f ./Dockerfile .
+                  docker push ${{ secrets.DOCKERHUB_USERNAME }}/kaardirakendus:latest
+
+            #- name: Build and push to Docker
+            #  uses: docker/build-push-action@v5
+            #  with:
+            #      context: .
+            #      file: ./Dockerfile
+            #      push: true
+            #      tags: ${{ secrets.DOCKERHUB_USERNAME }}/kaardirakendus:latest
