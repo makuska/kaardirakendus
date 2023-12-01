@@ -56,9 +56,18 @@ public class AkustikaService implements IAkustikaService {
             byte[] image = null;
             String baseDir = System.getProperty("user.dir");
 
+            // if sys is linux the basedir is /data
+           if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+                baseDir = "";
+            }
+
             try {
+                log.info(
+                        "Reading image file from: " + baseDir + "/data/stage/images/"
+                                + stageImage.getStage().getId() + "/" + stageImage.getFilename()
+                );
                 File img = new File(
-                        baseDir + "/stage/images/" +
+                        baseDir + "/data/stage/images/" +
                                 stageImage.getStage().getId() + "/" + stageImage.getFilename()
                 );
                 image = Files.readAllBytes(img.toPath());
@@ -66,6 +75,11 @@ public class AkustikaService implements IAkustikaService {
                 log.error("Error reading image file: " + stageImage.getFilename());
                 log.error(e.getMessage(), e);
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+            }
+
+            if (image.length == 0) {
+                log.error("Image not found!");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
             }
 
             return ResponseEntity
@@ -109,6 +123,11 @@ public class AkustikaService implements IAkustikaService {
                                 )
                                 .build()
                 );
+            }
+
+            if (images.isEmpty()) {
+                log.warn("Images not found for stage id: " + id);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
             }
 
             return ResponseEntity

@@ -21,10 +21,10 @@ services:
       - backend
 
   backend:
-    image: saskia02/kaardirakendus:latest
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
+#    image: saskia02/kaardirakendus:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     restart: always
@@ -38,7 +38,8 @@ services:
       SPRING_DATASOURCE_PASSWORD: "${POSTGRES_PASSWORD}"
       env_file: .env
     volumes:
-      - backend:/data/backend
+      - backend:/data
+      - backend:/logs
 
 networks:
     backend:
