@@ -1,7 +1,7 @@
 # https://hub.docker.com/r/saskia02/kaardirakendus/tags
 # https://hub.docker.com/_/postgres
 
-version: '3.1'
+version: "3.1"
 
 services:
   db:
@@ -22,9 +22,9 @@ services:
 
   backend:
     image: saskia02/kaardirakendus:latest
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
+    #    build:
+    #      context: .
+    #      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     restart: always
@@ -37,12 +37,15 @@ services:
       SPRING_DATASOURCE_USERNAME: "${POSTGRES_USER}"
       SPRING_DATASOURCE_PASSWORD: "${POSTGRES_PASSWORD}"
       env_file: .env
+    volumes:
+      - backend:/data/backend
 
 networks:
-    backend:
-        driver: bridge
+  backend:
+    driver: bridge
 
 volumes:
-    postgres:
-        driver: local
-
+  backend:
+    driver: local
+  postgres:
+    driver: local

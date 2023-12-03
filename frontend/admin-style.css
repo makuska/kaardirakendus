@@ -11,13 +11,18 @@ h1 {
 }
 
 form {
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.required {
+    color: red;
+}
+
 
 label {
     display: block;
@@ -34,10 +39,21 @@ input[type="text"] {
     margin-bottom: 15px;
 }
 
+input[type="file"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 8px;
+    cursor: pointer;
+}
+
 input[type="submit"] {
     background-color: #4CAF50;
     color: #fff;
     padding: 10px 20px;
+    display: flex;
+    margin: auto;
     border: none;
     border-radius: 3px;
     cursor: pointer;
