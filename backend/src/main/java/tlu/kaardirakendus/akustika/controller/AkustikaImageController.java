@@ -31,9 +31,4 @@ public class AkustikaImageController {
         return service.getStageImageByStageIdImageId(stageId, imageId);
     }
 
-//    @GetMapping(value = "/stage/{id}/images/zip", produces = "application/zip")
-//    public ResponseEntity<byte[]> getStageImagesById(@PathVariable Integer id) {
-//        return service.getStageImagesById(id);
-//    }
-
 }

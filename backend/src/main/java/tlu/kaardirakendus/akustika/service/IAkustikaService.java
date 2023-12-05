@@ -14,6 +14,5 @@ public interface IAkustikaService {
 
     ResponseEntity<byte[]> getStageImageByStageIdImageId(Integer stageId, Integer imageId);
 
-
     ResponseEntity<List<StageImageInfoDto>> getStageImageInfo(Integer id, String baseUrl);
 }
