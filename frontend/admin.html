@@ -63,6 +63,42 @@
 </form>
 
 <script>
+    function reqFieldCheck(formKey, formValue){
+        switch(formKey){
+            case "name":
+                if (formValue.length == 0){
+                    alert("Lavanimi on täitmata !");
+                    return true;
+                }
+                break;
+            case "county":
+                if (formValue.length == 0){
+                    alert("Linn on täitmata !");
+                    return true;
+                }
+                break;
+            case "address":
+                if (formValue.length == 0){
+                    alert("Aadress on täitmata");
+                    return true;
+                }
+                break;
+            case "latitude":
+                if (formValue.length == 0){
+                    alert("X koordinaadid on täitmata");
+                    return true;
+                }
+                break;
+            case "longitude":
+                if (formValue.length == 0){
+                    alert("Y koordinaadid on täitmata");
+                    return true;
+                }
+                break;
+        }
+        return false; 
+    }
+
     // Function that dynamically increases textarea height
     textarea = document.querySelector("#Ajalugu");
     textarea.addEventListener('input', autoResize, false);
@@ -87,10 +123,17 @@
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const formData = new FormData(form);
-        const payload = {};
-        const stageData = [];
+        const formData     = new FormData(form);
+        const payload      = {};
+        const stageData    = [];
+        let stopSubmission = false;
+
         formData.forEach((value, key) => {
+            if (reqFieldCheck(key, value)){
+                console.log("should stop");
+                stopSubmission = true;
+                return;
+            }
             let object = {};
             if(upper_case(key)){
                 if(value != ""){
@@ -101,6 +144,10 @@
                 payload[key] = value;
             }
         });
+
+        if (stopSubmission) {
+            return; // If stopSubmission is true, do not proceed with Axios request
+        }
         Object.assign(payload, {stageData: stageData});
         console.log(payload);
 
