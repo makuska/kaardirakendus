@@ -30,6 +30,17 @@ label {
     font-weight: bold;
 }
 
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    resize: none;
+}
+
 input[type="text"] {
     width: 100%;
     padding: 8px;
@@ -37,15 +48,6 @@ input[type="text"] {
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 15px;
-}
-
-input[type="file"] {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-    padding: 8px;
-    cursor: pointer;
 }
 
 input[type="submit"] {

@@ -30,7 +30,8 @@
     <input type="text" id="longitude" name="longitude" value="mingi longitude">
     <br>
     <label for="ajalugu">Ajalugu:</label>
-    <input type="text" class="resizableField" id="ajalugu" name="Ajalugu" value="mingi ajalugu">
+    <!-- <input type="text" class="resizableField" id="ajalugu" name="Ajalugu" value="mingi ajalugu"> -->
+    <textarea id="Ajalugu" name="Ajalugu" class="resizableField" value="mingi ajalugu"></textarea>
     <br>
     <label for="kes_ehitas">Kes ehitas:</label>
     <input type="text" id="kes_ehitas" name="Kes ehitas" value="keegi ehitas">
@@ -62,6 +63,15 @@
 </form>
 
 <script>
+    // Function that dynamically increases textarea height
+    textarea = document.querySelector("#Ajalugu");
+    textarea.addEventListener('input', autoResize, false);
+    function autoResize() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+    }
+    
+    //Function that checks if string starts with a capital letter
     function upper_case(str){
         regexp = /^[A-Z]/;
         if (regexp.test(str)){
