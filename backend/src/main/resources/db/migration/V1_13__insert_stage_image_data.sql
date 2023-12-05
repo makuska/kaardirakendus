@@ -48,7 +48,7 @@ CALL insert_images('Kumma laululava', 'Kumma', 12);
 CALL insert_images('Käru laululava', 'Käru', 10);
 CALL insert_images('Lohusuu', 'Lohusuu', 4);
 CALL insert_images('Lüganuse laululava', 'Lüganuse', 5);
-!CALL insert_images('Oonurme laululava', 'Oonurme', 4);
+CALL insert_images('Oonurme laululava', 'Oonurme', 4);
 CALL insert_images('Saka mõisa suvelava', 'Saka_mois', 4);
 CALL insert_images('Ingliste kõlakoda', 'Ingliste', 14);
 CALL insert_images('Sonda kõlakoda', 'Sonda', 4);
