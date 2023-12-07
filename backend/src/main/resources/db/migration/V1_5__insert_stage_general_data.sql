@@ -374,7 +374,8 @@ DO $$
             (selected_stage_id, width_id, '5.7m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '4.6m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Jaanuaris 2012 peeti Erra kultuuriseltsis külakoosolek, mille põhiteemaks oli uue laululava rajamine Erra parki. Projekti juhtis külavanem Veiko Rosi, ehitustööd tehti talgutena.. Projekt lõpetati 30.11.2013. (Allikas : http://errakultuuriselts.planet.ee/laululava_valmis.htm)', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2013', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Jaanuaris 2012 peeti Erra kultuuriseltsis külakoosolek, mille põhiteemaks oli uue laululava rajamine Erra parki. Projekti juhtis külavanem Veiko Rosi, ehitustööd tehti talgutena. Lava valmis 2013. aasta novembris. (Allikas : http://errakultuuriselts.planet.ee/laululava_valmis.htm)', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -384,8 +385,7 @@ DO $$
             (selected_stage_id, width_id, '10.1m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '1.6m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
-            (selected_stage_id, built_when_id, '1998. aastal', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Ants Üleoja lõi 1995. aastal koori ning tema eestvedamisel rajati ka Oonurme laululava. 1997. aastal toimus vastvalminud laululaval esimene kohalik laulupidu, täielikult valmis lava 1998. aastal, kui lavale rajati palkidest sein. Palkide asetus sümboliseerib orelivilede asetust. (Allikas: Oonurme külaselts)', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Oonurme laulupäevad on olnud Ida-Virumaa kooride ja puhkpilliorkestrite hulgas väga populaarsed. Ants Üleoja kutsus 1995. aastal kokku koori ning tema eestvedamisel ja kohalike metsaärimeeste toetusel rajati Oonurme laululava. 1997. aastal toimus vastvalminud laval esimene kohalik laulupidu.  Laulupeo plats on ühe endise talu õu, piiratud vanade puudega, mis on suureks ja vägevaks kasvanud. Tänu sellele on seal tekkinud looduslik kõlakoda. Laululava asub suure puu all. Maa sisse taoti suured palgid, nii et astmestiku taga asub palksein. Palkide asetus sümboliseerib orelivilede asetust. Laululava haldab Oonurme Külaselts', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '10.10.2023', false, NOW(), NOW());
 
@@ -395,6 +395,7 @@ DO $$
             (selected_stage_id, width_id, '9.6m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '5.6m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1996', false, NOW(), NOW()),
             (selected_stage_id, history_id, 'Laululava rajati aastal 1996, praegusel kujul valmis peale põhjalikku remonti aastal 2019. (Allikas: Võrguleht Põhjarannik https://pohjarannik.postimees.ee/6746605/johvi-park-saab-uued-konniteed-manguvaljaku-ja-laululava-katuse)', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, vähene tuul', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
@@ -405,7 +406,8 @@ DO $$
             (selected_stage_id, width_id, '10.2m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '7.1m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Ehitatud MTÜ Sonda Arenduskoolituskeskuse eestvedamisel ning rajatis kuulub MTÜ-le, kõlakoja  alune maa kohalikule omavalitsusele. (Karmen Kõrts). On rajatud aastal 2013.aasta 30. augustil. 2013. aastal toimusid Sondas uue kõlakoja ristsed. (Allikas: MTÜ Virumaa koostöökogu, https://www.viko.ee/sonda-kolakoja-ristsed/)', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2013', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Rajati 2013. aastal ning ehitati MTÜ Sonda Arenduskoolituskeskuse eestvedamisel. (Allikas: MTÜ Virumaa koostöökogu, https://www.viko.ee/sonda-kolakoja-ristsed/)', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '10.10.2023', false, NOW(), NOW());
 
@@ -417,7 +419,7 @@ DO $$
             (selected_stage_id, step_amount_id, '22', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, '07.06.1995', false, NOW(), NOW()),
             (selected_stage_id, built_by_id, 'Projekteerisid Rein Tomingas ja Vello Hütsi', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Hoone avati 7. juunil 1995. aastal, hoone projekteerisid Rein Tomingas ja Vello Hütsi. (Allikas: EPL https://epl.delfi.ee/artikkel/50724677/laululava-katus-kukkus-kokku)', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Toila laululava alustas tegevust 1960. aastal ja ehituse algatas kohalik rajoonikomitee. Praegune laululava avati 7. juunil 1995. aastal, hoone projekteerisid Rein Tomingas ja Vello Hütsi. Laval toimuvad kohaliku ja maakondliku tähtsusega laulu-ja tantsupeod, kontserdid, etendused.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -427,6 +429,7 @@ DO $$
             (selected_stage_id, width_id, '5.3m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '3.8m', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, '1995. aastal', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Asub Kulja Hiiemäel ning rajati 1995. aastal. (Allikas: Avaandmed, https://avaandmed.ee/Laululava_@_Ida-Viru_maakond_L%C3%BCganuse_vald_Kulja_k%C3%BCla_Kulja_laululava_(102038560))', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
@@ -437,7 +440,7 @@ DO $$
             (selected_stage_id, width_id, '10.5m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '8.2m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Avati 2010. aastal', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Avati 2010. aastal. (Allikas: https://dea.digar.ee/cgi-bin/dea?a=d&d=pohjarannik20091007.1.1&e=-------et-25--1--txt-txIN%7ctxTI%7ctxAU%7ctxTA-------------)', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -447,6 +450,7 @@ DO $$
             (selected_stage_id, width_id, '10m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '3.5m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Kohtla-Nõmme laululava alustas tegevust 2019, ehitas Toila vallavalitsus. Laval toimuvad kohaliku ja maakondliku tähtsusega laulu-ja tantsupeod, etendused, kontserdid. Haldab laululava Toila valla allasutus Toila valla Spordi-ja kultuurikeskus.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -465,6 +469,7 @@ DO $$
             (selected_stage_id, width_id, '7.4m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '3.8m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Haldab laululava Toila valla allasutus Toila valla Spordi-ja kultuurikeskus.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kerge vihm ja tuul', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -474,7 +479,8 @@ DO $$
             (selected_stage_id, width_id, '10.6m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '6.3m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '6', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Iisaku laululava rajati aastal 1960. Johannes Karri eestvedamisel korrastati rahvamaja põhjapoolse otsa pool asunud võssakasvanud kruusaauk ühistööna vabaõhuürituste tarvis. (Allikas : Laine Nimvitski (2010). Iisaku Rahvamaja 100.)', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1960', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Iisaku laululava rajati algselt 1960. aastal, mil Johannes Karri eestvedamisel korrastati ühistööna rahvamaja põhjapoolse otsa võssakasvanud kruusaauk vabaõhuürituste tarvis. Iisaku uus laululava on valminud 2007. aasta juunis Iisaku vallavalitsuse eestvedamisel. Avatud kaanega klaverit meenutava kõlakoja on projekteerinud arhitekt Andres Toome eskiiside põhjal OÜ Argrov projekt. Igal aastal toimub laval traditsiooniline jaanipidu, lisaks mitmeid muid sündmusi, näiteks Ida-Virumaa kooride päev, kihelkondadevaheline laulupüha, mitmel korral maakonna folkloorifestival Kirde-Killad, noorte räpifestival NORF, rahvusvahelise folkloorifestivali Baltica Virumaa maapäev, Võsu Viis muusikafestivali galakontsert, Eestimaa Looduse Päev, erinevad suvelavastused, sealhulgas 2023. aastal etendus „Kõik roosid…“ , mis oli spetsiaalselt Iisakule kirjutatud.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -483,6 +489,7 @@ DO $$
         VALUES
             (selected_stage_id, width_id, '10.8m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '9.8m', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Esimese ordulinnuse rajas Vasknarva 1349. aastal Liivi ordumeister Goswin von Herike, et kontrollida Peipsi järve ja Narva jõe veeteid. Samal aastal hävitasid pihkvalased linnuse. 1427. aastal alustas Liivi ordu linnuse taastamisega, sellest sai ordufoogti residents. Liivi sõjas purustati linnus taas. Täna on  kunagisest võimsast kaitseehitisest võimalik näha vaid kolme meetri paksuseid müüre.Vasknarva ordulinnuse varemete juures toimub iga-aastaselt Peipsi Järvefestivali üks kontsertidest. Varemeid haldab Alutaguse Vallavalitsus.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -492,7 +499,8 @@ DO $$
             (selected_stage_id, width_id, '10.3m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '4.6m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Lohusuu laululava ajalugu on tihedalt seotud kohalikku eripäraga: kalanduse, mitmekultuurilisuse, kalalaatade, kalurite päeva, kanuuretkedega. Lohusuu laululava on ehitatud aastal 2010 ning selle puitkonstruktsioonid on hakanud mädanema. Selleks, et olukorda parandada sai esitatud Peipsi-Alutaguse Koostöökoja meetmesse projektitaotlus, mille eesmärk oli kohaliku kultuuripärandi säilimiseks ja edasikandmiseks parimate tingimuste loomine Lohusuu laululava renoveerimise abil. Projektitaotlus sai rahastuse ning projekti elluviimise käigus renoveeriti laululava tantsuplats, laululava katusekate ja riietusruumi vahesein. Renoveeritud Lohusuu laululava aktiivne kultuuriline kasutamine aitab kaasa kultuuripärandi hoidmisele ja traditsioonide säilitamisele ning edasikandmisele, mis on piirkonna jaoks väga oluline. ( Allikas: Mustvee vallavalitsuse FB veebileht)', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2010', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Lohusuu laululava ajalugu on tihedalt seotud kohaliku eripäraga - kalanduse, mitmekultuurilisuse, kalalaatade, kalurite päeva ja kanuuretkedega. Lohusuu laululava on ehitatud aastal 2010 ning praeguseks on renoveeritud nii laululava tantsuplats, laululava katusekate kui ka  riietusruumi vaheseinad Peipsi-Alutaguse Koostöökoja toel. Lohusuu laululava aktiivne kultuuriline kasutamine aitab kaasa piirkonna jaoks väga olulise kultuuripärandi hoidmisele ja traditsioonide säilimisele ning edasikandmisele.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -512,7 +520,7 @@ DO $$
         VALUES
             (selected_stage_id, width_id, '8m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '5.5m', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Avati 2012. aastal Nukuteatri etendusega „Naksitrallid“.  Ideid külaplatsi kujundamiseks otsiti kogukondlikult, käies tutvumas ka teiste külaplatsidega. Ehituse esimeses etapis valmis suurem varjualune, mille ehitamisel kasutati oma küla Sarapiku talu enam kui 100 aasta vanuseid sarikaid ja penne ning teises etapis mänguväljaku atraktsioonid, grillikoda, välikäimla ning soetati mööbel. Külaplatsi ehitamist toetas LEADER-programm. 2023. aastal remonditi varjualune ja külaplatsi silt ning puidust varjualuse esine ala asendati tänavakividega.  Remondi- ja ehitustööde projekti rahastati kohaliku omaalgatuse programmist. Külaplats on kohtumispaigaks, vaba aja veetmiseks, koosolekute pidamiseks, väliõppeks, matkasihiks ja avalike sündmuste korraldamiseks avatud kõigile. Haldab MTÜ Valtu-Nurme külaselts.', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Avati 2012. aastal Nukuteatri etendusega „Naksitrallid“. Ideid külaplatsi kujundamiseks otsiti kogukondlikult, käies tutvumas ka teiste külaplatsidega. Ehituse esimeses etapis valmis suurem varjualune, mille ehitamisel kasutati oma küla Sarapiku talu enam kui 100 aasta vanuseid sarikaid ja penne ning teises etapis mänguväljaku atraktsioonid, grillikoda, välikäimla ning soetati mööbel. Külaplatsi ehitamist toetas LEADER-programm. 2023. aastal remonditi varjualune ja külaplatsi silt ning puidust varjualuse esine ala asendati tänavakividega.  Remondi- ja ehitustööde projekti rahastati kohaliku omaalgatuse programmist. Külaplats on kohtumispaigaks, vaba aja veetmiseks, koosolekute pidamiseks, väliõppeks, matkasihiks ja avalike sündmuste korraldamiseks avatud kõigile. Haldab MTÜ Valtu-Nurme külaselts.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '4.7 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
@@ -546,7 +554,7 @@ DO $$
             (selected_stage_id, depth_id, '4m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, 'Valmis 2022. aastal', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'valmis 2022. aastal Türi valla kaasava eelarve abil.  Aastaid tuntud peokohana, kuid pikalt tühjana seisvale platsile ehitati kogukondlikuks kasutamiseks laululava Vändra kirivöö mustrist inspiratsiooni saanud suure kivist tantsupõrandaga. Vana laululava lauad läksid taaskasutusse Tolli metsa- ja Saunametsa matkaradade toestamiseks. Plats on kogukondlikuks kasutamiseks. Seal korraldatakse jaaniõhtuid, kontserte ja muid üritusi. Haldab Türi Kultuurikeskus (Käru rahvamaja).', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Uus laululava valmis 2022. aastal Türi valla kaasava eelarve abil.  Aastaid tuntud peokohana, kuid pikalt tühjana seisvale platsile ehitati kogukondlikuks kasutamiseks laululava Vändra kirivöö mustrist inspiratsiooni saanud suure kivist tantsupõrandaga. Vana laululava lauad läksid taaskasutusse Tolli metsa- ja Saunametsa matkaradade toestamiseks. Plats on kogukondlikuks kasutamiseks. Seal korraldatakse jaaniõhtuid, kontserte ja muid üritusi. Haldab Türi Kultuurikeskus (Käru rahvamaja).', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Pilves, tuuline', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '26 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '08.10.2023', false, NOW(), NOW());
@@ -557,6 +565,7 @@ DO $$
             (selected_stage_id, width_id, '11m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '9.5m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Ruuporikujuline künkasse istuv vorm sobitub ja elavdab suhteliselt lauget mõisapargi maastikku. Kõlakoja kuju on tuletatud heli levimisest, mõjudes samas visuaalselt atraktiivsena. Küljelt vaadates meenutab fassaadi tasapindade mäng mustrilt lõõtsa. Sügavust loovad eenduvad termosaarest postid, mis tulevad hästi esile tumedaks peitsitud puidu taustal. Heledast ja avarast laulukaarest kasvab välja suur välilava. Laululava ees paikneva lava vorm jätkab orgaaniliselt laulukaare kumerusi, millest kasvab välja istumisala. Pealtvaatajad istuvad tuulte eest kaitsva valli sees. Laululaval on läbikäidav abiruum, kuhu saab paigutada ja  hoiustada esinejate rekvisiite ja tehnikat. Laululava juurde viib valgustatud tee. Romantilise meeleolu loovad sumedalt valgustatud ümberkaudsed puud ja kaare vormi rõhutav valgustus.Lava avati 30. mail 2018. aastal.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Vahelduv, nõrk tuul', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '12.10.2023', false, NOW(), NOW());
 
@@ -566,6 +575,7 @@ DO $$
             (selected_stage_id, width_id, '8.5m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '3m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Uus laululava avati 21. detsembril 2021. aastal. Lava asub Kooli tänaval, lähiümbruses on nii poed kui ka mänguplatsid.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Vahelduv, nõrk tuul', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '12.10.2023', false, NOW(), NOW());
 
@@ -574,6 +584,7 @@ DO $$
         VALUES
             (selected_stage_id, width_id, '7.6m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '5.3m', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Kõrgete küngaste vahel männimetsa varjus avaneb pahviks lööv vaade - ümarpalkidest kõlakoda ja pinkide rivi suure tantsulava ees. Kõlakojaga metsalagendikust, mida ühest küljest piirab jõekäänak ja teisest Mädara liivakünkad, kujunes populaarne kooskäimiskoht juba 1930ndatel, kui ümberkaudsed seal pidudel-simmanitel käisid. Metsaalustel kuplitel sõideti nii moto- kui jalgrattakrossi, käidi kelgutamas. Küla ettevõtmisi koondab külaselts MTÜ Mädara Mäed. Kuna varasemad ehitised olid ajale jalgu jäänud, kirjutati 2011. aastal projekt, et saada toetust kõlakoja, tantsulava, välikäimla, laste mänguväljaku, võrkpalliplatsi, grilliplatsi ja külakiige rajamiseks.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Vahelduv, nõrk tuul', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '12.10.2023', false, NOW(), NOW());
 
@@ -583,6 +594,9 @@ DO $$
             (selected_stage_id, width_id, '12m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '5.5m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2003 mai', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'Projekteerijaks Kalle Koppel', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Laululava valmimine oli planeeritud Saue linna kümnendaks sünnipäevaks ning laululava kõlakoda valmis mais 2003, projekteerijaks linna arhitekt Kalle Koppel.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Pilvine, niiske', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
 
@@ -591,6 +605,9 @@ DO $$
         VALUES
             (selected_stage_id, width_id, '10m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '8m', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2010', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'Projekteeris Jaan Vene, ehitusöid teostas OÜ Ööbiksaare töömehed', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Vanamõisa laululava on Eesti suurim palk-laululava, mis valmis 2010. aasta suvel. Laululava projekteeris Jaan Vene ning ehitustöid teostas OÜ Ööbiksaare töömehed. Haldab MTÜ Vanamõisa Küla', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Pilvine, niiske', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '8 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
@@ -601,6 +618,7 @@ DO $$
             (selected_stage_id, width_id, '9m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '7m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Haldab MTÜ Laitse Seltsimaja', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Vihmane', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '6 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
@@ -611,6 +629,9 @@ DO $$
             (selected_stage_id, width_id, '17m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '7m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2012', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'Kalmer Kuningas', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Kalju-lava on loodud Kloostri jõe endiste kallastele, kus loodus on säilitanud oma metsiku ilu. Enne õhtu saabumist avaneb hea võimalus näha kameruni kitsekarja ringi tantsimas või jälgida jões ujuvaid hanesid. Lava asub oru põhjas ning pealtvaatajad istuvad nõlval, kust avaneb hea vaade laval toimuvale. Lava valmis 2012. aastal ning selle loojaks ja ehitajaks oli Kallaste talu peremees Kalmer Kuningas. Lava on pühendatud Kalju Terasmaale.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Vihmane', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
 
@@ -620,6 +641,8 @@ DO $$
             (selected_stage_id, width_id, '6.5m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '5m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '22.12.2018', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Haeska küla laululava avati 22. detsembril 2018. aastal  ning see valmis  EV100 programmi toel kingitusena Eesti vabariigile. Laululava asub endise nõukogudeaegse kasutuseta seisnud pumbamaja alal. Pumbajaama vundament sobis suurepäraselt laululava aluseks. Kogukonna ühiste jõupingutustega korrastati kaablikraavid ning laululava vundamendi ümbrus, muutes selle kohalikuks pärliks.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Selge, niiske', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '6 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
@@ -630,6 +653,9 @@ DO $$
             (selected_stage_id, width_id, '12.5m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '6.7m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1997', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'Projekteeris Urmas Arike, ehitustöid teostas AS Helm', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Lihula mõisa kõrval asuv laululava valmis 1997. aasta  juunis. Lava projekteerijaks Urmas Arike, ehitustöid teostas AS Helm.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Selge, kuiv', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '7 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
@@ -640,6 +666,9 @@ DO $$
             (selected_stage_id, width_id, '7.5m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '4.5m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2023 märts', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'OÜ Resteh', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Pürksi mõisa pargis asuv Noarootsi laululava valmis 2023. aasta märtsis. Lava ehitustöid teostas OÜ Resteh.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Selge, niiske', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '4 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
