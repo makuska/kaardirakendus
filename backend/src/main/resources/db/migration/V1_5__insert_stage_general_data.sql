@@ -375,7 +375,7 @@ DO $$
             (selected_stage_id, depth_id, '4.6m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, '2013', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Jaanuaris 2012 peeti Erra kultuuriseltsis külakoosolek, mille põhiteemaks oli uue laululava rajamine Erra parki. Projekti juhtis külavanem Veiko Rosi, ehitustööd tehti talgutena. Lava valmis 2013. aasta novembris. (Allikas : http://errakultuuriselts.planet.ee/laululava_valmis.htm)', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Jaanuaris 2012 peeti Erra kultuuriseltsis külakoosolek, mille põhiteemaks oli uue laululava rajamine Erra parki. Projekti juhtis külavanem Veiko Rosi, ehitustööd tehti talgutena. Lava valmis 2013. aasta novembris.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -396,7 +396,7 @@ DO $$
             (selected_stage_id, depth_id, '5.6m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, '1996', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Laululava rajati aastal 1996, praegusel kujul valmis peale põhjalikku remonti aastal 2019. (Allikas: Võrguleht Põhjarannik https://pohjarannik.postimees.ee/6746605/johvi-park-saab-uued-konniteed-manguvaljaku-ja-laululava-katuse)', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Laululava rajati aastal 1996, praegusel kujul valmis peale põhjalikku remonti aastal 2019.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, vähene tuul', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
@@ -407,7 +407,7 @@ DO $$
             (selected_stage_id, depth_id, '7.1m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '4', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, '2013', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Rajati 2013. aastal ning ehitati MTÜ Sonda Arenduskoolituskeskuse eestvedamisel. (Allikas: MTÜ Virumaa koostöökogu, https://www.viko.ee/sonda-kolakoja-ristsed/)', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Rajati 2013. aastal ning ehitati MTÜ Sonda Arenduskoolituskeskuse eestvedamisel.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '10.10.2023', false, NOW(), NOW());
 
@@ -429,7 +429,7 @@ DO $$
             (selected_stage_id, width_id, '5.3m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '3.8m', false, NOW(), NOW()),
             (selected_stage_id, built_when_id, '1995. aastal', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Asub Kulja Hiiemäel ning rajati 1995. aastal. (Allikas: Avaandmed, https://avaandmed.ee/Laululava_@_Ida-Viru_maakond_L%C3%BCganuse_vald_Kulja_k%C3%BCla_Kulja_laululava_(102038560))', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Asub Kulja Hiiemäel ning rajati 1995. aastal.', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
@@ -440,7 +440,7 @@ DO $$
             (selected_stage_id, width_id, '10.5m', false, NOW(), NOW()),
             (selected_stage_id, depth_id, '8.2m', false, NOW(), NOW()),
             (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
-            (selected_stage_id, history_id, 'Avati 2010. aastal. (Allikas: https://dea.digar.ee/cgi-bin/dea?a=d&d=pohjarannik20091007.1.1&e=-------et-25--1--txt-txIN%7ctxTI%7ctxAU%7ctxTA-------------)', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Avati 2010. aastal.', false, NOW(), NOW()),
             (selected_stage_id, weather_id, 'Kuiv, tuulevaikne', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '09.10.2023', false, NOW(), NOW());
 
