@@ -58,5 +58,11 @@ DO $$
         CALL measurement_insert('Lihula laululava', '93.5', '89.4', '84.2', '79.1', null, 'lääs');
         CALL measurement_insert('Pürksi kõlakoda', '94.5', '92.2', '84.9', '77.8', null, 'lääs');
         CALL measurement_insert('Haapsalu linnus', '94.8', '89.3', '80.3', '80.8', null, 'lääs');
+        CALL measurement_insert('Pajusti laululava', '96.8', '94.6', '89', '82.6', '80.6', 'põhi');
+        CALL measurement_insert('Roela laululava', '95.1', '92.3', '86.4', '86.9', '82.2', 'ida');
+        CALL measurement_insert('Viru-Jaagupi kõlakoda', '93.4', '91.1', '86.5', '91.6', null, 'põhi');
+        CALL measurement_insert('Uhtna laululava', '96.5', '92.1', '84.2', '86.6', '80.4', 'ida');
+        CALL measurement_insert('Kantküla kõlakoda', '92.6', '86.3', '78.6', '79.6', null, 'ida');
+        CALL measurement_insert('Kunda laululava', '91.5', '85.6', '82.1', '85.6', '77.2', 'lõuna');
     END
 $$;
