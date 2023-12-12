@@ -10,7 +10,7 @@
 <body>
 <h1>Lisa kõlakoja andmed andmebaasi</h1>
 
-<form id="stageForm">
+<form id="stageForm" method="POST">
 <!--<form action="" method="POST">-->
     <b>Lava andmed:</b>
     <br><br>
@@ -150,8 +150,11 @@
         }
         Object.assign(payload, {stageData: stageData});
         console.log(payload);
+        
+        // Below can be used once POST endpoint is available 
 
-        axios.post('tulevane URL', stageData)
+        /*
+        axios.post('HopeFully Future URL', stageData)
             .then(res => {
                 alert("Lava andmed edukalt lisatud !");
                 console.log(res);
@@ -159,7 +162,7 @@
             .catch(err => {
                 alert("Midagi läks valesti !");
                 console.log(err);
-            })
+            })*/
     })
 
 </script>
