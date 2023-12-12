@@ -50,6 +50,15 @@ input[type="text"] {
     margin-bottom: 15px;
 }
 
+input[type="date"] {
+    width: 20%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
 input[type="submit"] {
     background-color: #4CAF50;
     color: #fff;
