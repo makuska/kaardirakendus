@@ -20,8 +20,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
                 .authorizeHttpRequests(req -> {
-                  req.requestMatchers("/v1/**").permitAll();
-                  req.anyRequest().denyAll();
+                    req.requestMatchers("/v3/**").permitAll(); // api docs, swagger
+                    req.requestMatchers("/v1/**").permitAll();
+                    req.anyRequest().denyAll();
                 })
                 .headers(withDefaults())
                 .httpBasic(withDefaults())

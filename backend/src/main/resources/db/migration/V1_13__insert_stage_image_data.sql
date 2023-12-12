@@ -39,7 +39,7 @@ call image_insert('Erra laululava', 'Erra_4.jpg');
 
 call image_insert('Iisaku laululava', 'lisaku_1.jpg');
 call image_insert('Iisaku laululava', 'lisaku_2.jpg');
-
+call image_insert('Iisaku laululava', 'lisaku_3.jpg');
 
 CALL insert_images('Keava laululava', 'Kaeva', 6);
 CALL insert_images('Kohtla-Nõmme laululava', 'Kohtla-Nõmme', 3);
