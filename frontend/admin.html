@@ -4,89 +4,164 @@
     <meta charset="UTF-8">
     <title>Adminileht</title>
     <link rel="stylesheet" type="text/css" href="admin-style.css">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-<h1>Lisa isikuid andmebaasi</h1>
+<h1>Lisa kõlakoja andmed andmebaasi</h1>
 
-<form id="personForm">
-<!--<form action="/api/v1/person/addPerson" method="POST">-->
-    <label for="eesnimi">Eesnimi:</label>
-    <input type="text" id="eesnimi" name="eesnimi">
+<form id="stageForm" method="POST">
+<!--<form action="" method="POST">-->
+    <b>Lava andmed:</b>
+    <br><br>
+    <label for="lavanimi">Lavanimi<span class="required"> *</span> :</label>
+    <input type="text" id="lavanimi" name="name"> 
     <br>
-    <label for="perekonnanimi">Perekonnanimi:</label>
-    <input type="text" id="perekonnanimi" name="perekonnanimi">
+    <label for="linn">Maakond<span class="required"> *</span> :</label>
+    <input type="text" id="linn" name="county">
     <br>
-    <label for="varjunimi">Varjunimi:</label>
-    <input type="text" id="varjunimi" name="varjunimi">
+    <label for="aadress">Aadress<span class="required"> *</span> :</label>
+    <input type="text" id="aadress" name="address">
     <br>
-    <label for="synniaeg">Sünniaeg:</label>
-    <input type="text" id="synniaeg" name="synniaeg">
+    <label for="latitude">Laiuskraadid (Kümnendkraadi vormingus)<span class="required"> *</span> :</label>
+    <input type="text" id="latitude" name="latitude">
     <br>
-    <label for="kasvukoht">Kasvukoht:</label>
-    <input type="text" id="kasvukoht" name="kasvukoht">
+    <label for="longitude">Pikkuskraadid (Kümnendkraadi vormingus)<span class="required"> *</span> :</label>
+    <input type="text" id="longitude" name="longitude">
     <br>
-    <label for="surmaaeg">Surmaaeg:</label>
-    <input type="text" id="surmaaeg" name="surmaaeg">
+    <label for="ajalugu">Ajalugu:</label>
+    <textarea id="Ajalugu" name="Ajalugu" class="resizableField"></textarea>
     <br>
-    <label for="valdkond">Valdkond:</label>
-    <input type="text" id="valdkond" name="valdkond">
+    <label for="kes_ehitas">Kes ehitas:</label>
+    <input type="text" id="kes_ehitas" name="Kes ehitas">
     <br>
-    <label for="tunnus">Tunnus:</label>
-    <input type="text" id="tunnus" name="tunnus">
+    <label for="kuna_ehitati">Kuna ehitati:</label>
+    <input type="text" id="kuna_ehitati" name="Kuna ehitati">
+    <br><br>
+    <label for="mootmisekuupaev">Mõõtmise kuupäev:</label>
+    <input type="date" id="mootmisekuupaev" name="Mõõtmise kuupäev">
     <br>
-    <label for="x_koordinaat">X koordinaadid:</label>
-    <input type="text" id="x_koordinaat" name="x_koordinaat">
+    <label for="ilm">Ilma kirjeldus:</label>
+    <input type="text" id="ilm" name="Ilm">
     <br>
-    <label for="y_koordinaat">Y koordinaadid:</label>
-    <input type="text" id="y_koordinaat" name="y_koordinaat">
+    <label for="astmete_arv">Astmete arv:</label>
+    <input type="text" id="astmete_arv" name="Astmete arv">
+    <br>
+    <label for="sygavus">Sügavus:</label>
+    <input type="text" id="sygavus" name="Sügavus">
+    <br>
+    <label for="laius">Laius:</label>
+    <input type="text" id="laius" name="Laius">
+    <br>
+    <label for="tuul">Tuul:</label>
+    <input type="text" id="tuul" name="Tuul"> 
     <br>
     <input type="submit" value="Sisesta andmebaasi!">
 </form>
+
 <script>
-    document.getElementById("personForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
-
-        // Get the form data
-        const form = document.getElementById("personForm");
-        const formData = new FormData(form);
-
-        // Convert the form data to JSON
-        const personData = {};
-        formData.forEach((value, key) => {
-            personData[key] = value;
-        });
-        console.log(personData);
-
-        // Make an HTTP POST request to the backend API
-        fetch("http://localhost:8080/api/v1/person/addPerson", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(personData)
-        })
-            .then(response => {
-                if (response.ok) {
-                    // If the response is successful (status code 200)
-                    return response.json().then(data => {
-                        // Display a success message
-                        alert("Person added successfully!");
-                        console.log(data);
-                        // Perform other actions if needed
-                    });
-                } else {
-                    // If the response is unsuccessful
-                    throw new Error("Request failed with status " + response.status);
+    function reqFieldCheck(formKey, formValue){
+        switch(formKey){
+            case "name":
+                if (!formValue){
+                    alert("Lavanimi on täitmata !");
+                    return true;
                 }
+                break;
+            case "county":
+                if (!formValue){
+                    alert("Maakond on täitmata !");
+                    return true;
+                }
+                break;
+            case "address":
+                if (!formValue){
+                    alert("Aadress on täitmata !");
+                    return true;
+                }
+                break;
+            case "latitude":
+                if (!formValue){
+                    alert("Laiuskraadid on täitmata !");
+                    return true;
+                }
+                break;
+            case "longitude":
+                if (!formValue){
+                    alert("Pikkuskraadid on täitmata");
+                    return true;
+                }
+                break;
+        }
+        return false; 
+    }
+
+    // Function that dynamically increases textarea height
+    textarea = document.querySelector("#Ajalugu");
+    textarea.addEventListener('input', autoResize, false);
+    function autoResize() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+    }
+    
+    //Function that checks if string starts with a capital letter
+    function upper_case(str){
+        regexp = /^[A-Z]/;
+        if (regexp.test(str)){
+                return true;
+            } 
+        else{
+            return false;
+        }
+    }
+
+    const form = document.getElementById("stageForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const formData     = new FormData(form);
+        const payload      = {};
+        const stageData    = [];
+        let stopSubmission = false;
+
+        formData.forEach((value, key) => {
+            if (reqFieldCheck(key, value)){
+                console.log("should stop");
+                stopSubmission = true;
+                return;
+            }
+            let object = {};
+            if(upper_case(key)){
+                if(value){
+                    Object.assign(object,  {type: key, value: value});
+                    stageData.push(object);
+                }
+            } else {
+                payload[key] = value;
+            }
+        });
+
+        if (stopSubmission) {
+            return; // If stopSubmission is true, do not proceed with Axios request
+        }
+        Object.assign(payload, {stageData: stageData});
+        console.log(payload);
+        
+        // Below can be used once POST endpoint is available 
+
+        /*
+        axios.post('HopeFully Future URL', stageData)
+            .then(res => {
+                alert("Lava andmed edukalt lisatud !");
+                console.log(res);
             })
-            .catch(error => {
-                // Handle any errors that occurred during the request
-                console.error(error);
-                // Display an error message
-                alert("An error occurred while adding the person.");
-                // Perform other error handling if needed
-            });
-    });
+            .catch(err => {
+                alert("Midagi läks valesti !");
+                console.log(err);
+            })*/
+    })
+
 </script>
 </body>
 </html>
