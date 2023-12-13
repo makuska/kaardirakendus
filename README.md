@@ -1,5 +1,11 @@
 # Akustikaproov II
 
+## Documentation
+
+    API documentation: 
+        - /v3/swagger-ui/index.html
+        - /v3/api-docs
+
 ## Backend
 
 Run BE [docker](https://hub.docker.com/r/saskia02/kaardirakendus):
