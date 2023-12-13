@@ -17,7 +17,7 @@
     <label for="lavanimi">Lavanimi<span class="required"> *</span> :</label>
     <input type="text" id="lavanimi" name="name"> 
     <br>
-    <label for="linn">Linn<span class="required"> *</span> :</label>
+    <label for="linn">Maakond<span class="required"> *</span> :</label>
     <input type="text" id="linn" name="county">
     <br>
     <label for="aadress">Aadress<span class="required"> *</span> :</label>
@@ -63,32 +63,32 @@
     function reqFieldCheck(formKey, formValue){
         switch(formKey){
             case "name":
-                if (formValue.length == 0){
+                if (!formValue){
                     alert("Lavanimi on täitmata !");
                     return true;
                 }
                 break;
             case "county":
-                if (formValue.length == 0){
-                    alert("Linn on täitmata !");
+                if (!formValue){
+                    alert("Maakond on täitmata !");
                     return true;
                 }
                 break;
             case "address":
-                if (formValue.length == 0){
-                    alert("Aadress on täitmata");
+                if (!formValue){
+                    alert("Aadress on täitmata !");
                     return true;
                 }
                 break;
             case "latitude":
-                if (formValue.length == 0){
-                    alert("X koordinaadid on täitmata");
+                if (!formValue){
+                    alert("Laiuskraadid on täitmata !");
                     return true;
                 }
                 break;
             case "longitude":
-                if (formValue.length == 0){
-                    alert("Y koordinaadid on täitmata");
+                if (!formValue){
+                    alert("Pikkuskraadid on täitmata");
                     return true;
                 }
                 break;
