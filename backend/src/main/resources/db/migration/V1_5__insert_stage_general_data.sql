@@ -682,5 +682,67 @@ DO $$
             (selected_stage_id, weather_id, 'Selge, niiske', false, NOW(), NOW()),
             (selected_stage_id, wind_id, '8 m/s', false, NOW(), NOW()),
             (selected_stage_id, measure_date_id, '14.10.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Roela laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '30m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '8m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '5', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1986. aastal', false, NOW(), NOW()),
+            (selected_stage_id, built_by_id, 'Autor Ott Metsis, ehitas Roela Sovhoos', false, NOW(), NOW()),
+            (selected_stage_id, history_id, '1986.aastal maist-juunini valmis Roela laululava 40 päevaga. Tänaseks on sellest saanud Roela sümbol. Siin peetakse ühisüritusi ja kokkutulekuid, jaani- ja spordipäevi, laulu- ja tantsupidusid. Projekti autor on Ott Metsis. Ehitas Roela Sovhoos. Ehitusala spetsialistideks Enn Männapuu ja Toivo Igo. Kogu projekti hingeks olid sovhoosi direktor Koit Saarepera ja direktori asetäitja Toomas Väinaste. Laululava avati 1986. juunis Viru Mängudega. Viru Mängud toimusid aastatel 1974-1990. Need olid majandite vahelised spordivõistlused. Igal aastal toimusid võistlused erinevas kohas. Roela sai tänu mängudele ilusa uue laulukaare.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '04.11.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Pajusti laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '8m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.5m', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Pajusti laululava on rajatud küngaste vahelisele nõlvale, mis asub Vinni-Pajusti vahelises tammikus, mis on Eesti vanim ja suurima pindalaga. Traditsiooniliselt on seal peetud jaanipidusid. Hetkel on laululava kurvas seisus. Suurem lõhkumine pandi seal toime 2014. aasta talvel ja ajaga on pilt halvemaks muutunud. Algselt kavatses vald laululava remontida, kuid endise Vinni vallavanema Toomas Väinaste sõnul ei oleks sellel olnud suuremat mõtet. “Võimalik, et kaugemas tulevikus saab laululavaga midagi tõsisemat ette võtta ning on olemas koht, kus suuri üritusi läbi viia,” märkis vallavanem.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '04.11.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Viru-Jaagupi kõlakoda';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '8m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.5m', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Viru-Jaagupi laululava asub Viru-Jaagupi koolimaja hoovis. Seal toimuvad erinevad suvepeod, kooliüritused, talgud ja kogupereüritused. Tegemisi haldab Viru-Jaagupi Kogukonna Selts.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '04.11.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Uhtna laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '11m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '4m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '3', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '2005. aastal', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Uhtna on alevik Rakvere vallas. Uhtna laululava avati koos Uhtna raamatukoguga 2005. aastal. Laululavad toimuvad erinevad külapeod, vabaõhuüritusel ja väiksemad rahvaüritused. Rakvere linnavalitsus kinkis 2018. aastal Uhtna alevikule üleilmset kuulsust tekitanud puidust jõulukuuske, mis ehib nüüd Uhtna keskset külaplatsi, mille veerele jääb ka laululava.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '04.11.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Kantküla kõlakoda';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '4.3m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '3.1m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '1', false, NOW(), NOW()),
+            (selected_stage_id, built_when_id, '1920ndatel', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Kantküla laululava asub Vinni vallas, Lääne-Viru maakonnas. Laululava oli ehitatud 1920ndatel aastatel. Hetkel ei ole laululava kasutuses ja vajab renoveerimist. Kantküla laululava ei ole veel saanud toetust, kuid on regionaalarengu toetuseks märgitud objektide hulgas.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '04.11.2023', false, NOW(), NOW());
+
+        SELECT id INTO selected_stage_id FROM stage WHERE name = 'Kunda laululava';
+        INSERT INTO stage_data (stage_id, stage_data_type_id, value, deleted, created, edited)
+        VALUES
+            (selected_stage_id, width_id, '10m', false, NOW(), NOW()),
+            (selected_stage_id, depth_id, '5.5m', false, NOW(), NOW()),
+            (selected_stage_id, step_amount_id, '2', false, NOW(), NOW()),
+            (selected_stage_id, history_id, 'Kunda laululava asub Kunda küla Seltsimaja territooriumil. Seltsi tublide vedajate ja liikmete eestvedamisel on aastate jooksul järk-järgult renoveeritud peamaja ja kogu kinnistu hoonetekompleks. Välilava kasutatakse suviste sündmuste tähistamiseks. Kunda Külaselts rekonstrueeris seltsimaja  pargis oleva kõlakoja katuse ja esinemispõranda 2015. aastal.', false, NOW(), NOW()),
+            (selected_stage_id, weather_id, 'Pilvine, nõrk tuul', false, NOW(), NOW()),
+            (selected_stage_id, measure_date_id, '04.11.2023', false, NOW(), NOW());
     END
 $$;

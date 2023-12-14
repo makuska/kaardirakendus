@@ -55,4 +55,10 @@ INSERT INTO stage (name, county, address, latitude, longitude, created, edited, 
     ('Haeska laululava', 'Läänemaa', 'Seltsimaja, Haeska, 90407 Lääne maakond', 58.804452604096085, 23.666965390194406, NOW(), NOW(), false),
     ('Lihula laululava', 'Pärnumaa', 'Linnuse, Lihula, 90303 Lääne maakond', 58.693844914907615, 23.840524606763022, NOW(), NOW(), false),
     ('Pürksi kõlakoda', 'Läänemaa', 'Pürksi, 91201 Lääne maakond (mõisa park)', 59.00682678557911, 23.525564530348323, NOW(), NOW(), false),
-    ('Haapsalu linnus', 'Läänemaa', 'Lossiplats 3, Haapsalu, 90502 Lääne maakond', 58.94724624100119, 23.53873808495943, NOW(), NOW(), false);
+    ('Haapsalu linnus', 'Läänemaa', 'Lossiplats 3, Haapsalu, 90502 Lääne maakond', 58.94724624100119, 23.53873808495943, NOW(), NOW(), false),
+    ('Pajusti laululava', 'Lääne-Virumaa', 'Tartu mnt 17a, Pajusti', 59.283083843541654, 26.420454233674803, NOW(), NOW(), false),
+    ('Roela laululava', 'Lääne-Virumaa', 'Sinilille 1a, Roela', 59.16606120961378, 26.587850497551532, NOW(), NOW(), false),
+    ('Viru-Jaagupi kõlakoda', 'Lääne-Virumaa', 'Kooli tee 7, Viru-Jaagupi', 59.24062253181505, 26.47561840473221, NOW(), NOW(), false),
+    ('Uhtna laululava', 'Lääne-Virumaa', 'Laulukaare, Uhtna, 44202 Lääne-Viru maakond', 59.395924855806925, 26.563136408040037, NOW(), NOW(), false),
+    ('Kantküla kõlakoda', 'Lääne-Virumaa', 'Vana-Vallamaja 10, Kantküla', 59.299231536642054, 26.535644383070885, NOW(), NOW(), false),
+    ('Kunda laululava', 'Lääne-Virumaa', 'Kunda küla Seltsimaja, Kunda, 44009 Lääne-Viru maakond', 59.48875154779, 26.554693032177862, NOW(), NOW(), false);
