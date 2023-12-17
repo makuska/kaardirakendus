@@ -1,5 +1,5 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2023-10-28 15:51:45.159
+-- Last modification date: 2023-12-17 18:15:26.44
 
 -- tables
 -- Table: measurement_result
@@ -97,14 +97,6 @@ CREATE TABLE "user" (
 );
 
 -- foreign keys
--- Reference: Copy_of_image_stage (table: stage_image)
-ALTER TABLE stage_image ADD CONSTRAINT Copy_of_image_stage
-    FOREIGN KEY (stage_id)
-    REFERENCES stage (id)  
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE
-;
-
 -- Reference: measurement_result_stage_data (table: measurement_result)
 ALTER TABLE measurement_result ADD CONSTRAINT measurement_result_stage_data
     FOREIGN KEY (stage_data_id)
@@ -141,6 +133,14 @@ ALTER TABLE stage_data ADD CONSTRAINT stage_data_stage
 ALTER TABLE stage_data ADD CONSTRAINT stage_data_stage_data_category
     FOREIGN KEY (stage_data_type_id)
     REFERENCES stage_data_type (id)  
+    NOT DEFERRABLE 
+    INITIALLY IMMEDIATE
+;
+
+-- Reference: stage_image_stage (table: stage_image)
+ALTER TABLE stage_image ADD CONSTRAINT stage_image_stage
+    FOREIGN KEY (stage_id)
+    REFERENCES stage (id)  
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;

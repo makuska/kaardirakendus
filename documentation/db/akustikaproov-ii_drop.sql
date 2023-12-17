@@ -1,10 +1,7 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2023-10-28 15:51:45.159
+-- Last modification date: 2023-12-17 18:15:26.44
 
 -- foreign keys
-ALTER TABLE stage_image
-    DROP CONSTRAINT Copy_of_image_stage;
-
 ALTER TABLE measurement_result
     DROP CONSTRAINT measurement_result_stage_data;
 
@@ -19,6 +16,9 @@ ALTER TABLE stage_data
 
 ALTER TABLE stage_data
     DROP CONSTRAINT stage_data_stage_data_category;
+
+ALTER TABLE stage_image
+    DROP CONSTRAINT stage_image_stage;
 
 -- tables
 DROP TABLE measurement_result;
