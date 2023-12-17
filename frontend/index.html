@@ -15,6 +15,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
 
+  <!-- Fancybox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Fancybox JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
   <!-- search -->
   <link href="src/AnimatedSearchBox.css" rel="stylesheet">
   <script src="src/AnimatedSearchBox.js"></script>
@@ -61,25 +70,24 @@
     <li class="menu-item" data-item="menu">
       <svg><use xlink:href="#icon-menu"></use></svg>
     </li>
-    <li class="menu-item" data-item="person">
+<!-- <li class="menu-item" data-item="person">
       <svg><use xlink:href="#icon-person"></use></svg>
-    </li>
-    <li class="menu-item" data-item="email">
+    </li> --> 
+   <!-- <li class="menu-item" data-item="email">
       <svg><use xlink:href="#icon-email"></use></svg>
-    </li>
-    <!--    <li class="menu-item" data-item="search">-->
+    </li> -->
+    <!--  <li class="menu-item" data-item="search">-->
     <!--      <svg><use xlink:href="#icon-search"></use></svg>-->
     <!--    </li>-->
-    <li class="menu-item" data-item="download">
-      <svg><use xlink:href="#icon-download"></use></svg>
+   <li class="menu-item" data-item="download">
     </li>
-  </ul>
+  </ul> 
 
   <div class="sidebar-content">
     <div class="item-content" id="menu">
       <h2>Natuke meist</h2>
       <div class="content">
-        Oleme informaatika esmakursuse tudengid Tallinna Ülikoolist. Meie grupp koosneb viiest inimesest. Kahest digimeedia suuna tudengist: Susanna Veskist ja Kristiin Marleen Suikist. Ja ka kolmest tarkvaraarenduse suuna tudengist: Jan Henrik Levertandist, Roland Siltist ning meie grupijuhist, Sander Nõlvakust. See projekt, "Eesti avalike tegelaste sünnigeograafia kaart", on koostatud kooli poolt pakutud praktika raames. Eesmärgiks on rikastada Eesti kultuuri ja hoida elus mälestusi meie riigi avalike elu tegelastest. Kõik, kes kaardil on, on võetud toimetaja Richard Kleisi poolt koostatud teosest "Eesti avalikud tegelased". Meile esitas tellimuse Kädi Riismaa, kes on Tallinna Ülikoolis digitehnoloogia instituudis teabehalduse lektor ning ka teadatuntud dokumendihalduse spetsialist. Suured tänuavaldused meie õppejõududele: Jaagup Kippar, Andrus Rinde ning Inga Petuhhov.
+        Midagi
       </div>
     </div>
     <div class="item-content" id="person">
@@ -90,28 +98,6 @@
         </a>
       </div>
     </div>
-    <div class="item-content" id="email">
-      <h2>Anna tagasisidet!</h2>
-      <form id="emailForm" action="http://localhost:8080/api/v1/email/sendEmail" method="post">
-        Nimi:<input type="text" name="name" id="name"><br>
-        Jäta oma kommentaar siia:<br>
-        <textarea name="subject" id="subject" rows="4"></textarea><br>
-        <input type="submit" value="Saada">
-      </form>
-    </div>
-    <div class="item-content" id="download">
-      <h2>Lae alla</h2>
-      <button class="custom-button1" type="button" onclick="openAPIWindow()">Lae alla</button>
-    </div>
-
-    <script>
-      function openAPIWindow() {
-        // Make API request to retrieve person data
-        let apiURL = "http://localhost:8080/api/v1/marker/getMarkers";
-        let newWindow = window.open(apiURL, "_blank");
-        newWindow.focus();
-      }
-    </script>
   </div>
 </div>
 
