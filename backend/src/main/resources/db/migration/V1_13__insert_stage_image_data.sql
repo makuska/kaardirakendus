@@ -56,3 +56,22 @@ CALL insert_images('Toila laululava', 'Toila', 6);
 CALL insert_images('Vasknarva kõlakoda (ordulinnuse varemed)', 'Vasknarva', 2);
 CALL insert_images('Valtu-Nurme laululava', 'Valtu-Nurme', 14);
 
+CALL insert_images('Pürksi kõlakoda', 'Pürksi', 4);
+CALL insert_images('Viru-Jaagupi kõlakoda', 'Viru-jaagupi', 5);
+CALL insert_images('Vanamõisa laululava', 'vanamõisa', 4);
+CALL insert_images('Uhtna laululava', 'Uhtna', 6);
+CALL insert_images('Tootsi laululava', 'Tootsi', 5);
+CALL insert_images('Saue laululava', 'Saue', 4);
+CALL insert_images('Pajusti laululava', 'Pajusti', 5);
+CALL insert_images('Mädara laululava', 'Mädara', 5);
+CALL insert_images('Lihula laululava', 'Lihula', 4);
+CALL insert_images('Laitse laululava', 'Laitse', 4);
+CALL insert_images('Kunda laululava', 'Kunda', 4);
+CALL insert_images('Kantküla kõlakoda', 'Kantküla', 4);
+CALL insert_images('Kalju-Lava', 'Kalju', 5);
+CALL insert_images('Haeska laululava', 'Haeska', 4);
+CALL insert_images('Audru laululava', 'Audru', 8);
+CALL insert_images('Roela laululava', 'Roela', 5);
+CALL insert_images('Saka laululava', 'Saka', 4);
+
+-- CALL insert_images('Haapsalu linnus', 'Haapsalu_linnus', 4); 55 id
